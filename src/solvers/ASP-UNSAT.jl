@@ -5,7 +5,7 @@ using Parameters
 
 include("../common.jl")
 
-struct AMPGraph
+struct ASPGraph
     x::Vector{Float64}
     Δ0::Vector{Float64}
     Δ1::Vector{Float64}
@@ -25,21 +25,30 @@ struct AMPGraph
     W2::Matrix{Float64}
 end
 
-function AMPGraph(problem)
+function ASPGraph(problem)
     @extract problem: W=A y
     N, M = size(W)
     @assert length(y) == M
 
-    AMPGraph( [zeros(N) for _=1:6]...,
+    ASPGraph( [zeros(N) for _=1:6]...,
         [zeros(M) for _=1:6]...,
         y, W, W.^2)
 end
 
-function init!(amp::AMPGraph, prms)
-    amp.x .= initx(amp.W, amp.y, prms)
-    amp.Δ0 .= 2
-    amp.Δ1 .= 1
-    amp.g .= 0
+
+function Base.show(io::IO, prob::ASPGraph)
+    print(io, "ASPGraph:\n")
+    for f in fieldnames(ASPGraph)
+        print(io, "  $f: $(summary(getfield(prob, f)))\n")
+    end
+end
+
+
+function init!(asp::ASPGraph, prms)
+    asp.x .= initx(asp.W, asp.y, prms)
+    asp.Δ0 .= 2
+    asp.Δ1 .= 1
+    asp.g .= 0
 end
 
 predict(x, A) = abs.(A'x)
@@ -107,13 +116,13 @@ end
 ∂V0_ϕ(y, ω, V0, V1, m) = ∂q10_Ge₀(y, ω, V0, V1, m)
 ∂V1_ϕ(y, ω, V0, V1, m) =  ∂δq_Ge₀(y, ω, V0, V1, m)
 
-function oneiter!(amp::AMPGraph, t, prms)
-    @extract amp: x Δ0 Δ1 A0 A1 B ω V0 V1 g Γ0 Γ1 y W W2
+function oneiter!(asp::ASPGraph, t, prms)
+    @extract asp: x Δ0 Δ1 A0 A1 B ω V0 V1 g Γ0 Γ1 y W W2
     @extract prms: m λ
     α = size(W, 2) / size(W, 1)
 
 
-    # γ = tanh(t*1e-4)
+    γ = tanh(t*1e-4)
     # Bold = copy(B)
     ψ = 0.5
 
@@ -192,7 +201,7 @@ function solve(problem, prms::Params)
             ρ = Float64[], xnorm=Float64[])
 
     report(epoch, Δ, verb) = begin
-            x = amp.x
+            x = asp.x
             res = (epoch=epoch,
                     train_loss = loss(x, A, y),
                     test_loss = loss(x, Atst, ytst),
@@ -205,12 +214,12 @@ function solve(problem, prms::Params)
         end
     ########################
 
-    amp = AMPGraph(problem)
-    init!(amp, prms)
+    asp = ASPGraph(problem)
+    init!(asp, prms)
     ok = false
     report(0, 1, prms.verb)
     for epoch=1:prms.epochs
-        Δ = oneiter!(amp, epoch, prms)
+        Δ = oneiter!(asp, epoch, prms)
         epoch % prms.infotime == 0 && report(epoch, Δ, prms.verb)
         ok = Δ < prms.ϵ
         # prms.λ < 0 && break
@@ -226,7 +235,7 @@ function solve(problem, prms::Params)
         end
     end
     prms.verb > 0 && !ok && @warn("not converged!")
-    return df, amp, ok
+    return df, asp, ok
 end
 
 end #module
