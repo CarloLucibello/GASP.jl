@@ -1,0 +1,4758 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: RS_alpha_lambda_landscape_Rinit+eps.eps
+%%Creator: gnuplot 5.0 patchlevel 3
+%%CreationDate: Tue Jan 15 11:15:52 2019
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 410 302
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape false def
+/Level1 false def
+/Level3 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -60 def
+/dl1 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 410 50 lineto 410 302 lineto 50 302 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 5.1 (Oct 2015)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Classic Line colors (version 5.0)
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default dash patterns (version 5.0)
+/LTB {BL [] LCb DL} def
+/LTw {PL [] 1 setgray} def
+/LTb {PL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
+/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
+/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
+/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
+/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/SL {[] 0 setdash} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+%
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {textshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
+     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
+     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (RS_alpha_lambda_landscape_Rinit+eps.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 5.0 patchlevel 3)
+  /Author (luca)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Tue Jan 15 11:15:52 2019)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Support for boxed text - Ethan A Merritt May 2005
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { Boxing
+    { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if } def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox 1 1 1 setrgbcolor fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
+% redundant definitions for compatibility with prologue.ps older than 5.0.2
+/LTB {BL [] LCb DL} def
+/LTb {PL [] LCb DL} def
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.050 0.050 scale
+0 setgray
+newpath
+(Helvetica) findfont 180 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 839 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 839 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 1.2)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 1277 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 1277 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 1.4)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 1714 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 1714 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 1.6)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 2152 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 2152 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 1.8)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 2590 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 2590 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 2)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 3028 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 3028 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 2.2)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 3466 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 3466 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 2.4)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 3904 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 3904 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 2.6)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 4341 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 4341 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 2.8)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 4779 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 4779 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 3)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 576 M
+0 63 V
+0 4184 R
+0 -63 V
+stroke
+1080 396 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 0.001)]
+] -60.0 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1513 576 M
+0 31 V
+0 4216 R
+0 -31 V
+1767 576 M
+0 31 V
+0 4216 R
+0 -31 V
+1947 576 M
+0 31 V
+0 4216 R
+0 -31 V
+2086 576 M
+0 31 V
+0 4216 R
+0 -31 V
+2200 576 M
+0 31 V
+0 4216 R
+0 -31 V
+2297 576 M
+0 31 V
+0 4216 R
+0 -31 V
+2380 576 M
+0 31 V
+0 4216 R
+0 -31 V
+2454 576 M
+0 31 V
+0 4216 R
+0 -31 V
+2520 576 M
+0 63 V
+0 4184 R
+0 -63 V
+stroke
+2520 396 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 0.01)]
+] -60.0 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+2953 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3207 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3386 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3526 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3640 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3736 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3820 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3893 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3959 576 M
+0 63 V
+0 4184 R
+0 -63 V
+stroke
+3959 396 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 0.1)]
+] -60.0 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+4393 576 M
+0 31 V
+0 4216 R
+0 -31 V
+4646 576 M
+0 31 V
+0 4216 R
+0 -31 V
+4826 576 M
+0 31 V
+0 4216 R
+0 -31 V
+4966 576 M
+0 31 V
+0 4216 R
+0 -31 V
+5080 576 M
+0 31 V
+0 4216 R
+0 -31 V
+5176 576 M
+0 31 V
+0 4216 R
+0 -31 V
+5259 576 M
+0 31 V
+0 4216 R
+0 -31 V
+5333 576 M
+0 31 V
+0 4216 R
+0 -31 V
+5399 576 M
+0 63 V
+0 4184 R
+0 -63 V
+stroke
+5399 396 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 1)]
+] -60.0 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+1080 4823 N
+0 -4247 V
+4319 0 V
+0 4247 V
+-4319 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+342 2699 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Symbol) 180.0 0.0 true true 0 (a)]
+] -60.0 MCshow
+grestore
+LTb
+LCb setrgbcolor
+3239 126 M
+[ [(Symbol) 180.0 0.0 true true 0 (l)]
+] -60.0 MCshow
+LTb
+1.000 UL
+LTb
+LCb setrgbcolor
+3500 4040 N
+0 720 V
+1791 0 V
+0 -720 V
+-1791 0 V
+Z stroke
+% Begin plot #1
+1.000 UP
+1.000 UL
+LTb
+0.00 1.00 0.00 C 1080 4779 CircleF
+1167 4779 CircleF
+1255 4779 CircleF
+1342 4779 CircleF
+1430 4779 CircleF
+1517 4779 CircleF
+1604 4779 CircleF
+1692 4779 CircleF
+1779 4779 CircleF
+1866 4779 CircleF
+1954 4779 CircleF
+2041 4779 CircleF
+2129 4779 CircleF
+2216 4779 CircleF
+2303 4779 CircleF
+2391 4779 CircleF
+2478 4779 CircleF
+2566 4779 CircleF
+2653 4779 CircleF
+2740 4779 CircleF
+2828 4779 CircleF
+2915 4779 CircleF
+3002 4779 CircleF
+3090 4779 CircleF
+3177 4779 CircleF
+3265 4779 CircleF
+3352 4779 CircleF
+3439 4779 CircleF
+3527 4779 CircleF
+3614 4779 CircleF
+3702 4779 CircleF
+3789 4779 CircleF
+3876 4779 CircleF
+3964 4779 CircleF
+4051 4779 CircleF
+4138 4779 CircleF
+4226 4779 CircleF
+4313 4779 CircleF
+4401 4779 CircleF
+4488 4779 CircleF
+4575 4779 CircleF
+4663 4779 CircleF
+4750 4779 CircleF
+4838 4779 CircleF
+4925 4779 CircleF
+5012 4779 CircleF
+5100 4779 CircleF
+5187 4779 CircleF
+5274 4779 CircleF
+5362 4779 CircleF
+1080 4724 CircleF
+1167 4724 CircleF
+1255 4724 CircleF
+1342 4724 CircleF
+1430 4724 CircleF
+1517 4724 CircleF
+1604 4724 CircleF
+1692 4724 CircleF
+1779 4724 CircleF
+1866 4724 CircleF
+1954 4724 CircleF
+2041 4724 CircleF
+2129 4724 CircleF
+2216 4724 CircleF
+2303 4724 CircleF
+2391 4724 CircleF
+2478 4724 CircleF
+2566 4724 CircleF
+2653 4724 CircleF
+2740 4724 CircleF
+2828 4724 CircleF
+2915 4724 CircleF
+3002 4724 CircleF
+3090 4724 CircleF
+3177 4724 CircleF
+3265 4724 CircleF
+3352 4724 CircleF
+3439 4724 CircleF
+3527 4724 CircleF
+3614 4724 CircleF
+3702 4724 CircleF
+3789 4724 CircleF
+3876 4724 CircleF
+3964 4724 CircleF
+4051 4724 CircleF
+4138 4724 CircleF
+4226 4724 CircleF
+4313 4724 CircleF
+4401 4724 CircleF
+4488 4724 CircleF
+4575 4724 CircleF
+4663 4724 CircleF
+4750 4724 CircleF
+4838 4724 CircleF
+4925 4724 CircleF
+5012 4724 CircleF
+5100 4724 CircleF
+5187 4724 CircleF
+5274 4724 CircleF
+5362 4724 CircleF
+1080 4670 CircleF
+1167 4670 CircleF
+1255 4670 CircleF
+1342 4670 CircleF
+1430 4670 CircleF
+1517 4670 CircleF
+1604 4670 CircleF
+1692 4670 CircleF
+1779 4670 CircleF
+1866 4670 CircleF
+1954 4670 CircleF
+2041 4670 CircleF
+2129 4670 CircleF
+2216 4670 CircleF
+2303 4670 CircleF
+2391 4670 CircleF
+2478 4670 CircleF
+2566 4670 CircleF
+2653 4670 CircleF
+2740 4670 CircleF
+2828 4670 CircleF
+2915 4670 CircleF
+3002 4670 CircleF
+3090 4670 CircleF
+3177 4670 CircleF
+3265 4670 CircleF
+3352 4670 CircleF
+3439 4670 CircleF
+3527 4670 CircleF
+3614 4670 CircleF
+3702 4670 CircleF
+3789 4670 CircleF
+3876 4670 CircleF
+3964 4670 CircleF
+4051 4670 CircleF
+4138 4670 CircleF
+4226 4670 CircleF
+4313 4670 CircleF
+4401 4670 CircleF
+4488 4670 CircleF
+4575 4670 CircleF
+4663 4670 CircleF
+4750 4670 CircleF
+4838 4670 CircleF
+4925 4670 CircleF
+5012 4670 CircleF
+5100 4670 CircleF
+5187 4670 CircleF
+5274 4670 CircleF
+5362 4670 CircleF
+1080 4615 CircleF
+1167 4615 CircleF
+1255 4615 CircleF
+1342 4615 CircleF
+1430 4615 CircleF
+1517 4615 CircleF
+1604 4615 CircleF
+1692 4615 CircleF
+1779 4615 CircleF
+1866 4615 CircleF
+1954 4615 CircleF
+2041 4615 CircleF
+2129 4615 CircleF
+2216 4615 CircleF
+2303 4615 CircleF
+2391 4615 CircleF
+2478 4615 CircleF
+2566 4615 CircleF
+2653 4615 CircleF
+2740 4615 CircleF
+2828 4615 CircleF
+2915 4615 CircleF
+3002 4615 CircleF
+3090 4615 CircleF
+3177 4615 CircleF
+3265 4615 CircleF
+3352 4615 CircleF
+3439 4615 CircleF
+3527 4615 CircleF
+3614 4615 CircleF
+3702 4615 CircleF
+3789 4615 CircleF
+3876 4615 CircleF
+3964 4615 CircleF
+4051 4615 CircleF
+4138 4615 CircleF
+4226 4615 CircleF
+4313 4615 CircleF
+4401 4615 CircleF
+4488 4615 CircleF
+4575 4615 CircleF
+4663 4615 CircleF
+4750 4615 CircleF
+4838 4615 CircleF
+4925 4615 CircleF
+5012 4615 CircleF
+5100 4615 CircleF
+5187 4615 CircleF
+5274 4615 CircleF
+5362 4615 CircleF
+1080 4560 CircleF
+1167 4560 CircleF
+1255 4560 CircleF
+1342 4560 CircleF
+1430 4560 CircleF
+1517 4560 CircleF
+1604 4560 CircleF
+1692 4560 CircleF
+1779 4560 CircleF
+1866 4560 CircleF
+1954 4560 CircleF
+2041 4560 CircleF
+2129 4560 CircleF
+2216 4560 CircleF
+2303 4560 CircleF
+2391 4560 CircleF
+2478 4560 CircleF
+2566 4560 CircleF
+2653 4560 CircleF
+2740 4560 CircleF
+2828 4560 CircleF
+2915 4560 CircleF
+3002 4560 CircleF
+3090 4560 CircleF
+3177 4560 CircleF
+3265 4560 CircleF
+3352 4560 CircleF
+3439 4560 CircleF
+3527 4560 CircleF
+3614 4560 CircleF
+3702 4560 CircleF
+3789 4560 CircleF
+3876 4560 CircleF
+3964 4560 CircleF
+4051 4560 CircleF
+4138 4560 CircleF
+4226 4560 CircleF
+4313 4560 CircleF
+4401 4560 CircleF
+4488 4560 CircleF
+4575 4560 CircleF
+4663 4560 CircleF
+4750 4560 CircleF
+4838 4560 CircleF
+4925 4560 CircleF
+5012 4560 CircleF
+5100 4560 CircleF
+5187 4560 CircleF
+5274 4560 CircleF
+5362 4560 CircleF
+1080 4506 CircleF
+1167 4506 CircleF
+1255 4506 CircleF
+1342 4506 CircleF
+1430 4506 CircleF
+1517 4506 CircleF
+1604 4506 CircleF
+1692 4506 CircleF
+1779 4506 CircleF
+1866 4506 CircleF
+1954 4506 CircleF
+2041 4506 CircleF
+2129 4506 CircleF
+2216 4506 CircleF
+2303 4506 CircleF
+2391 4506 CircleF
+2478 4506 CircleF
+2566 4506 CircleF
+2653 4506 CircleF
+2740 4506 CircleF
+2828 4506 CircleF
+2915 4506 CircleF
+3002 4506 CircleF
+3090 4506 CircleF
+3177 4506 CircleF
+3265 4506 CircleF
+3352 4506 CircleF
+3439 4506 CircleF
+3527 4506 CircleF
+3614 4506 CircleF
+3702 4506 CircleF
+3789 4506 CircleF
+3876 4506 CircleF
+3964 4506 CircleF
+4051 4506 CircleF
+4138 4506 CircleF
+4226 4506 CircleF
+4313 4506 CircleF
+4401 4506 CircleF
+4488 4506 CircleF
+4575 4506 CircleF
+4663 4506 CircleF
+4750 4506 CircleF
+4838 4506 CircleF
+4925 4506 CircleF
+5012 4506 CircleF
+5100 4506 CircleF
+5187 4506 CircleF
+5274 4506 CircleF
+5362 4506 CircleF
+1080 4451 CircleF
+1167 4451 CircleF
+1255 4451 CircleF
+1342 4451 CircleF
+1430 4451 CircleF
+1517 4451 CircleF
+1604 4451 CircleF
+1692 4451 CircleF
+1779 4451 CircleF
+1866 4451 CircleF
+1954 4451 CircleF
+2041 4451 CircleF
+2129 4451 CircleF
+2216 4451 CircleF
+2303 4451 CircleF
+2391 4451 CircleF
+2478 4451 CircleF
+2566 4451 CircleF
+2653 4451 CircleF
+2740 4451 CircleF
+2828 4451 CircleF
+2915 4451 CircleF
+3002 4451 CircleF
+3090 4451 CircleF
+3177 4451 CircleF
+3265 4451 CircleF
+3352 4451 CircleF
+3439 4451 CircleF
+3527 4451 CircleF
+3614 4451 CircleF
+3702 4451 CircleF
+3789 4451 CircleF
+3876 4451 CircleF
+3964 4451 CircleF
+4051 4451 CircleF
+4138 4451 CircleF
+4226 4451 CircleF
+4313 4451 CircleF
+4401 4451 CircleF
+4488 4451 CircleF
+4575 4451 CircleF
+4663 4451 CircleF
+4750 4451 CircleF
+4838 4451 CircleF
+4925 4451 CircleF
+5012 4451 CircleF
+5100 4451 CircleF
+5187 4451 CircleF
+5274 4451 CircleF
+5362 4451 CircleF
+1080 4396 CircleF
+1167 4396 CircleF
+1255 4396 CircleF
+1342 4396 CircleF
+1430 4396 CircleF
+1517 4396 CircleF
+1604 4396 CircleF
+1692 4396 CircleF
+1779 4396 CircleF
+1866 4396 CircleF
+1954 4396 CircleF
+2041 4396 CircleF
+2129 4396 CircleF
+2216 4396 CircleF
+2303 4396 CircleF
+2391 4396 CircleF
+2478 4396 CircleF
+2566 4396 CircleF
+2653 4396 CircleF
+2740 4396 CircleF
+2828 4396 CircleF
+2915 4396 CircleF
+3002 4396 CircleF
+3090 4396 CircleF
+3177 4396 CircleF
+3265 4396 CircleF
+3352 4396 CircleF
+3439 4396 CircleF
+3527 4396 CircleF
+3614 4396 CircleF
+3702 4396 CircleF
+3789 4396 CircleF
+3876 4396 CircleF
+3964 4396 CircleF
+4051 4396 CircleF
+4138 4396 CircleF
+4226 4396 CircleF
+4313 4396 CircleF
+4401 4396 CircleF
+4488 4396 CircleF
+4575 4396 CircleF
+4663 4396 CircleF
+4750 4396 CircleF
+4838 4396 CircleF
+4925 4396 CircleF
+5012 4396 CircleF
+5100 4396 CircleF
+5187 4396 CircleF
+5274 4396 CircleF
+5362 4396 CircleF
+1080 4341 CircleF
+1167 4341 CircleF
+1255 4341 CircleF
+1342 4341 CircleF
+1430 4341 CircleF
+1517 4341 CircleF
+1604 4341 CircleF
+1692 4341 CircleF
+1779 4341 CircleF
+1866 4341 CircleF
+1954 4341 CircleF
+2041 4341 CircleF
+2129 4341 CircleF
+2216 4341 CircleF
+2303 4341 CircleF
+2391 4341 CircleF
+2478 4341 CircleF
+2566 4341 CircleF
+2653 4341 CircleF
+2740 4341 CircleF
+2828 4341 CircleF
+2915 4341 CircleF
+3002 4341 CircleF
+3090 4341 CircleF
+3177 4341 CircleF
+3265 4341 CircleF
+3352 4341 CircleF
+3439 4341 CircleF
+3527 4341 CircleF
+3614 4341 CircleF
+3702 4341 CircleF
+3789 4341 CircleF
+3876 4341 CircleF
+3964 4341 CircleF
+4051 4341 CircleF
+4138 4341 CircleF
+4226 4341 CircleF
+4313 4341 CircleF
+4401 4341 CircleF
+4488 4341 CircleF
+4575 4341 CircleF
+4663 4341 CircleF
+4750 4341 CircleF
+4838 4341 CircleF
+4925 4341 CircleF
+5012 4341 CircleF
+5100 4341 CircleF
+5187 4341 CircleF
+5274 4341 CircleF
+5362 4341 CircleF
+1080 4287 CircleF
+1167 4287 CircleF
+1255 4287 CircleF
+1342 4287 CircleF
+1430 4287 CircleF
+1517 4287 CircleF
+1604 4287 CircleF
+1692 4287 CircleF
+1779 4287 CircleF
+1866 4287 CircleF
+1954 4287 CircleF
+2041 4287 CircleF
+2129 4287 CircleF
+2216 4287 CircleF
+2303 4287 CircleF
+2391 4287 CircleF
+2478 4287 CircleF
+2566 4287 CircleF
+2653 4287 CircleF
+2740 4287 CircleF
+2828 4287 CircleF
+2915 4287 CircleF
+3002 4287 CircleF
+3090 4287 CircleF
+3177 4287 CircleF
+3265 4287 CircleF
+3352 4287 CircleF
+3439 4287 CircleF
+3527 4287 CircleF
+3614 4287 CircleF
+3702 4287 CircleF
+3789 4287 CircleF
+3876 4287 CircleF
+3964 4287 CircleF
+4051 4287 CircleF
+4138 4287 CircleF
+4226 4287 CircleF
+4313 4287 CircleF
+4401 4287 CircleF
+4488 4287 CircleF
+4575 4287 CircleF
+4663 4287 CircleF
+4750 4287 CircleF
+4838 4287 CircleF
+4925 4287 CircleF
+5012 4287 CircleF
+5100 4287 CircleF
+5187 4287 CircleF
+5274 4287 CircleF
+5362 4287 CircleF
+1080 4232 CircleF
+1167 4232 CircleF
+1255 4232 CircleF
+1342 4232 CircleF
+1430 4232 CircleF
+1517 4232 CircleF
+1604 4232 CircleF
+1692 4232 CircleF
+1779 4232 CircleF
+1866 4232 CircleF
+1954 4232 CircleF
+2041 4232 CircleF
+2129 4232 CircleF
+2216 4232 CircleF
+2303 4232 CircleF
+2391 4232 CircleF
+2478 4232 CircleF
+2566 4232 CircleF
+2653 4232 CircleF
+2740 4232 CircleF
+2828 4232 CircleF
+2915 4232 CircleF
+3002 4232 CircleF
+3090 4232 CircleF
+3177 4232 CircleF
+3265 4232 CircleF
+3352 4232 CircleF
+3439 4232 CircleF
+3527 4232 CircleF
+3614 4232 CircleF
+3702 4232 CircleF
+3789 4232 CircleF
+3876 4232 CircleF
+3964 4232 CircleF
+4051 4232 CircleF
+4138 4232 CircleF
+4226 4232 CircleF
+4313 4232 CircleF
+4401 4232 CircleF
+4488 4232 CircleF
+4575 4232 CircleF
+4663 4232 CircleF
+4750 4232 CircleF
+4838 4232 CircleF
+4925 4232 CircleF
+5012 4232 CircleF
+5100 4232 CircleF
+5187 4232 CircleF
+5274 4232 CircleF
+5362 4232 CircleF
+1080 4177 CircleF
+1167 4177 CircleF
+1255 4177 CircleF
+1342 4177 CircleF
+1430 4177 CircleF
+1517 4177 CircleF
+1604 4177 CircleF
+1692 4177 CircleF
+1779 4177 CircleF
+1866 4177 CircleF
+1954 4177 CircleF
+2041 4177 CircleF
+2129 4177 CircleF
+2216 4177 CircleF
+2303 4177 CircleF
+2391 4177 CircleF
+2478 4177 CircleF
+2566 4177 CircleF
+2653 4177 CircleF
+2740 4177 CircleF
+2828 4177 CircleF
+2915 4177 CircleF
+3002 4177 CircleF
+3090 4177 CircleF
+3177 4177 CircleF
+3265 4177 CircleF
+3352 4177 CircleF
+3439 4177 CircleF
+3527 4177 CircleF
+3614 4177 CircleF
+3702 4177 CircleF
+3789 4177 CircleF
+3876 4177 CircleF
+3964 4177 CircleF
+4051 4177 CircleF
+4138 4177 CircleF
+4226 4177 CircleF
+4313 4177 CircleF
+4401 4177 CircleF
+4488 4177 CircleF
+4575 4177 CircleF
+4663 4177 CircleF
+4750 4177 CircleF
+4838 4177 CircleF
+4925 4177 CircleF
+5012 4177 CircleF
+5100 4177 CircleF
+5187 4177 CircleF
+5274 4177 CircleF
+5362 4177 CircleF
+1080 4122 CircleF
+1167 4122 CircleF
+1255 4122 CircleF
+1342 4122 CircleF
+1430 4122 CircleF
+1517 4122 CircleF
+1604 4122 CircleF
+1692 4122 CircleF
+1779 4122 CircleF
+1866 4122 CircleF
+1954 4122 CircleF
+2041 4122 CircleF
+2129 4122 CircleF
+2216 4122 CircleF
+2303 4122 CircleF
+2391 4122 CircleF
+2478 4122 CircleF
+2566 4122 CircleF
+2653 4122 CircleF
+2740 4122 CircleF
+2828 4122 CircleF
+2915 4122 CircleF
+3002 4122 CircleF
+3090 4122 CircleF
+3177 4122 CircleF
+3265 4122 CircleF
+3352 4122 CircleF
+3439 4122 CircleF
+3527 4122 CircleF
+3614 4122 CircleF
+3702 4122 CircleF
+3789 4122 CircleF
+3876 4122 CircleF
+3964 4122 CircleF
+4051 4122 CircleF
+4138 4122 CircleF
+4226 4122 CircleF
+4313 4122 CircleF
+4401 4122 CircleF
+4488 4122 CircleF
+4575 4122 CircleF
+4663 4122 CircleF
+4750 4122 CircleF
+4838 4122 CircleF
+4925 4122 CircleF
+5012 4122 CircleF
+5100 4122 CircleF
+5187 4122 CircleF
+5274 4122 CircleF
+5362 4122 CircleF
+1080 4068 CircleF
+1167 4068 CircleF
+1255 4068 CircleF
+1342 4068 CircleF
+1430 4068 CircleF
+1517 4068 CircleF
+1604 4068 CircleF
+1692 4068 CircleF
+1779 4068 CircleF
+1866 4068 CircleF
+1954 4068 CircleF
+2041 4068 CircleF
+2129 4068 CircleF
+2216 4068 CircleF
+2303 4068 CircleF
+2391 4068 CircleF
+2478 4068 CircleF
+2566 4068 CircleF
+2653 4068 CircleF
+2740 4068 CircleF
+2828 4068 CircleF
+2915 4068 CircleF
+3002 4068 CircleF
+3090 4068 CircleF
+3177 4068 CircleF
+3265 4068 CircleF
+3352 4068 CircleF
+3439 4068 CircleF
+3527 4068 CircleF
+3614 4068 CircleF
+3702 4068 CircleF
+3789 4068 CircleF
+3876 4068 CircleF
+3964 4068 CircleF
+4051 4068 CircleF
+4138 4068 CircleF
+4226 4068 CircleF
+4313 4068 CircleF
+4401 4068 CircleF
+4488 4068 CircleF
+4575 4068 CircleF
+4663 4068 CircleF
+4750 4068 CircleF
+4838 4068 CircleF
+4925 4068 CircleF
+5012 4068 CircleF
+5100 4068 CircleF
+5187 4068 CircleF
+5274 4068 CircleF
+5362 4068 CircleF
+1080 4013 CircleF
+1167 4013 CircleF
+1255 4013 CircleF
+1342 4013 CircleF
+1430 4013 CircleF
+1517 4013 CircleF
+1604 4013 CircleF
+1692 4013 CircleF
+1779 4013 CircleF
+1866 4013 CircleF
+1954 4013 CircleF
+2041 4013 CircleF
+2129 4013 CircleF
+2216 4013 CircleF
+2303 4013 CircleF
+2391 4013 CircleF
+2478 4013 CircleF
+2566 4013 CircleF
+2653 4013 CircleF
+2740 4013 CircleF
+2828 4013 CircleF
+2915 4013 CircleF
+3002 4013 CircleF
+3090 4013 CircleF
+3177 4013 CircleF
+3265 4013 CircleF
+3352 4013 CircleF
+3439 4013 CircleF
+3527 4013 CircleF
+3614 4013 CircleF
+3702 4013 CircleF
+3789 4013 CircleF
+3876 4013 CircleF
+3964 4013 CircleF
+4051 4013 CircleF
+4138 4013 CircleF
+4226 4013 CircleF
+4313 4013 CircleF
+4401 4013 CircleF
+4488 4013 CircleF
+4575 4013 CircleF
+4663 4013 CircleF
+4750 4013 CircleF
+4838 4013 CircleF
+4925 4013 CircleF
+5012 4013 CircleF
+5100 4013 CircleF
+5187 4013 CircleF
+5274 4013 CircleF
+5362 4013 CircleF
+1080 3958 CircleF
+1167 3958 CircleF
+1255 3958 CircleF
+1342 3958 CircleF
+1430 3958 CircleF
+1517 3958 CircleF
+1604 3958 CircleF
+1692 3958 CircleF
+1779 3958 CircleF
+1866 3958 CircleF
+1954 3958 CircleF
+2041 3958 CircleF
+2129 3958 CircleF
+2216 3958 CircleF
+2303 3958 CircleF
+2391 3958 CircleF
+2478 3958 CircleF
+2566 3958 CircleF
+2653 3958 CircleF
+2740 3958 CircleF
+2828 3958 CircleF
+2915 3958 CircleF
+3002 3958 CircleF
+3090 3958 CircleF
+3177 3958 CircleF
+3265 3958 CircleF
+3352 3958 CircleF
+3439 3958 CircleF
+3527 3958 CircleF
+3614 3958 CircleF
+3702 3958 CircleF
+3789 3958 CircleF
+3876 3958 CircleF
+3964 3958 CircleF
+4051 3958 CircleF
+4138 3958 CircleF
+4226 3958 CircleF
+4313 3958 CircleF
+4401 3958 CircleF
+4488 3958 CircleF
+4575 3958 CircleF
+4663 3958 CircleF
+4750 3958 CircleF
+4838 3958 CircleF
+4925 3958 CircleF
+5012 3958 CircleF
+5100 3958 CircleF
+5187 3958 CircleF
+5274 3958 CircleF
+5362 3958 CircleF
+1080 3904 CircleF
+1167 3904 CircleF
+1255 3904 CircleF
+1342 3904 CircleF
+1430 3904 CircleF
+1517 3904 CircleF
+1604 3904 CircleF
+1692 3904 CircleF
+1779 3904 CircleF
+1866 3904 CircleF
+1954 3904 CircleF
+2041 3904 CircleF
+2129 3904 CircleF
+2216 3904 CircleF
+2303 3904 CircleF
+2391 3904 CircleF
+2478 3904 CircleF
+2566 3904 CircleF
+2653 3904 CircleF
+2740 3904 CircleF
+2828 3904 CircleF
+2915 3904 CircleF
+3002 3904 CircleF
+3090 3904 CircleF
+3177 3904 CircleF
+3265 3904 CircleF
+3352 3904 CircleF
+3439 3904 CircleF
+3527 3904 CircleF
+3614 3904 CircleF
+3702 3904 CircleF
+3789 3904 CircleF
+3876 3904 CircleF
+3964 3904 CircleF
+4051 3904 CircleF
+4138 3904 CircleF
+4226 3904 CircleF
+4313 3904 CircleF
+4401 3904 CircleF
+4488 3904 CircleF
+4575 3904 CircleF
+4663 3904 CircleF
+4750 3904 CircleF
+4838 3904 CircleF
+4925 3904 CircleF
+5012 3904 CircleF
+5100 3904 CircleF
+5187 3904 CircleF
+5274 3904 CircleF
+5362 3904 CircleF
+1080 3849 CircleF
+1167 3849 CircleF
+1255 3849 CircleF
+1342 3849 CircleF
+1430 3849 CircleF
+1517 3849 CircleF
+1604 3849 CircleF
+1692 3849 CircleF
+1779 3849 CircleF
+1866 3849 CircleF
+1954 3849 CircleF
+2041 3849 CircleF
+2129 3849 CircleF
+2216 3849 CircleF
+2303 3849 CircleF
+2391 3849 CircleF
+2478 3849 CircleF
+2566 3849 CircleF
+2653 3849 CircleF
+2740 3849 CircleF
+2828 3849 CircleF
+2915 3849 CircleF
+3002 3849 CircleF
+3090 3849 CircleF
+3177 3849 CircleF
+3265 3849 CircleF
+3352 3849 CircleF
+3439 3849 CircleF
+3527 3849 CircleF
+3614 3849 CircleF
+3702 3849 CircleF
+3789 3849 CircleF
+3876 3849 CircleF
+3964 3849 CircleF
+4051 3849 CircleF
+4138 3849 CircleF
+4226 3849 CircleF
+4313 3849 CircleF
+4401 3849 CircleF
+4488 3849 CircleF
+4575 3849 CircleF
+4663 3849 CircleF
+4750 3849 CircleF
+4838 3849 CircleF
+4925 3849 CircleF
+5012 3849 CircleF
+5100 3849 CircleF
+5187 3849 CircleF
+5274 3849 CircleF
+5362 3849 CircleF
+1080 3794 CircleF
+1167 3794 CircleF
+1255 3794 CircleF
+1342 3794 CircleF
+1430 3794 CircleF
+1517 3794 CircleF
+1604 3794 CircleF
+1692 3794 CircleF
+1779 3794 CircleF
+1866 3794 CircleF
+1954 3794 CircleF
+2041 3794 CircleF
+2129 3794 CircleF
+2216 3794 CircleF
+2303 3794 CircleF
+2391 3794 CircleF
+2478 3794 CircleF
+2566 3794 CircleF
+2653 3794 CircleF
+2740 3794 CircleF
+2828 3794 CircleF
+2915 3794 CircleF
+3002 3794 CircleF
+3090 3794 CircleF
+3177 3794 CircleF
+3265 3794 CircleF
+3352 3794 CircleF
+3439 3794 CircleF
+3527 3794 CircleF
+3614 3794 CircleF
+3702 3794 CircleF
+3789 3794 CircleF
+3876 3794 CircleF
+3964 3794 CircleF
+4051 3794 CircleF
+4138 3794 CircleF
+4226 3794 CircleF
+4313 3794 CircleF
+4401 3794 CircleF
+4488 3794 CircleF
+4575 3794 CircleF
+4663 3794 CircleF
+4750 3794 CircleF
+4838 3794 CircleF
+4925 3794 CircleF
+5012 3794 CircleF
+5100 3794 CircleF
+5187 3794 CircleF
+5274 3794 CircleF
+5362 3794 CircleF
+1080 3739 CircleF
+1167 3739 CircleF
+1255 3739 CircleF
+1342 3739 CircleF
+1430 3739 CircleF
+1517 3739 CircleF
+1604 3739 CircleF
+1692 3739 CircleF
+1779 3739 CircleF
+1866 3739 CircleF
+1954 3739 CircleF
+2041 3739 CircleF
+2129 3739 CircleF
+2216 3739 CircleF
+2303 3739 CircleF
+2391 3739 CircleF
+2478 3739 CircleF
+2566 3739 CircleF
+2653 3739 CircleF
+2740 3739 CircleF
+2828 3739 CircleF
+2915 3739 CircleF
+3002 3739 CircleF
+3090 3739 CircleF
+3177 3739 CircleF
+3265 3739 CircleF
+3352 3739 CircleF
+3439 3739 CircleF
+3527 3739 CircleF
+3614 3739 CircleF
+3702 3739 CircleF
+3789 3739 CircleF
+3876 3739 CircleF
+3964 3739 CircleF
+4051 3739 CircleF
+4138 3739 CircleF
+4226 3739 CircleF
+4313 3739 CircleF
+4401 3739 CircleF
+4488 3739 CircleF
+4575 3739 CircleF
+4663 3739 CircleF
+4750 3739 CircleF
+4838 3739 CircleF
+4925 3739 CircleF
+5012 3739 CircleF
+5100 3739 CircleF
+5187 3739 CircleF
+5274 3739 CircleF
+5362 3739 CircleF
+1080 3685 CircleF
+1167 3685 CircleF
+1255 3685 CircleF
+1342 3685 CircleF
+1430 3685 CircleF
+1517 3685 CircleF
+1604 3685 CircleF
+1692 3685 CircleF
+1779 3685 CircleF
+1866 3685 CircleF
+1954 3685 CircleF
+2041 3685 CircleF
+2129 3685 CircleF
+2216 3685 CircleF
+2303 3685 CircleF
+2391 3685 CircleF
+2478 3685 CircleF
+2566 3685 CircleF
+2653 3685 CircleF
+2740 3685 CircleF
+2828 3685 CircleF
+2915 3685 CircleF
+3002 3685 CircleF
+3090 3685 CircleF
+3177 3685 CircleF
+3265 3685 CircleF
+3352 3685 CircleF
+3439 3685 CircleF
+3527 3685 CircleF
+3614 3685 CircleF
+3702 3685 CircleF
+3789 3685 CircleF
+3876 3685 CircleF
+3964 3685 CircleF
+4051 3685 CircleF
+4138 3685 CircleF
+4226 3685 CircleF
+4313 3685 CircleF
+4401 3685 CircleF
+4488 3685 CircleF
+4575 3685 CircleF
+4663 3685 CircleF
+4750 3685 CircleF
+4838 3685 CircleF
+4925 3685 CircleF
+5012 3685 CircleF
+5100 3685 CircleF
+5187 3685 CircleF
+5274 3685 CircleF
+5362 3685 CircleF
+1080 3630 CircleF
+1167 3630 CircleF
+1255 3630 CircleF
+1342 3630 CircleF
+1430 3630 CircleF
+1517 3630 CircleF
+1604 3630 CircleF
+1692 3630 CircleF
+1779 3630 CircleF
+1866 3630 CircleF
+1954 3630 CircleF
+2041 3630 CircleF
+2129 3630 CircleF
+2216 3630 CircleF
+2303 3630 CircleF
+2391 3630 CircleF
+2478 3630 CircleF
+2566 3630 CircleF
+2653 3630 CircleF
+2740 3630 CircleF
+2828 3630 CircleF
+2915 3630 CircleF
+3002 3630 CircleF
+3090 3630 CircleF
+3177 3630 CircleF
+3265 3630 CircleF
+3352 3630 CircleF
+3439 3630 CircleF
+3527 3630 CircleF
+3614 3630 CircleF
+3702 3630 CircleF
+3789 3630 CircleF
+3876 3630 CircleF
+3964 3630 CircleF
+4051 3630 CircleF
+4138 3630 CircleF
+4226 3630 CircleF
+4313 3630 CircleF
+4401 3630 CircleF
+4488 3630 CircleF
+4575 3630 CircleF
+4663 3630 CircleF
+4750 3630 CircleF
+4838 3630 CircleF
+4925 3630 CircleF
+5012 3630 CircleF
+5100 3630 CircleF
+5187 3630 CircleF
+5274 3630 CircleF
+5362 3630 CircleF
+2041 3575 CircleF
+2129 3575 CircleF
+2216 3575 CircleF
+2303 3575 CircleF
+2391 3575 CircleF
+2478 3575 CircleF
+2566 3575 CircleF
+2653 3575 CircleF
+2740 3575 CircleF
+2828 3575 CircleF
+2915 3575 CircleF
+3002 3575 CircleF
+3090 3575 CircleF
+3177 3575 CircleF
+3265 3575 CircleF
+3352 3575 CircleF
+3439 3575 CircleF
+3527 3575 CircleF
+3614 3575 CircleF
+3702 3575 CircleF
+3789 3575 CircleF
+3876 3575 CircleF
+3964 3575 CircleF
+4051 3575 CircleF
+4138 3575 CircleF
+4226 3575 CircleF
+4313 3575 CircleF
+4401 3575 CircleF
+4488 3575 CircleF
+4575 3575 CircleF
+4663 3575 CircleF
+4750 3575 CircleF
+4838 3575 CircleF
+4925 3575 CircleF
+5012 3575 CircleF
+5100 3575 CircleF
+5187 3575 CircleF
+5274 3575 CircleF
+5362 3575 CircleF
+2566 3520 CircleF
+2653 3520 CircleF
+2740 3520 CircleF
+2828 3520 CircleF
+2915 3520 CircleF
+3002 3520 CircleF
+3090 3520 CircleF
+3177 3520 CircleF
+3265 3520 CircleF
+3352 3520 CircleF
+3439 3520 CircleF
+3527 3520 CircleF
+3614 3520 CircleF
+3702 3520 CircleF
+3789 3520 CircleF
+3876 3520 CircleF
+3964 3520 CircleF
+4051 3520 CircleF
+4138 3520 CircleF
+4226 3520 CircleF
+4313 3520 CircleF
+4401 3520 CircleF
+4488 3520 CircleF
+4575 3520 CircleF
+4663 3520 CircleF
+4750 3520 CircleF
+4838 3520 CircleF
+4925 3520 CircleF
+5012 3520 CircleF
+5100 3520 CircleF
+5187 3520 CircleF
+5274 3520 CircleF
+5362 3520 CircleF
+2828 3466 CircleF
+2915 3466 CircleF
+3002 3466 CircleF
+3090 3466 CircleF
+3177 3466 CircleF
+3265 3466 CircleF
+3352 3466 CircleF
+3439 3466 CircleF
+3527 3466 CircleF
+3614 3466 CircleF
+3702 3466 CircleF
+3789 3466 CircleF
+3876 3466 CircleF
+3964 3466 CircleF
+4051 3466 CircleF
+4138 3466 CircleF
+4226 3466 CircleF
+4313 3466 CircleF
+4401 3466 CircleF
+4488 3466 CircleF
+4575 3466 CircleF
+4663 3466 CircleF
+4750 3466 CircleF
+4838 3466 CircleF
+4925 3466 CircleF
+5012 3466 CircleF
+5100 3466 CircleF
+5187 3466 CircleF
+5274 3466 CircleF
+5362 3466 CircleF
+3002 3411 CircleF
+3090 3411 CircleF
+3177 3411 CircleF
+3265 3411 CircleF
+3352 3411 CircleF
+3439 3411 CircleF
+3527 3411 CircleF
+3614 3411 CircleF
+3702 3411 CircleF
+3789 3411 CircleF
+3876 3411 CircleF
+3964 3411 CircleF
+4051 3411 CircleF
+4138 3411 CircleF
+4226 3411 CircleF
+4313 3411 CircleF
+4401 3411 CircleF
+4488 3411 CircleF
+4575 3411 CircleF
+4663 3411 CircleF
+4750 3411 CircleF
+4838 3411 CircleF
+4925 3411 CircleF
+5012 3411 CircleF
+5100 3411 CircleF
+5187 3411 CircleF
+5274 3411 CircleF
+5362 3411 CircleF
+3177 3356 CircleF
+3265 3356 CircleF
+3352 3356 CircleF
+3439 3356 CircleF
+3527 3356 CircleF
+3614 3356 CircleF
+3702 3356 CircleF
+3789 3356 CircleF
+3876 3356 CircleF
+3964 3356 CircleF
+4051 3356 CircleF
+4138 3356 CircleF
+4226 3356 CircleF
+4313 3356 CircleF
+4401 3356 CircleF
+4488 3356 CircleF
+4575 3356 CircleF
+4663 3356 CircleF
+4750 3356 CircleF
+4838 3356 CircleF
+4925 3356 CircleF
+5012 3356 CircleF
+5100 3356 CircleF
+5187 3356 CircleF
+5274 3356 CircleF
+5362 3356 CircleF
+3265 3302 CircleF
+3352 3302 CircleF
+3439 3302 CircleF
+3527 3302 CircleF
+3614 3302 CircleF
+3702 3302 CircleF
+3789 3302 CircleF
+3876 3302 CircleF
+3964 3302 CircleF
+4051 3302 CircleF
+4138 3302 CircleF
+4226 3302 CircleF
+4313 3302 CircleF
+4401 3302 CircleF
+4488 3302 CircleF
+4575 3302 CircleF
+4663 3302 CircleF
+4750 3302 CircleF
+4838 3302 CircleF
+4925 3302 CircleF
+5012 3302 CircleF
+5100 3302 CircleF
+5187 3302 CircleF
+5274 3302 CircleF
+5362 3302 CircleF
+3352 3247 CircleF
+3439 3247 CircleF
+3527 3247 CircleF
+3614 3247 CircleF
+3702 3247 CircleF
+3789 3247 CircleF
+3876 3247 CircleF
+3964 3247 CircleF
+4051 3247 CircleF
+4138 3247 CircleF
+4226 3247 CircleF
+4313 3247 CircleF
+4401 3247 CircleF
+4488 3247 CircleF
+4575 3247 CircleF
+4663 3247 CircleF
+4750 3247 CircleF
+4838 3247 CircleF
+4925 3247 CircleF
+5012 3247 CircleF
+5100 3247 CircleF
+5187 3247 CircleF
+5274 3247 CircleF
+5362 3247 CircleF
+3439 3192 CircleF
+3527 3192 CircleF
+3614 3192 CircleF
+3702 3192 CircleF
+3789 3192 CircleF
+3876 3192 CircleF
+3964 3192 CircleF
+4051 3192 CircleF
+4138 3192 CircleF
+4226 3192 CircleF
+4313 3192 CircleF
+4401 3192 CircleF
+4488 3192 CircleF
+4575 3192 CircleF
+4663 3192 CircleF
+4750 3192 CircleF
+4838 3192 CircleF
+4925 3192 CircleF
+5012 3192 CircleF
+5100 3192 CircleF
+5187 3192 CircleF
+5274 3192 CircleF
+5362 3192 CircleF
+3527 3137 CircleF
+3614 3137 CircleF
+3702 3137 CircleF
+3789 3137 CircleF
+3876 3137 CircleF
+3964 3137 CircleF
+4051 3137 CircleF
+4138 3137 CircleF
+4226 3137 CircleF
+4313 3137 CircleF
+4401 3137 CircleF
+4488 3137 CircleF
+4575 3137 CircleF
+4663 3137 CircleF
+4750 3137 CircleF
+4838 3137 CircleF
+4925 3137 CircleF
+5012 3137 CircleF
+5100 3137 CircleF
+5187 3137 CircleF
+5274 3137 CircleF
+5362 3137 CircleF
+3527 3083 CircleF
+3614 3083 CircleF
+3702 3083 CircleF
+3789 3083 CircleF
+3876 3083 CircleF
+3964 3083 CircleF
+4051 3083 CircleF
+4138 3083 CircleF
+4226 3083 CircleF
+4313 3083 CircleF
+4401 3083 CircleF
+4488 3083 CircleF
+4575 3083 CircleF
+4663 3083 CircleF
+4750 3083 CircleF
+4838 3083 CircleF
+4925 3083 CircleF
+5012 3083 CircleF
+5100 3083 CircleF
+5187 3083 CircleF
+5274 3083 CircleF
+5362 3083 CircleF
+3614 3028 CircleF
+3702 3028 CircleF
+3789 3028 CircleF
+3876 3028 CircleF
+3964 3028 CircleF
+4051 3028 CircleF
+4138 3028 CircleF
+4226 3028 CircleF
+4313 3028 CircleF
+4401 3028 CircleF
+4488 3028 CircleF
+4575 3028 CircleF
+4663 3028 CircleF
+4750 3028 CircleF
+4838 3028 CircleF
+4925 3028 CircleF
+5012 3028 CircleF
+5100 3028 CircleF
+5187 3028 CircleF
+5274 3028 CircleF
+5362 3028 CircleF
+3702 2973 CircleF
+3789 2973 CircleF
+3876 2973 CircleF
+3964 2973 CircleF
+4051 2973 CircleF
+4138 2973 CircleF
+4226 2973 CircleF
+4313 2973 CircleF
+4401 2973 CircleF
+4488 2973 CircleF
+4575 2973 CircleF
+4663 2973 CircleF
+4750 2973 CircleF
+4838 2973 CircleF
+4925 2973 CircleF
+5012 2973 CircleF
+5100 2973 CircleF
+5187 2973 CircleF
+5274 2973 CircleF
+5362 2973 CircleF
+3702 2918 CircleF
+3789 2918 CircleF
+3876 2918 CircleF
+3964 2918 CircleF
+4051 2918 CircleF
+4138 2918 CircleF
+4226 2918 CircleF
+4313 2918 CircleF
+4401 2918 CircleF
+4488 2918 CircleF
+4575 2918 CircleF
+4663 2918 CircleF
+4750 2918 CircleF
+4838 2918 CircleF
+4925 2918 CircleF
+5012 2918 CircleF
+5100 2918 CircleF
+5187 2918 CircleF
+5274 2918 CircleF
+5362 2918 CircleF
+3789 2864 CircleF
+3876 2864 CircleF
+3964 2864 CircleF
+4051 2864 CircleF
+4138 2864 CircleF
+4226 2864 CircleF
+4313 2864 CircleF
+4401 2864 CircleF
+4488 2864 CircleF
+4575 2864 CircleF
+4663 2864 CircleF
+4750 2864 CircleF
+4838 2864 CircleF
+4925 2864 CircleF
+5012 2864 CircleF
+5100 2864 CircleF
+5187 2864 CircleF
+5274 2864 CircleF
+5362 2864 CircleF
+3789 2809 CircleF
+3876 2809 CircleF
+3964 2809 CircleF
+4051 2809 CircleF
+4138 2809 CircleF
+4226 2809 CircleF
+4313 2809 CircleF
+4401 2809 CircleF
+4488 2809 CircleF
+4575 2809 CircleF
+4663 2809 CircleF
+4750 2809 CircleF
+4838 2809 CircleF
+4925 2809 CircleF
+5012 2809 CircleF
+5100 2809 CircleF
+5187 2809 CircleF
+5274 2809 CircleF
+5362 2809 CircleF
+3789 2754 CircleF
+3876 2754 CircleF
+3964 2754 CircleF
+4051 2754 CircleF
+4138 2754 CircleF
+4226 2754 CircleF
+4313 2754 CircleF
+4401 2754 CircleF
+4488 2754 CircleF
+4575 2754 CircleF
+4663 2754 CircleF
+4750 2754 CircleF
+4838 2754 CircleF
+4925 2754 CircleF
+5012 2754 CircleF
+5100 2754 CircleF
+5187 2754 CircleF
+5274 2754 CircleF
+5362 2754 CircleF
+3876 2699 CircleF
+3964 2699 CircleF
+4051 2699 CircleF
+4138 2699 CircleF
+4226 2699 CircleF
+4313 2699 CircleF
+4401 2699 CircleF
+4488 2699 CircleF
+4575 2699 CircleF
+4663 2699 CircleF
+4750 2699 CircleF
+4838 2699 CircleF
+4925 2699 CircleF
+5012 2699 CircleF
+5100 2699 CircleF
+5187 2699 CircleF
+5274 2699 CircleF
+5362 2699 CircleF
+3876 2645 CircleF
+3964 2645 CircleF
+4051 2645 CircleF
+4138 2645 CircleF
+4226 2645 CircleF
+4313 2645 CircleF
+4401 2645 CircleF
+4488 2645 CircleF
+4575 2645 CircleF
+4663 2645 CircleF
+4750 2645 CircleF
+4838 2645 CircleF
+4925 2645 CircleF
+5012 2645 CircleF
+5100 2645 CircleF
+5187 2645 CircleF
+5274 2645 CircleF
+5362 2645 CircleF
+3876 2590 CircleF
+3964 2590 CircleF
+4051 2590 CircleF
+4138 2590 CircleF
+4226 2590 CircleF
+4313 2590 CircleF
+4401 2590 CircleF
+4488 2590 CircleF
+4575 2590 CircleF
+4663 2590 CircleF
+4750 2590 CircleF
+4838 2590 CircleF
+4925 2590 CircleF
+5012 2590 CircleF
+5100 2590 CircleF
+5187 2590 CircleF
+5274 2590 CircleF
+5362 2590 CircleF
+3964 2535 CircleF
+4051 2535 CircleF
+4138 2535 CircleF
+4226 2535 CircleF
+4313 2535 CircleF
+4401 2535 CircleF
+4488 2535 CircleF
+4575 2535 CircleF
+4663 2535 CircleF
+4750 2535 CircleF
+4838 2535 CircleF
+4925 2535 CircleF
+5012 2535 CircleF
+5100 2535 CircleF
+5187 2535 CircleF
+5274 2535 CircleF
+5362 2535 CircleF
+3964 2481 CircleF
+4051 2481 CircleF
+4138 2481 CircleF
+4226 2481 CircleF
+4313 2481 CircleF
+4401 2481 CircleF
+4488 2481 CircleF
+4575 2481 CircleF
+4663 2481 CircleF
+4750 2481 CircleF
+4838 2481 CircleF
+4925 2481 CircleF
+5012 2481 CircleF
+5100 2481 CircleF
+5187 2481 CircleF
+5274 2481 CircleF
+5362 2481 CircleF
+3964 2426 CircleF
+4051 2426 CircleF
+4138 2426 CircleF
+4226 2426 CircleF
+4313 2426 CircleF
+4401 2426 CircleF
+4488 2426 CircleF
+4575 2426 CircleF
+4663 2426 CircleF
+4750 2426 CircleF
+4838 2426 CircleF
+4925 2426 CircleF
+5012 2426 CircleF
+5100 2426 CircleF
+5187 2426 CircleF
+5274 2426 CircleF
+5362 2426 CircleF
+4051 2371 CircleF
+4138 2371 CircleF
+4226 2371 CircleF
+4313 2371 CircleF
+4401 2371 CircleF
+4488 2371 CircleF
+4575 2371 CircleF
+4663 2371 CircleF
+4750 2371 CircleF
+4838 2371 CircleF
+4925 2371 CircleF
+5012 2371 CircleF
+5100 2371 CircleF
+5187 2371 CircleF
+5274 2371 CircleF
+5362 2371 CircleF
+4051 2316 CircleF
+4138 2316 CircleF
+4226 2316 CircleF
+4313 2316 CircleF
+4401 2316 CircleF
+4488 2316 CircleF
+4575 2316 CircleF
+4663 2316 CircleF
+4750 2316 CircleF
+4838 2316 CircleF
+4925 2316 CircleF
+5012 2316 CircleF
+5100 2316 CircleF
+5187 2316 CircleF
+5274 2316 CircleF
+5362 2316 CircleF
+4051 2262 CircleF
+4138 2262 CircleF
+4226 2262 CircleF
+4313 2262 CircleF
+4401 2262 CircleF
+4488 2262 CircleF
+4575 2262 CircleF
+4663 2262 CircleF
+4750 2262 CircleF
+4838 2262 CircleF
+4925 2262 CircleF
+5012 2262 CircleF
+5100 2262 CircleF
+5187 2262 CircleF
+5274 2262 CircleF
+5362 2262 CircleF
+4051 2207 CircleF
+4138 2207 CircleF
+4226 2207 CircleF
+4313 2207 CircleF
+4401 2207 CircleF
+4488 2207 CircleF
+4575 2207 CircleF
+4663 2207 CircleF
+4750 2207 CircleF
+4838 2207 CircleF
+4925 2207 CircleF
+5012 2207 CircleF
+5100 2207 CircleF
+5187 2207 CircleF
+5274 2207 CircleF
+5362 2207 CircleF
+4138 2152 CircleF
+4226 2152 CircleF
+4313 2152 CircleF
+4401 2152 CircleF
+4488 2152 CircleF
+4575 2152 CircleF
+4663 2152 CircleF
+4750 2152 CircleF
+4838 2152 CircleF
+4925 2152 CircleF
+5012 2152 CircleF
+5100 2152 CircleF
+5187 2152 CircleF
+5274 2152 CircleF
+5362 2152 CircleF
+4138 2097 CircleF
+4226 2097 CircleF
+4313 2097 CircleF
+4401 2097 CircleF
+4488 2097 CircleF
+4575 2097 CircleF
+4663 2097 CircleF
+4750 2097 CircleF
+4838 2097 CircleF
+4925 2097 CircleF
+5012 2097 CircleF
+5100 2097 CircleF
+5187 2097 CircleF
+5274 2097 CircleF
+5362 2097 CircleF
+4226 2043 CircleF
+4313 2043 CircleF
+4401 2043 CircleF
+4488 2043 CircleF
+4575 2043 CircleF
+4663 2043 CircleF
+4750 2043 CircleF
+4838 2043 CircleF
+4925 2043 CircleF
+5012 2043 CircleF
+5100 2043 CircleF
+5187 2043 CircleF
+5274 2043 CircleF
+5362 2043 CircleF
+4226 1988 CircleF
+4313 1988 CircleF
+4401 1988 CircleF
+4488 1988 CircleF
+4575 1988 CircleF
+4663 1988 CircleF
+4750 1988 CircleF
+4838 1988 CircleF
+4925 1988 CircleF
+5012 1988 CircleF
+5100 1988 CircleF
+5187 1988 CircleF
+5274 1988 CircleF
+5362 1988 CircleF
+4313 1933 CircleF
+4401 1933 CircleF
+4488 1933 CircleF
+4575 1933 CircleF
+4663 1933 CircleF
+4750 1933 CircleF
+4838 1933 CircleF
+4925 1933 CircleF
+5012 1933 CircleF
+5100 1933 CircleF
+5187 1933 CircleF
+5274 1933 CircleF
+5362 1933 CircleF
+4313 1879 CircleF
+4401 1879 CircleF
+4488 1879 CircleF
+4575 1879 CircleF
+4663 1879 CircleF
+4750 1879 CircleF
+4838 1879 CircleF
+4925 1879 CircleF
+5012 1879 CircleF
+5100 1879 CircleF
+5187 1879 CircleF
+5274 1879 CircleF
+5362 1879 CircleF
+4401 1824 CircleF
+4488 1824 CircleF
+4575 1824 CircleF
+4663 1824 CircleF
+4750 1824 CircleF
+4838 1824 CircleF
+4925 1824 CircleF
+5012 1824 CircleF
+5100 1824 CircleF
+5187 1824 CircleF
+5274 1824 CircleF
+5362 1824 CircleF
+4401 1769 CircleF
+4488 1769 CircleF
+4575 1769 CircleF
+4663 1769 CircleF
+4750 1769 CircleF
+4838 1769 CircleF
+4925 1769 CircleF
+5012 1769 CircleF
+5100 1769 CircleF
+5187 1769 CircleF
+5274 1769 CircleF
+5362 1769 CircleF
+4488 1714 CircleF
+4575 1714 CircleF
+4663 1714 CircleF
+4750 1714 CircleF
+4838 1714 CircleF
+4925 1714 CircleF
+5012 1714 CircleF
+5100 1714 CircleF
+5187 1714 CircleF
+5274 1714 CircleF
+5362 1714 CircleF
+4575 1660 CircleF
+4663 1660 CircleF
+4750 1660 CircleF
+4838 1660 CircleF
+4925 1660 CircleF
+5012 1660 CircleF
+5100 1660 CircleF
+5187 1660 CircleF
+5274 1660 CircleF
+5362 1660 CircleF
+4663 1605 CircleF
+4750 1605 CircleF
+4838 1605 CircleF
+4925 1605 CircleF
+5012 1605 CircleF
+5100 1605 CircleF
+5187 1605 CircleF
+5274 1605 CircleF
+5362 1605 CircleF
+4838 1550 CircleF
+4925 1550 CircleF
+5012 1550 CircleF
+5100 1550 CircleF
+5187 1550 CircleF
+5274 1550 CircleF
+5362 1550 CircleF
+4925 1495 CircleF
+5012 1495 CircleF
+5100 1495 CircleF
+5187 1495 CircleF
+5274 1495 CircleF
+5362 1495 CircleF
+5274 1441 CircleF
+% End plot #1
+% Begin plot #2
+1.000 UP
+1.000 UL
+LTb
+1.00 1.00 0.00 C 1080 3575 CircleF
+1167 3575 CircleF
+1255 3575 CircleF
+1342 3575 CircleF
+1430 3575 CircleF
+1517 3575 CircleF
+1604 3575 CircleF
+1692 3575 CircleF
+1779 3575 CircleF
+1866 3575 CircleF
+1954 3575 CircleF
+1080 3520 CircleF
+1167 3520 CircleF
+1255 3520 CircleF
+1342 3520 CircleF
+1430 3520 CircleF
+1517 3520 CircleF
+1604 3520 CircleF
+1692 3520 CircleF
+1779 3520 CircleF
+1866 3520 CircleF
+1954 3520 CircleF
+2041 3520 CircleF
+2129 3520 CircleF
+2216 3520 CircleF
+2303 3520 CircleF
+2391 3520 CircleF
+2478 3520 CircleF
+1080 3466 CircleF
+1167 3466 CircleF
+1255 3466 CircleF
+1342 3466 CircleF
+1430 3466 CircleF
+1517 3466 CircleF
+1604 3466 CircleF
+1692 3466 CircleF
+1779 3466 CircleF
+1866 3466 CircleF
+1954 3466 CircleF
+2041 3466 CircleF
+2129 3466 CircleF
+2216 3466 CircleF
+2303 3466 CircleF
+2391 3466 CircleF
+2478 3466 CircleF
+2566 3466 CircleF
+2653 3466 CircleF
+2740 3466 CircleF
+1080 3411 CircleF
+1167 3411 CircleF
+1255 3411 CircleF
+1342 3411 CircleF
+1430 3411 CircleF
+1517 3411 CircleF
+1604 3411 CircleF
+1692 3411 CircleF
+1779 3411 CircleF
+1866 3411 CircleF
+1954 3411 CircleF
+2041 3411 CircleF
+2129 3411 CircleF
+2216 3411 CircleF
+2303 3411 CircleF
+2391 3411 CircleF
+2478 3411 CircleF
+2566 3411 CircleF
+2653 3411 CircleF
+2740 3411 CircleF
+2828 3411 CircleF
+2915 3411 CircleF
+1080 3356 CircleF
+1167 3356 CircleF
+1255 3356 CircleF
+1342 3356 CircleF
+1430 3356 CircleF
+1517 3356 CircleF
+1604 3356 CircleF
+1692 3356 CircleF
+1779 3356 CircleF
+1866 3356 CircleF
+1954 3356 CircleF
+2041 3356 CircleF
+2129 3356 CircleF
+2216 3356 CircleF
+2303 3356 CircleF
+2391 3356 CircleF
+2478 3356 CircleF
+2566 3356 CircleF
+2653 3356 CircleF
+2740 3356 CircleF
+2828 3356 CircleF
+2915 3356 CircleF
+3002 3356 CircleF
+3090 3356 CircleF
+1080 3302 CircleF
+1167 3302 CircleF
+1255 3302 CircleF
+1342 3302 CircleF
+1430 3302 CircleF
+1517 3302 CircleF
+1604 3302 CircleF
+1692 3302 CircleF
+1779 3302 CircleF
+1866 3302 CircleF
+1954 3302 CircleF
+2041 3302 CircleF
+2129 3302 CircleF
+2216 3302 CircleF
+2303 3302 CircleF
+2391 3302 CircleF
+2478 3302 CircleF
+2566 3302 CircleF
+2653 3302 CircleF
+2740 3302 CircleF
+2828 3302 CircleF
+2915 3302 CircleF
+3002 3302 CircleF
+3090 3302 CircleF
+3177 3302 CircleF
+1080 3247 CircleF
+1167 3247 CircleF
+1255 3247 CircleF
+1342 3247 CircleF
+1430 3247 CircleF
+1517 3247 CircleF
+1604 3247 CircleF
+1692 3247 CircleF
+1779 3247 CircleF
+1866 3247 CircleF
+1954 3247 CircleF
+2041 3247 CircleF
+2129 3247 CircleF
+2216 3247 CircleF
+2303 3247 CircleF
+2391 3247 CircleF
+2478 3247 CircleF
+2566 3247 CircleF
+2653 3247 CircleF
+2740 3247 CircleF
+2828 3247 CircleF
+2915 3247 CircleF
+3002 3247 CircleF
+3090 3247 CircleF
+3177 3247 CircleF
+3265 3247 CircleF
+1080 3192 CircleF
+1167 3192 CircleF
+1255 3192 CircleF
+1342 3192 CircleF
+1430 3192 CircleF
+1517 3192 CircleF
+1604 3192 CircleF
+1692 3192 CircleF
+1779 3192 CircleF
+1866 3192 CircleF
+1954 3192 CircleF
+2041 3192 CircleF
+2129 3192 CircleF
+2216 3192 CircleF
+2303 3192 CircleF
+2391 3192 CircleF
+2478 3192 CircleF
+2566 3192 CircleF
+2653 3192 CircleF
+2740 3192 CircleF
+2828 3192 CircleF
+2915 3192 CircleF
+3002 3192 CircleF
+3090 3192 CircleF
+3177 3192 CircleF
+3265 3192 CircleF
+3352 3192 CircleF
+1080 3137 CircleF
+1167 3137 CircleF
+1255 3137 CircleF
+1342 3137 CircleF
+1430 3137 CircleF
+1517 3137 CircleF
+1604 3137 CircleF
+1692 3137 CircleF
+1779 3137 CircleF
+1866 3137 CircleF
+1954 3137 CircleF
+2041 3137 CircleF
+2129 3137 CircleF
+2216 3137 CircleF
+2303 3137 CircleF
+2391 3137 CircleF
+2478 3137 CircleF
+2566 3137 CircleF
+2653 3137 CircleF
+2740 3137 CircleF
+2828 3137 CircleF
+2915 3137 CircleF
+3002 3137 CircleF
+3090 3137 CircleF
+3177 3137 CircleF
+3265 3137 CircleF
+3352 3137 CircleF
+3439 3137 CircleF
+1080 3083 CircleF
+1167 3083 CircleF
+1255 3083 CircleF
+1342 3083 CircleF
+1430 3083 CircleF
+1517 3083 CircleF
+1604 3083 CircleF
+1692 3083 CircleF
+1779 3083 CircleF
+1866 3083 CircleF
+1954 3083 CircleF
+2041 3083 CircleF
+2129 3083 CircleF
+2216 3083 CircleF
+2303 3083 CircleF
+2391 3083 CircleF
+2478 3083 CircleF
+2566 3083 CircleF
+2653 3083 CircleF
+2740 3083 CircleF
+2828 3083 CircleF
+2915 3083 CircleF
+3002 3083 CircleF
+3090 3083 CircleF
+3177 3083 CircleF
+3265 3083 CircleF
+3352 3083 CircleF
+3439 3083 CircleF
+1080 3028 CircleF
+1167 3028 CircleF
+1255 3028 CircleF
+1342 3028 CircleF
+1430 3028 CircleF
+1517 3028 CircleF
+1604 3028 CircleF
+1692 3028 CircleF
+1779 3028 CircleF
+1866 3028 CircleF
+1954 3028 CircleF
+2041 3028 CircleF
+2129 3028 CircleF
+2216 3028 CircleF
+2303 3028 CircleF
+2391 3028 CircleF
+2478 3028 CircleF
+2566 3028 CircleF
+2653 3028 CircleF
+2740 3028 CircleF
+2828 3028 CircleF
+2915 3028 CircleF
+3002 3028 CircleF
+3090 3028 CircleF
+3177 3028 CircleF
+3265 3028 CircleF
+3352 3028 CircleF
+3439 3028 CircleF
+3527 3028 CircleF
+1080 2973 CircleF
+1167 2973 CircleF
+1255 2973 CircleF
+1342 2973 CircleF
+1430 2973 CircleF
+1517 2973 CircleF
+1604 2973 CircleF
+1692 2973 CircleF
+1779 2973 CircleF
+1866 2973 CircleF
+1954 2973 CircleF
+2041 2973 CircleF
+2129 2973 CircleF
+2216 2973 CircleF
+2303 2973 CircleF
+2391 2973 CircleF
+2478 2973 CircleF
+2566 2973 CircleF
+2653 2973 CircleF
+2740 2973 CircleF
+2828 2973 CircleF
+2915 2973 CircleF
+3002 2973 CircleF
+3090 2973 CircleF
+3177 2973 CircleF
+3265 2973 CircleF
+3352 2973 CircleF
+3439 2973 CircleF
+3527 2973 CircleF
+3614 2973 CircleF
+1080 2918 CircleF
+1167 2918 CircleF
+1255 2918 CircleF
+1342 2918 CircleF
+1430 2918 CircleF
+1517 2918 CircleF
+1604 2918 CircleF
+1692 2918 CircleF
+1779 2918 CircleF
+1866 2918 CircleF
+1954 2918 CircleF
+2041 2918 CircleF
+2129 2918 CircleF
+2216 2918 CircleF
+2303 2918 CircleF
+2391 2918 CircleF
+2478 2918 CircleF
+2566 2918 CircleF
+2653 2918 CircleF
+2740 2918 CircleF
+2828 2918 CircleF
+2915 2918 CircleF
+3002 2918 CircleF
+3090 2918 CircleF
+3177 2918 CircleF
+3265 2918 CircleF
+3352 2918 CircleF
+3439 2918 CircleF
+3527 2918 CircleF
+3614 2918 CircleF
+1080 2864 CircleF
+1167 2864 CircleF
+1255 2864 CircleF
+1342 2864 CircleF
+1430 2864 CircleF
+1517 2864 CircleF
+1604 2864 CircleF
+1692 2864 CircleF
+1779 2864 CircleF
+1866 2864 CircleF
+1954 2864 CircleF
+2041 2864 CircleF
+2129 2864 CircleF
+2216 2864 CircleF
+2303 2864 CircleF
+2391 2864 CircleF
+2478 2864 CircleF
+2566 2864 CircleF
+2653 2864 CircleF
+2740 2864 CircleF
+2828 2864 CircleF
+2915 2864 CircleF
+3002 2864 CircleF
+3090 2864 CircleF
+3177 2864 CircleF
+3265 2864 CircleF
+3352 2864 CircleF
+3439 2864 CircleF
+3527 2864 CircleF
+3614 2864 CircleF
+3702 2864 CircleF
+1080 2809 CircleF
+1167 2809 CircleF
+1255 2809 CircleF
+1342 2809 CircleF
+1430 2809 CircleF
+1517 2809 CircleF
+1604 2809 CircleF
+1692 2809 CircleF
+1779 2809 CircleF
+1866 2809 CircleF
+1954 2809 CircleF
+2041 2809 CircleF
+2129 2809 CircleF
+2216 2809 CircleF
+2303 2809 CircleF
+2391 2809 CircleF
+2478 2809 CircleF
+2566 2809 CircleF
+2653 2809 CircleF
+2740 2809 CircleF
+2828 2809 CircleF
+2915 2809 CircleF
+3002 2809 CircleF
+3090 2809 CircleF
+3177 2809 CircleF
+3265 2809 CircleF
+3352 2809 CircleF
+3439 2809 CircleF
+3527 2809 CircleF
+3614 2809 CircleF
+3702 2809 CircleF
+1080 2754 CircleF
+1167 2754 CircleF
+1255 2754 CircleF
+1342 2754 CircleF
+1430 2754 CircleF
+1517 2754 CircleF
+1604 2754 CircleF
+1692 2754 CircleF
+1779 2754 CircleF
+1866 2754 CircleF
+1954 2754 CircleF
+2041 2754 CircleF
+2129 2754 CircleF
+2216 2754 CircleF
+2303 2754 CircleF
+2391 2754 CircleF
+2478 2754 CircleF
+2566 2754 CircleF
+2653 2754 CircleF
+2740 2754 CircleF
+2828 2754 CircleF
+2915 2754 CircleF
+3002 2754 CircleF
+3090 2754 CircleF
+3177 2754 CircleF
+3265 2754 CircleF
+3352 2754 CircleF
+3439 2754 CircleF
+3527 2754 CircleF
+3614 2754 CircleF
+3702 2754 CircleF
+1080 2699 CircleF
+1167 2699 CircleF
+1255 2699 CircleF
+1342 2699 CircleF
+1430 2699 CircleF
+1517 2699 CircleF
+1604 2699 CircleF
+1692 2699 CircleF
+1779 2699 CircleF
+1866 2699 CircleF
+1954 2699 CircleF
+2041 2699 CircleF
+2129 2699 CircleF
+2216 2699 CircleF
+2303 2699 CircleF
+2391 2699 CircleF
+2478 2699 CircleF
+2566 2699 CircleF
+2653 2699 CircleF
+2740 2699 CircleF
+2828 2699 CircleF
+2915 2699 CircleF
+3002 2699 CircleF
+3090 2699 CircleF
+3177 2699 CircleF
+3265 2699 CircleF
+3352 2699 CircleF
+3439 2699 CircleF
+3527 2699 CircleF
+3614 2699 CircleF
+3702 2699 CircleF
+3789 2699 CircleF
+1080 2645 CircleF
+1167 2645 CircleF
+1255 2645 CircleF
+1342 2645 CircleF
+1430 2645 CircleF
+1517 2645 CircleF
+1604 2645 CircleF
+1692 2645 CircleF
+1779 2645 CircleF
+1866 2645 CircleF
+1954 2645 CircleF
+2041 2645 CircleF
+2129 2645 CircleF
+2216 2645 CircleF
+2303 2645 CircleF
+2391 2645 CircleF
+2478 2645 CircleF
+2566 2645 CircleF
+2653 2645 CircleF
+2740 2645 CircleF
+2828 2645 CircleF
+2915 2645 CircleF
+3002 2645 CircleF
+3090 2645 CircleF
+3177 2645 CircleF
+3265 2645 CircleF
+3352 2645 CircleF
+3439 2645 CircleF
+3527 2645 CircleF
+3614 2645 CircleF
+3702 2645 CircleF
+3789 2645 CircleF
+1080 2590 CircleF
+1167 2590 CircleF
+1255 2590 CircleF
+1342 2590 CircleF
+1430 2590 CircleF
+1517 2590 CircleF
+1604 2590 CircleF
+1692 2590 CircleF
+1779 2590 CircleF
+1866 2590 CircleF
+1954 2590 CircleF
+2041 2590 CircleF
+2129 2590 CircleF
+2216 2590 CircleF
+2303 2590 CircleF
+2391 2590 CircleF
+2478 2590 CircleF
+2566 2590 CircleF
+2653 2590 CircleF
+2740 2590 CircleF
+2828 2590 CircleF
+2915 2590 CircleF
+3002 2590 CircleF
+3090 2590 CircleF
+3177 2590 CircleF
+3265 2590 CircleF
+3352 2590 CircleF
+3439 2590 CircleF
+3527 2590 CircleF
+3614 2590 CircleF
+3702 2590 CircleF
+3789 2590 CircleF
+1080 2535 CircleF
+1167 2535 CircleF
+1255 2535 CircleF
+1342 2535 CircleF
+1430 2535 CircleF
+1517 2535 CircleF
+1604 2535 CircleF
+1692 2535 CircleF
+1779 2535 CircleF
+1866 2535 CircleF
+1954 2535 CircleF
+2041 2535 CircleF
+2129 2535 CircleF
+2216 2535 CircleF
+2303 2535 CircleF
+2391 2535 CircleF
+2478 2535 CircleF
+2566 2535 CircleF
+2653 2535 CircleF
+2740 2535 CircleF
+2828 2535 CircleF
+2915 2535 CircleF
+3002 2535 CircleF
+3090 2535 CircleF
+3177 2535 CircleF
+3265 2535 CircleF
+3352 2535 CircleF
+3439 2535 CircleF
+3527 2535 CircleF
+3614 2535 CircleF
+3702 2535 CircleF
+3789 2535 CircleF
+3876 2535 CircleF
+1080 2481 CircleF
+1167 2481 CircleF
+1255 2481 CircleF
+1342 2481 CircleF
+1430 2481 CircleF
+1517 2481 CircleF
+1604 2481 CircleF
+1692 2481 CircleF
+1779 2481 CircleF
+1866 2481 CircleF
+1954 2481 CircleF
+2041 2481 CircleF
+2129 2481 CircleF
+2216 2481 CircleF
+2303 2481 CircleF
+2391 2481 CircleF
+2478 2481 CircleF
+2566 2481 CircleF
+2653 2481 CircleF
+2740 2481 CircleF
+2828 2481 CircleF
+2915 2481 CircleF
+3002 2481 CircleF
+3090 2481 CircleF
+3177 2481 CircleF
+3265 2481 CircleF
+3352 2481 CircleF
+3439 2481 CircleF
+3527 2481 CircleF
+3614 2481 CircleF
+3702 2481 CircleF
+3789 2481 CircleF
+3876 2481 CircleF
+1080 2426 CircleF
+1167 2426 CircleF
+1255 2426 CircleF
+1342 2426 CircleF
+1430 2426 CircleF
+1517 2426 CircleF
+1604 2426 CircleF
+1692 2426 CircleF
+1779 2426 CircleF
+1866 2426 CircleF
+1954 2426 CircleF
+2041 2426 CircleF
+2129 2426 CircleF
+2216 2426 CircleF
+2303 2426 CircleF
+2391 2426 CircleF
+2478 2426 CircleF
+2566 2426 CircleF
+2653 2426 CircleF
+2740 2426 CircleF
+2828 2426 CircleF
+2915 2426 CircleF
+3002 2426 CircleF
+3090 2426 CircleF
+3177 2426 CircleF
+3265 2426 CircleF
+3352 2426 CircleF
+3439 2426 CircleF
+3527 2426 CircleF
+3614 2426 CircleF
+3702 2426 CircleF
+3789 2426 CircleF
+3876 2426 CircleF
+1080 2371 CircleF
+1167 2371 CircleF
+1255 2371 CircleF
+1342 2371 CircleF
+1430 2371 CircleF
+1517 2371 CircleF
+1604 2371 CircleF
+1692 2371 CircleF
+1779 2371 CircleF
+1866 2371 CircleF
+1954 2371 CircleF
+2041 2371 CircleF
+2129 2371 CircleF
+2216 2371 CircleF
+2303 2371 CircleF
+2391 2371 CircleF
+2478 2371 CircleF
+2566 2371 CircleF
+2653 2371 CircleF
+2740 2371 CircleF
+2828 2371 CircleF
+2915 2371 CircleF
+3002 2371 CircleF
+3090 2371 CircleF
+3177 2371 CircleF
+3265 2371 CircleF
+3352 2371 CircleF
+3439 2371 CircleF
+3527 2371 CircleF
+3614 2371 CircleF
+3702 2371 CircleF
+3789 2371 CircleF
+3876 2371 CircleF
+3964 2371 CircleF
+1080 2316 CircleF
+1167 2316 CircleF
+1255 2316 CircleF
+1342 2316 CircleF
+1430 2316 CircleF
+1517 2316 CircleF
+1604 2316 CircleF
+1692 2316 CircleF
+1779 2316 CircleF
+1866 2316 CircleF
+1954 2316 CircleF
+2041 2316 CircleF
+2129 2316 CircleF
+2216 2316 CircleF
+2303 2316 CircleF
+2391 2316 CircleF
+2478 2316 CircleF
+2566 2316 CircleF
+2653 2316 CircleF
+2740 2316 CircleF
+2828 2316 CircleF
+2915 2316 CircleF
+3002 2316 CircleF
+3090 2316 CircleF
+3177 2316 CircleF
+3265 2316 CircleF
+3352 2316 CircleF
+3439 2316 CircleF
+3527 2316 CircleF
+3614 2316 CircleF
+3702 2316 CircleF
+3789 2316 CircleF
+3876 2316 CircleF
+3964 2316 CircleF
+1080 2262 CircleF
+1167 2262 CircleF
+1255 2262 CircleF
+1342 2262 CircleF
+1430 2262 CircleF
+1517 2262 CircleF
+1604 2262 CircleF
+1692 2262 CircleF
+1779 2262 CircleF
+1866 2262 CircleF
+1954 2262 CircleF
+2041 2262 CircleF
+2129 2262 CircleF
+2216 2262 CircleF
+2303 2262 CircleF
+2391 2262 CircleF
+2478 2262 CircleF
+2566 2262 CircleF
+2653 2262 CircleF
+2740 2262 CircleF
+2828 2262 CircleF
+2915 2262 CircleF
+3002 2262 CircleF
+3090 2262 CircleF
+3177 2262 CircleF
+3265 2262 CircleF
+3352 2262 CircleF
+3439 2262 CircleF
+3527 2262 CircleF
+3614 2262 CircleF
+3702 2262 CircleF
+3789 2262 CircleF
+3876 2262 CircleF
+3964 2262 CircleF
+1080 2207 CircleF
+1167 2207 CircleF
+1255 2207 CircleF
+1342 2207 CircleF
+1430 2207 CircleF
+1517 2207 CircleF
+1604 2207 CircleF
+1692 2207 CircleF
+1779 2207 CircleF
+1866 2207 CircleF
+1954 2207 CircleF
+2041 2207 CircleF
+2129 2207 CircleF
+2216 2207 CircleF
+2303 2207 CircleF
+2391 2207 CircleF
+2478 2207 CircleF
+2566 2207 CircleF
+2653 2207 CircleF
+2740 2207 CircleF
+2828 2207 CircleF
+2915 2207 CircleF
+3002 2207 CircleF
+3090 2207 CircleF
+3177 2207 CircleF
+3265 2207 CircleF
+3352 2207 CircleF
+3439 2207 CircleF
+3527 2207 CircleF
+3614 2207 CircleF
+3702 2207 CircleF
+3789 2207 CircleF
+3876 2207 CircleF
+3964 2207 CircleF
+1080 2152 CircleF
+1167 2152 CircleF
+1255 2152 CircleF
+1342 2152 CircleF
+1430 2152 CircleF
+1517 2152 CircleF
+1604 2152 CircleF
+1692 2152 CircleF
+1779 2152 CircleF
+1866 2152 CircleF
+1954 2152 CircleF
+2041 2152 CircleF
+2129 2152 CircleF
+2216 2152 CircleF
+2303 2152 CircleF
+2391 2152 CircleF
+2478 2152 CircleF
+2566 2152 CircleF
+2653 2152 CircleF
+2740 2152 CircleF
+2828 2152 CircleF
+2915 2152 CircleF
+3002 2152 CircleF
+3090 2152 CircleF
+3177 2152 CircleF
+3265 2152 CircleF
+3352 2152 CircleF
+3439 2152 CircleF
+3527 2152 CircleF
+3614 2152 CircleF
+3702 2152 CircleF
+3789 2152 CircleF
+3876 2152 CircleF
+3964 2152 CircleF
+4051 2152 CircleF
+1080 2097 CircleF
+1167 2097 CircleF
+1255 2097 CircleF
+1342 2097 CircleF
+1430 2097 CircleF
+1517 2097 CircleF
+1604 2097 CircleF
+1692 2097 CircleF
+1779 2097 CircleF
+1866 2097 CircleF
+1954 2097 CircleF
+2041 2097 CircleF
+2129 2097 CircleF
+2216 2097 CircleF
+2303 2097 CircleF
+2391 2097 CircleF
+2478 2097 CircleF
+2566 2097 CircleF
+2653 2097 CircleF
+2740 2097 CircleF
+2828 2097 CircleF
+2915 2097 CircleF
+3002 2097 CircleF
+3090 2097 CircleF
+3177 2097 CircleF
+3265 2097 CircleF
+3352 2097 CircleF
+3439 2097 CircleF
+3527 2097 CircleF
+3614 2097 CircleF
+3702 2097 CircleF
+3789 2097 CircleF
+3876 2097 CircleF
+3964 2097 CircleF
+4051 2097 CircleF
+1080 2043 CircleF
+1167 2043 CircleF
+1255 2043 CircleF
+1342 2043 CircleF
+1430 2043 CircleF
+1517 2043 CircleF
+1604 2043 CircleF
+1692 2043 CircleF
+1779 2043 CircleF
+1866 2043 CircleF
+1954 2043 CircleF
+2041 2043 CircleF
+2129 2043 CircleF
+2216 2043 CircleF
+2303 2043 CircleF
+2391 2043 CircleF
+2478 2043 CircleF
+2566 2043 CircleF
+2653 2043 CircleF
+2740 2043 CircleF
+2828 2043 CircleF
+2915 2043 CircleF
+3002 2043 CircleF
+3090 2043 CircleF
+3177 2043 CircleF
+3265 2043 CircleF
+3352 2043 CircleF
+3439 2043 CircleF
+3527 2043 CircleF
+3614 2043 CircleF
+3702 2043 CircleF
+3789 2043 CircleF
+3876 2043 CircleF
+3964 2043 CircleF
+4051 2043 CircleF
+4138 2043 CircleF
+1080 1988 CircleF
+1167 1988 CircleF
+1255 1988 CircleF
+1342 1988 CircleF
+1430 1988 CircleF
+1517 1988 CircleF
+1604 1988 CircleF
+1692 1988 CircleF
+1779 1988 CircleF
+1866 1988 CircleF
+1954 1988 CircleF
+2041 1988 CircleF
+2129 1988 CircleF
+2216 1988 CircleF
+2303 1988 CircleF
+2391 1988 CircleF
+2478 1988 CircleF
+2566 1988 CircleF
+2653 1988 CircleF
+2740 1988 CircleF
+2828 1988 CircleF
+2915 1988 CircleF
+3002 1988 CircleF
+3090 1988 CircleF
+3177 1988 CircleF
+3265 1988 CircleF
+3352 1988 CircleF
+3439 1988 CircleF
+3527 1988 CircleF
+3614 1988 CircleF
+3702 1988 CircleF
+3789 1988 CircleF
+3876 1988 CircleF
+3964 1988 CircleF
+4051 1988 CircleF
+4138 1988 CircleF
+1080 1933 CircleF
+1167 1933 CircleF
+1255 1933 CircleF
+1342 1933 CircleF
+1430 1933 CircleF
+1517 1933 CircleF
+1604 1933 CircleF
+1692 1933 CircleF
+1779 1933 CircleF
+1866 1933 CircleF
+1954 1933 CircleF
+2041 1933 CircleF
+2129 1933 CircleF
+2216 1933 CircleF
+2303 1933 CircleF
+2391 1933 CircleF
+2478 1933 CircleF
+2566 1933 CircleF
+2653 1933 CircleF
+2740 1933 CircleF
+2828 1933 CircleF
+2915 1933 CircleF
+3002 1933 CircleF
+3090 1933 CircleF
+3177 1933 CircleF
+3265 1933 CircleF
+3352 1933 CircleF
+3439 1933 CircleF
+3527 1933 CircleF
+3614 1933 CircleF
+3702 1933 CircleF
+3789 1933 CircleF
+3876 1933 CircleF
+3964 1933 CircleF
+4051 1933 CircleF
+4138 1933 CircleF
+4226 1933 CircleF
+1080 1879 CircleF
+1167 1879 CircleF
+1255 1879 CircleF
+1342 1879 CircleF
+1430 1879 CircleF
+1517 1879 CircleF
+1604 1879 CircleF
+1692 1879 CircleF
+1779 1879 CircleF
+1866 1879 CircleF
+1954 1879 CircleF
+2041 1879 CircleF
+2129 1879 CircleF
+2216 1879 CircleF
+2303 1879 CircleF
+2391 1879 CircleF
+2478 1879 CircleF
+2566 1879 CircleF
+2653 1879 CircleF
+2740 1879 CircleF
+2828 1879 CircleF
+2915 1879 CircleF
+3002 1879 CircleF
+3090 1879 CircleF
+3177 1879 CircleF
+3265 1879 CircleF
+3352 1879 CircleF
+3439 1879 CircleF
+3527 1879 CircleF
+3614 1879 CircleF
+3702 1879 CircleF
+3789 1879 CircleF
+3876 1879 CircleF
+3964 1879 CircleF
+4051 1879 CircleF
+4138 1879 CircleF
+4226 1879 CircleF
+1080 1824 CircleF
+1167 1824 CircleF
+1255 1824 CircleF
+1342 1824 CircleF
+1430 1824 CircleF
+1517 1824 CircleF
+1604 1824 CircleF
+1692 1824 CircleF
+1779 1824 CircleF
+1866 1824 CircleF
+1954 1824 CircleF
+2041 1824 CircleF
+2129 1824 CircleF
+2216 1824 CircleF
+2303 1824 CircleF
+2391 1824 CircleF
+2478 1824 CircleF
+2566 1824 CircleF
+2653 1824 CircleF
+2740 1824 CircleF
+2828 1824 CircleF
+2915 1824 CircleF
+3002 1824 CircleF
+3090 1824 CircleF
+3177 1824 CircleF
+3265 1824 CircleF
+3352 1824 CircleF
+3439 1824 CircleF
+3527 1824 CircleF
+3614 1824 CircleF
+3702 1824 CircleF
+3789 1824 CircleF
+3876 1824 CircleF
+3964 1824 CircleF
+4051 1824 CircleF
+4138 1824 CircleF
+4226 1824 CircleF
+4313 1824 CircleF
+1080 1769 CircleF
+1167 1769 CircleF
+1255 1769 CircleF
+1342 1769 CircleF
+1430 1769 CircleF
+1517 1769 CircleF
+1604 1769 CircleF
+1692 1769 CircleF
+1779 1769 CircleF
+1866 1769 CircleF
+1954 1769 CircleF
+2041 1769 CircleF
+2129 1769 CircleF
+2216 1769 CircleF
+2303 1769 CircleF
+2391 1769 CircleF
+2478 1769 CircleF
+2566 1769 CircleF
+2653 1769 CircleF
+2740 1769 CircleF
+2828 1769 CircleF
+2915 1769 CircleF
+3002 1769 CircleF
+3090 1769 CircleF
+3177 1769 CircleF
+3265 1769 CircleF
+3352 1769 CircleF
+3439 1769 CircleF
+3527 1769 CircleF
+3614 1769 CircleF
+3702 1769 CircleF
+3789 1769 CircleF
+3876 1769 CircleF
+3964 1769 CircleF
+4051 1769 CircleF
+4138 1769 CircleF
+4226 1769 CircleF
+4313 1769 CircleF
+1080 1714 CircleF
+1167 1714 CircleF
+1255 1714 CircleF
+1342 1714 CircleF
+1430 1714 CircleF
+1517 1714 CircleF
+1604 1714 CircleF
+1692 1714 CircleF
+1779 1714 CircleF
+1866 1714 CircleF
+1954 1714 CircleF
+2041 1714 CircleF
+2129 1714 CircleF
+2216 1714 CircleF
+2303 1714 CircleF
+2391 1714 CircleF
+2478 1714 CircleF
+2566 1714 CircleF
+2653 1714 CircleF
+2740 1714 CircleF
+2828 1714 CircleF
+2915 1714 CircleF
+3002 1714 CircleF
+3090 1714 CircleF
+3177 1714 CircleF
+3265 1714 CircleF
+3352 1714 CircleF
+3439 1714 CircleF
+3527 1714 CircleF
+3614 1714 CircleF
+3702 1714 CircleF
+3789 1714 CircleF
+3876 1714 CircleF
+3964 1714 CircleF
+4051 1714 CircleF
+4138 1714 CircleF
+4226 1714 CircleF
+4313 1714 CircleF
+4401 1714 CircleF
+1080 1660 CircleF
+1167 1660 CircleF
+1255 1660 CircleF
+1342 1660 CircleF
+1430 1660 CircleF
+1517 1660 CircleF
+1604 1660 CircleF
+1692 1660 CircleF
+1779 1660 CircleF
+1866 1660 CircleF
+1954 1660 CircleF
+2041 1660 CircleF
+2129 1660 CircleF
+2216 1660 CircleF
+2303 1660 CircleF
+2391 1660 CircleF
+2478 1660 CircleF
+2566 1660 CircleF
+2653 1660 CircleF
+2740 1660 CircleF
+2828 1660 CircleF
+2915 1660 CircleF
+3002 1660 CircleF
+3090 1660 CircleF
+3177 1660 CircleF
+3265 1660 CircleF
+3352 1660 CircleF
+3439 1660 CircleF
+3527 1660 CircleF
+3614 1660 CircleF
+3702 1660 CircleF
+3789 1660 CircleF
+3876 1660 CircleF
+3964 1660 CircleF
+4051 1660 CircleF
+4138 1660 CircleF
+4226 1660 CircleF
+4313 1660 CircleF
+4401 1660 CircleF
+4488 1660 CircleF
+1080 1605 CircleF
+1167 1605 CircleF
+1255 1605 CircleF
+1342 1605 CircleF
+1430 1605 CircleF
+1517 1605 CircleF
+1604 1605 CircleF
+1692 1605 CircleF
+1779 1605 CircleF
+1866 1605 CircleF
+1954 1605 CircleF
+2041 1605 CircleF
+2129 1605 CircleF
+2216 1605 CircleF
+2303 1605 CircleF
+2391 1605 CircleF
+2478 1605 CircleF
+2566 1605 CircleF
+2653 1605 CircleF
+2740 1605 CircleF
+2828 1605 CircleF
+2915 1605 CircleF
+3002 1605 CircleF
+3090 1605 CircleF
+3177 1605 CircleF
+3265 1605 CircleF
+3352 1605 CircleF
+3439 1605 CircleF
+3527 1605 CircleF
+3614 1605 CircleF
+3702 1605 CircleF
+3789 1605 CircleF
+3876 1605 CircleF
+3964 1605 CircleF
+4051 1605 CircleF
+4138 1605 CircleF
+4226 1605 CircleF
+4313 1605 CircleF
+4401 1605 CircleF
+4488 1605 CircleF
+4575 1605 CircleF
+1080 1550 CircleF
+1167 1550 CircleF
+1255 1550 CircleF
+1342 1550 CircleF
+1430 1550 CircleF
+1517 1550 CircleF
+1604 1550 CircleF
+1692 1550 CircleF
+1779 1550 CircleF
+1866 1550 CircleF
+1954 1550 CircleF
+2041 1550 CircleF
+2129 1550 CircleF
+2216 1550 CircleF
+2303 1550 CircleF
+2391 1550 CircleF
+2478 1550 CircleF
+2566 1550 CircleF
+2653 1550 CircleF
+2740 1550 CircleF
+2828 1550 CircleF
+2915 1550 CircleF
+3002 1550 CircleF
+3090 1550 CircleF
+3177 1550 CircleF
+3265 1550 CircleF
+3352 1550 CircleF
+3439 1550 CircleF
+3527 1550 CircleF
+3614 1550 CircleF
+3702 1550 CircleF
+3789 1550 CircleF
+3876 1550 CircleF
+3964 1550 CircleF
+4051 1550 CircleF
+4138 1550 CircleF
+4226 1550 CircleF
+4313 1550 CircleF
+4401 1550 CircleF
+4488 1550 CircleF
+4575 1550 CircleF
+4663 1550 CircleF
+4750 1550 CircleF
+1080 1495 CircleF
+1167 1495 CircleF
+1255 1495 CircleF
+1342 1495 CircleF
+1430 1495 CircleF
+1517 1495 CircleF
+1604 1495 CircleF
+1692 1495 CircleF
+1779 1495 CircleF
+1866 1495 CircleF
+1954 1495 CircleF
+2041 1495 CircleF
+2129 1495 CircleF
+2216 1495 CircleF
+2303 1495 CircleF
+2391 1495 CircleF
+2478 1495 CircleF
+2566 1495 CircleF
+2653 1495 CircleF
+2740 1495 CircleF
+2828 1495 CircleF
+2915 1495 CircleF
+3002 1495 CircleF
+3090 1495 CircleF
+3177 1495 CircleF
+3265 1495 CircleF
+3352 1495 CircleF
+3439 1495 CircleF
+3527 1495 CircleF
+3614 1495 CircleF
+3702 1495 CircleF
+3789 1495 CircleF
+3876 1495 CircleF
+3964 1495 CircleF
+4051 1495 CircleF
+4138 1495 CircleF
+4226 1495 CircleF
+4313 1495 CircleF
+4401 1495 CircleF
+4488 1495 CircleF
+4575 1495 CircleF
+4663 1495 CircleF
+4750 1495 CircleF
+4838 1495 CircleF
+1080 1441 CircleF
+1167 1441 CircleF
+1255 1441 CircleF
+1342 1441 CircleF
+1430 1441 CircleF
+1517 1441 CircleF
+1604 1441 CircleF
+1692 1441 CircleF
+1779 1441 CircleF
+1866 1441 CircleF
+1954 1441 CircleF
+2041 1441 CircleF
+2129 1441 CircleF
+2216 1441 CircleF
+2303 1441 CircleF
+2391 1441 CircleF
+2478 1441 CircleF
+2566 1441 CircleF
+2653 1441 CircleF
+2740 1441 CircleF
+2828 1441 CircleF
+2915 1441 CircleF
+3002 1441 CircleF
+3090 1441 CircleF
+3177 1441 CircleF
+3265 1441 CircleF
+3352 1441 CircleF
+3439 1441 CircleF
+3527 1441 CircleF
+3614 1441 CircleF
+3702 1441 CircleF
+3789 1441 CircleF
+3876 1441 CircleF
+3964 1441 CircleF
+4051 1441 CircleF
+4138 1441 CircleF
+4226 1441 CircleF
+4313 1441 CircleF
+4401 1441 CircleF
+4488 1441 CircleF
+4575 1441 CircleF
+4663 1441 CircleF
+4750 1441 CircleF
+4838 1441 CircleF
+4925 1441 CircleF
+5012 1441 CircleF
+5100 1441 CircleF
+5187 1441 CircleF
+5362 1441 CircleF
+1080 1386 CircleF
+1167 1386 CircleF
+1255 1386 CircleF
+1342 1386 CircleF
+1430 1386 CircleF
+1517 1386 CircleF
+1604 1386 CircleF
+1692 1386 CircleF
+1779 1386 CircleF
+1866 1386 CircleF
+1954 1386 CircleF
+2041 1386 CircleF
+2129 1386 CircleF
+2216 1386 CircleF
+2303 1386 CircleF
+2391 1386 CircleF
+2478 1386 CircleF
+2566 1386 CircleF
+2653 1386 CircleF
+2740 1386 CircleF
+2828 1386 CircleF
+2915 1386 CircleF
+3002 1386 CircleF
+3090 1386 CircleF
+3177 1386 CircleF
+3265 1386 CircleF
+3352 1386 CircleF
+3439 1386 CircleF
+3527 1386 CircleF
+3614 1386 CircleF
+3702 1386 CircleF
+3789 1386 CircleF
+3876 1386 CircleF
+3964 1386 CircleF
+4051 1386 CircleF
+4138 1386 CircleF
+4226 1386 CircleF
+4313 1386 CircleF
+4401 1386 CircleF
+4488 1386 CircleF
+4575 1386 CircleF
+4663 1386 CircleF
+4750 1386 CircleF
+4838 1386 CircleF
+1080 1331 CircleF
+1167 1331 CircleF
+1255 1331 CircleF
+1342 1331 CircleF
+1430 1331 CircleF
+1517 1331 CircleF
+1604 1331 CircleF
+1692 1331 CircleF
+1779 1331 CircleF
+1866 1331 CircleF
+1954 1331 CircleF
+2041 1331 CircleF
+2129 1331 CircleF
+2216 1331 CircleF
+2303 1331 CircleF
+2391 1331 CircleF
+2478 1331 CircleF
+2566 1331 CircleF
+2653 1331 CircleF
+2740 1331 CircleF
+2828 1331 CircleF
+2915 1331 CircleF
+3002 1331 CircleF
+3090 1331 CircleF
+3177 1331 CircleF
+3265 1331 CircleF
+3352 1331 CircleF
+3439 1331 CircleF
+3527 1331 CircleF
+3614 1331 CircleF
+3702 1331 CircleF
+3789 1331 CircleF
+3876 1331 CircleF
+3964 1331 CircleF
+4051 1331 CircleF
+4138 1331 CircleF
+4226 1331 CircleF
+4313 1331 CircleF
+1080 1277 CircleF
+1167 1277 CircleF
+1255 1277 CircleF
+1342 1277 CircleF
+1430 1277 CircleF
+1517 1277 CircleF
+1604 1277 CircleF
+1692 1277 CircleF
+1779 1277 CircleF
+1866 1277 CircleF
+1954 1277 CircleF
+2041 1277 CircleF
+2129 1277 CircleF
+2216 1277 CircleF
+2303 1277 CircleF
+2391 1277 CircleF
+2478 1277 CircleF
+2566 1277 CircleF
+2653 1277 CircleF
+2740 1277 CircleF
+2828 1277 CircleF
+2915 1277 CircleF
+3002 1277 CircleF
+3090 1277 CircleF
+3177 1277 CircleF
+3265 1277 CircleF
+3352 1277 CircleF
+3439 1277 CircleF
+3527 1277 CircleF
+3614 1277 CircleF
+3702 1277 CircleF
+% End plot #2
+% Begin plot #3
+1.000 UP
+1.000 UL
+LTb
+1.00 0.00 0.00 C 4925 1386 CircleF
+5012 1386 CircleF
+4401 1331 CircleF
+4488 1331 CircleF
+4575 1331 CircleF
+4663 1331 CircleF
+4750 1331 CircleF
+3789 1277 CircleF
+3876 1277 CircleF
+3964 1277 CircleF
+4051 1277 CircleF
+4138 1277 CircleF
+4226 1277 CircleF
+4313 1277 CircleF
+4401 1277 CircleF
+4488 1277 CircleF
+4575 1277 CircleF
+1080 1222 CircleF
+1167 1222 CircleF
+1255 1222 CircleF
+1342 1222 CircleF
+1430 1222 CircleF
+1517 1222 CircleF
+1604 1222 CircleF
+1692 1222 CircleF
+1779 1222 CircleF
+1866 1222 CircleF
+1954 1222 CircleF
+2041 1222 CircleF
+2129 1222 CircleF
+2216 1222 CircleF
+2303 1222 CircleF
+2391 1222 CircleF
+2478 1222 CircleF
+2566 1222 CircleF
+2653 1222 CircleF
+2740 1222 CircleF
+2828 1222 CircleF
+2915 1222 CircleF
+3002 1222 CircleF
+3090 1222 CircleF
+3177 1222 CircleF
+3265 1222 CircleF
+3352 1222 CircleF
+3439 1222 CircleF
+3527 1222 CircleF
+3614 1222 CircleF
+3702 1222 CircleF
+3789 1222 CircleF
+3876 1222 CircleF
+3964 1222 CircleF
+4051 1222 CircleF
+4138 1222 CircleF
+4226 1222 CircleF
+4313 1222 CircleF
+4401 1222 CircleF
+1080 1167 CircleF
+1167 1167 CircleF
+1255 1167 CircleF
+1342 1167 CircleF
+1430 1167 CircleF
+1517 1167 CircleF
+1604 1167 CircleF
+1692 1167 CircleF
+1779 1167 CircleF
+1866 1167 CircleF
+1954 1167 CircleF
+2041 1167 CircleF
+2129 1167 CircleF
+2216 1167 CircleF
+2303 1167 CircleF
+2391 1167 CircleF
+2478 1167 CircleF
+2566 1167 CircleF
+2653 1167 CircleF
+2740 1167 CircleF
+2828 1167 CircleF
+2915 1167 CircleF
+3002 1167 CircleF
+3090 1167 CircleF
+3177 1167 CircleF
+3265 1167 CircleF
+3352 1167 CircleF
+3439 1167 CircleF
+3527 1167 CircleF
+3614 1167 CircleF
+3702 1167 CircleF
+3789 1167 CircleF
+3876 1167 CircleF
+3964 1167 CircleF
+4051 1167 CircleF
+4138 1167 CircleF
+1080 1112 CircleF
+1167 1112 CircleF
+1255 1112 CircleF
+1342 1112 CircleF
+1430 1112 CircleF
+1517 1112 CircleF
+1604 1112 CircleF
+1692 1112 CircleF
+1779 1112 CircleF
+1866 1112 CircleF
+1954 1112 CircleF
+2041 1112 CircleF
+2129 1112 CircleF
+2216 1112 CircleF
+2303 1112 CircleF
+2391 1112 CircleF
+2478 1112 CircleF
+2566 1112 CircleF
+2653 1112 CircleF
+2740 1112 CircleF
+2828 1112 CircleF
+2915 1112 CircleF
+3002 1112 CircleF
+3090 1112 CircleF
+3177 1112 CircleF
+3265 1112 CircleF
+3352 1112 CircleF
+3439 1112 CircleF
+3527 1112 CircleF
+3614 1112 CircleF
+3702 1112 CircleF
+3789 1112 CircleF
+3876 1112 CircleF
+3964 1112 CircleF
+1080 1058 CircleF
+1167 1058 CircleF
+1255 1058 CircleF
+1342 1058 CircleF
+1430 1058 CircleF
+1517 1058 CircleF
+1604 1058 CircleF
+1692 1058 CircleF
+1779 1058 CircleF
+1866 1058 CircleF
+1954 1058 CircleF
+2041 1058 CircleF
+2129 1058 CircleF
+2216 1058 CircleF
+2303 1058 CircleF
+2391 1058 CircleF
+2478 1058 CircleF
+2566 1058 CircleF
+2653 1058 CircleF
+2740 1058 CircleF
+2828 1058 CircleF
+2915 1058 CircleF
+3002 1058 CircleF
+3090 1058 CircleF
+3177 1058 CircleF
+3265 1058 CircleF
+3352 1058 CircleF
+3439 1058 CircleF
+3527 1058 CircleF
+3614 1058 CircleF
+3702 1058 CircleF
+3789 1058 CircleF
+1080 1003 CircleF
+1167 1003 CircleF
+1255 1003 CircleF
+1342 1003 CircleF
+1430 1003 CircleF
+1517 1003 CircleF
+1604 1003 CircleF
+1692 1003 CircleF
+1779 1003 CircleF
+1866 1003 CircleF
+1954 1003 CircleF
+2041 1003 CircleF
+2129 1003 CircleF
+2216 1003 CircleF
+2303 1003 CircleF
+2391 1003 CircleF
+2478 1003 CircleF
+2566 1003 CircleF
+2653 1003 CircleF
+2740 1003 CircleF
+2828 1003 CircleF
+2915 1003 CircleF
+3002 1003 CircleF
+3090 1003 CircleF
+3177 1003 CircleF
+3265 1003 CircleF
+3352 1003 CircleF
+3439 1003 CircleF
+3527 1003 CircleF
+3614 1003 CircleF
+1080 948 CircleF
+1167 948 CircleF
+1255 948 CircleF
+1342 948 CircleF
+1430 948 CircleF
+1517 948 CircleF
+1604 948 CircleF
+1692 948 CircleF
+1779 948 CircleF
+1866 948 CircleF
+1954 948 CircleF
+2041 948 CircleF
+2129 948 CircleF
+2216 948 CircleF
+2303 948 CircleF
+2391 948 CircleF
+2478 948 CircleF
+2566 948 CircleF
+2653 948 CircleF
+2740 948 CircleF
+2828 948 CircleF
+2915 948 CircleF
+3002 948 CircleF
+3090 948 CircleF
+3177 948 CircleF
+3265 948 CircleF
+3352 948 CircleF
+3439 948 CircleF
+1080 893 CircleF
+1167 893 CircleF
+1255 893 CircleF
+1342 893 CircleF
+1430 893 CircleF
+1517 893 CircleF
+1604 893 CircleF
+1692 893 CircleF
+1779 893 CircleF
+1866 893 CircleF
+1954 893 CircleF
+2041 893 CircleF
+2129 893 CircleF
+2216 893 CircleF
+2303 893 CircleF
+2391 893 CircleF
+2478 893 CircleF
+2566 893 CircleF
+2653 893 CircleF
+2740 893 CircleF
+2828 893 CircleF
+2915 893 CircleF
+3002 893 CircleF
+3090 893 CircleF
+3177 893 CircleF
+1080 839 CircleF
+1167 839 CircleF
+1255 839 CircleF
+1342 839 CircleF
+1430 839 CircleF
+1517 839 CircleF
+1604 839 CircleF
+1692 839 CircleF
+1779 839 CircleF
+1866 839 CircleF
+1954 839 CircleF
+2041 839 CircleF
+2129 839 CircleF
+2216 839 CircleF
+2303 839 CircleF
+2391 839 CircleF
+2478 839 CircleF
+2566 839 CircleF
+2653 839 CircleF
+2740 839 CircleF
+2828 839 CircleF
+2915 839 CircleF
+1080 784 CircleF
+1167 784 CircleF
+1255 784 CircleF
+1342 784 CircleF
+1430 784 CircleF
+1517 784 CircleF
+1604 784 CircleF
+1692 784 CircleF
+1779 784 CircleF
+1866 784 CircleF
+1954 784 CircleF
+2041 784 CircleF
+2129 784 CircleF
+2216 784 CircleF
+2303 784 CircleF
+2391 784 CircleF
+2478 784 CircleF
+2566 784 CircleF
+2653 784 CircleF
+2740 784 CircleF
+1080 729 CircleF
+1167 729 CircleF
+1255 729 CircleF
+1342 729 CircleF
+1430 729 CircleF
+1517 729 CircleF
+1604 729 CircleF
+1692 729 CircleF
+1779 729 CircleF
+1866 729 CircleF
+1954 729 CircleF
+2041 729 CircleF
+2129 729 CircleF
+2216 729 CircleF
+2303 729 CircleF
+2391 729 CircleF
+1080 675 CircleF
+1167 675 CircleF
+1255 675 CircleF
+1342 675 CircleF
+1430 675 CircleF
+1517 675 CircleF
+1604 675 CircleF
+1692 675 CircleF
+1779 675 CircleF
+1866 675 CircleF
+1954 675 CircleF
+2041 675 CircleF
+1080 620 CircleF
+1167 620 CircleF
+1255 620 CircleF
+1342 620 CircleF
+1430 620 CircleF
+1517 620 CircleF
+1604 620 CircleF
+1692 620 CircleF
+% End plot #3
+% Begin plot #4
+1.000 UP
+1.000 UL
+LTb
+0.75 0.75 0.75 C 5100 1386 CircleF
+5187 1386 CircleF
+5274 1386 CircleF
+5362 1386 CircleF
+4838 1331 CircleF
+4925 1331 CircleF
+5012 1331 CircleF
+5100 1331 CircleF
+5187 1331 CircleF
+5274 1331 CircleF
+5362 1331 CircleF
+4663 1277 CircleF
+4750 1277 CircleF
+4838 1277 CircleF
+4925 1277 CircleF
+5012 1277 CircleF
+5100 1277 CircleF
+5187 1277 CircleF
+5274 1277 CircleF
+5362 1277 CircleF
+4488 1222 CircleF
+4575 1222 CircleF
+4663 1222 CircleF
+4750 1222 CircleF
+4838 1222 CircleF
+4925 1222 CircleF
+5012 1222 CircleF
+5100 1222 CircleF
+5187 1222 CircleF
+5274 1222 CircleF
+5362 1222 CircleF
+4226 1167 CircleF
+4313 1167 CircleF
+4401 1167 CircleF
+4488 1167 CircleF
+4575 1167 CircleF
+4663 1167 CircleF
+4750 1167 CircleF
+4838 1167 CircleF
+4925 1167 CircleF
+5012 1167 CircleF
+5100 1167 CircleF
+5187 1167 CircleF
+5274 1167 CircleF
+5362 1167 CircleF
+4051 1112 CircleF
+4138 1112 CircleF
+4226 1112 CircleF
+4313 1112 CircleF
+4401 1112 CircleF
+4488 1112 CircleF
+4575 1112 CircleF
+4663 1112 CircleF
+4750 1112 CircleF
+4838 1112 CircleF
+4925 1112 CircleF
+5012 1112 CircleF
+5100 1112 CircleF
+5187 1112 CircleF
+5274 1112 CircleF
+5362 1112 CircleF
+3876 1058 CircleF
+3964 1058 CircleF
+4051 1058 CircleF
+4138 1058 CircleF
+4226 1058 CircleF
+4313 1058 CircleF
+4401 1058 CircleF
+4488 1058 CircleF
+4575 1058 CircleF
+4663 1058 CircleF
+4750 1058 CircleF
+4838 1058 CircleF
+4925 1058 CircleF
+5012 1058 CircleF
+5100 1058 CircleF
+5187 1058 CircleF
+5274 1058 CircleF
+5362 1058 CircleF
+3702 1003 CircleF
+3789 1003 CircleF
+3876 1003 CircleF
+3964 1003 CircleF
+4051 1003 CircleF
+4138 1003 CircleF
+4226 1003 CircleF
+4313 1003 CircleF
+4401 1003 CircleF
+4488 1003 CircleF
+4575 1003 CircleF
+4663 1003 CircleF
+4750 1003 CircleF
+4838 1003 CircleF
+4925 1003 CircleF
+5012 1003 CircleF
+5100 1003 CircleF
+5187 1003 CircleF
+5274 1003 CircleF
+5362 1003 CircleF
+3527 948 CircleF
+3614 948 CircleF
+3702 948 CircleF
+3789 948 CircleF
+3876 948 CircleF
+3964 948 CircleF
+4051 948 CircleF
+4138 948 CircleF
+4226 948 CircleF
+4313 948 CircleF
+4401 948 CircleF
+4488 948 CircleF
+4575 948 CircleF
+4663 948 CircleF
+4750 948 CircleF
+4838 948 CircleF
+4925 948 CircleF
+5012 948 CircleF
+5100 948 CircleF
+5187 948 CircleF
+5274 948 CircleF
+5362 948 CircleF
+3265 893 CircleF
+3352 893 CircleF
+3439 893 CircleF
+3527 893 CircleF
+3614 893 CircleF
+3702 893 CircleF
+3789 893 CircleF
+3876 893 CircleF
+3964 893 CircleF
+4051 893 CircleF
+4138 893 CircleF
+4226 893 CircleF
+4313 893 CircleF
+4401 893 CircleF
+4488 893 CircleF
+4575 893 CircleF
+4663 893 CircleF
+4750 893 CircleF
+4838 893 CircleF
+4925 893 CircleF
+5012 893 CircleF
+5100 893 CircleF
+5187 893 CircleF
+5274 893 CircleF
+5362 893 CircleF
+3002 839 CircleF
+3090 839 CircleF
+3177 839 CircleF
+3265 839 CircleF
+3352 839 CircleF
+3439 839 CircleF
+3527 839 CircleF
+3614 839 CircleF
+3702 839 CircleF
+3789 839 CircleF
+3876 839 CircleF
+3964 839 CircleF
+4051 839 CircleF
+4138 839 CircleF
+4226 839 CircleF
+4313 839 CircleF
+4401 839 CircleF
+4488 839 CircleF
+4575 839 CircleF
+4663 839 CircleF
+4750 839 CircleF
+4838 839 CircleF
+4925 839 CircleF
+5012 839 CircleF
+5100 839 CircleF
+5187 839 CircleF
+5274 839 CircleF
+5362 839 CircleF
+2828 784 CircleF
+2915 784 CircleF
+3002 784 CircleF
+3090 784 CircleF
+3177 784 CircleF
+3265 784 CircleF
+3352 784 CircleF
+3439 784 CircleF
+3527 784 CircleF
+3614 784 CircleF
+3702 784 CircleF
+3789 784 CircleF
+3876 784 CircleF
+3964 784 CircleF
+4051 784 CircleF
+4138 784 CircleF
+4226 784 CircleF
+4313 784 CircleF
+4401 784 CircleF
+4488 784 CircleF
+4575 784 CircleF
+4663 784 CircleF
+4750 784 CircleF
+4838 784 CircleF
+4925 784 CircleF
+5012 784 CircleF
+5100 784 CircleF
+5187 784 CircleF
+5274 784 CircleF
+5362 784 CircleF
+2478 729 CircleF
+2566 729 CircleF
+2653 729 CircleF
+2740 729 CircleF
+2828 729 CircleF
+2915 729 CircleF
+3002 729 CircleF
+3090 729 CircleF
+3177 729 CircleF
+3265 729 CircleF
+3352 729 CircleF
+3439 729 CircleF
+3527 729 CircleF
+3614 729 CircleF
+3702 729 CircleF
+3789 729 CircleF
+3876 729 CircleF
+3964 729 CircleF
+4051 729 CircleF
+4138 729 CircleF
+4226 729 CircleF
+4313 729 CircleF
+4401 729 CircleF
+4488 729 CircleF
+4575 729 CircleF
+4663 729 CircleF
+4750 729 CircleF
+4838 729 CircleF
+4925 729 CircleF
+5012 729 CircleF
+5100 729 CircleF
+5187 729 CircleF
+5274 729 CircleF
+5362 729 CircleF
+2129 675 CircleF
+2216 675 CircleF
+2303 675 CircleF
+2391 675 CircleF
+2478 675 CircleF
+2566 675 CircleF
+2653 675 CircleF
+2740 675 CircleF
+2828 675 CircleF
+2915 675 CircleF
+3002 675 CircleF
+3090 675 CircleF
+3177 675 CircleF
+3265 675 CircleF
+3352 675 CircleF
+3439 675 CircleF
+3527 675 CircleF
+3614 675 CircleF
+3702 675 CircleF
+3789 675 CircleF
+3876 675 CircleF
+3964 675 CircleF
+4051 675 CircleF
+4138 675 CircleF
+4226 675 CircleF
+4313 675 CircleF
+4401 675 CircleF
+4488 675 CircleF
+4575 675 CircleF
+4663 675 CircleF
+4750 675 CircleF
+4838 675 CircleF
+4925 675 CircleF
+5012 675 CircleF
+5100 675 CircleF
+5187 675 CircleF
+5274 675 CircleF
+5362 675 CircleF
+1779 620 CircleF
+1866 620 CircleF
+1954 620 CircleF
+2041 620 CircleF
+2129 620 CircleF
+2216 620 CircleF
+2303 620 CircleF
+2391 620 CircleF
+2478 620 CircleF
+2566 620 CircleF
+2653 620 CircleF
+2740 620 CircleF
+2828 620 CircleF
+2915 620 CircleF
+3002 620 CircleF
+3090 620 CircleF
+3177 620 CircleF
+3265 620 CircleF
+3352 620 CircleF
+3439 620 CircleF
+3527 620 CircleF
+3614 620 CircleF
+3702 620 CircleF
+3789 620 CircleF
+3876 620 CircleF
+3964 620 CircleF
+4051 620 CircleF
+4138 620 CircleF
+4226 620 CircleF
+4313 620 CircleF
+4401 620 CircleF
+4488 620 CircleF
+4575 620 CircleF
+4663 620 CircleF
+4750 620 CircleF
+4838 620 CircleF
+4925 620 CircleF
+5012 620 CircleF
+5100 620 CircleF
+5187 620 CircleF
+5274 620 CircleF
+5362 620 CircleF
+% End plot #4
+LCw setrgbcolor
+1.000 3500 4040 1791 720 BoxColFill
+1.000 UL
+LTb
+LCb setrgbcolor
+3500 4040 N
+0 720 V
+1791 0 V
+0 -720 V
+-1791 0 V
+Z stroke
+% Begin plot #5
+1.000 UP
+1.000 UL
+LTb
+0.00 1.00 0.00 C LCb setrgbcolor
+4580 4670 M
+[ [(Helvetica) 180.0 0.0 true true 0 (easy)]
+] -60.0 MRshow
+1.000 UP
+1.000 UL
+LTb
+0.00 1.00 0.00 C 4935 4670 CircleF
+% End plot #5
+% Begin plot #6
+1.000 UP
+1.000 UL
+LTb
+1.00 1.00 0.00 C LCb setrgbcolor
+4580 4490 M
+[ [(Helvetica) 180.0 0.0 true true 0 (hard)]
+] -60.0 MRshow
+1.000 UP
+1.000 UL
+LTb
+1.00 1.00 0.00 C 4935 4490 CircleF
+% End plot #6
+% Begin plot #7
+1.000 UP
+1.000 UL
+LTb
+1.00 0.00 0.00 C LCb setrgbcolor
+4580 4310 M
+[ [(Helvetica) 180.0 0.0 true true 0 (impossible)]
+] -60.0 MRshow
+1.000 UP
+1.000 UL
+LTb
+1.00 0.00 0.00 C 4935 4310 CircleF
+% End plot #7
+% Begin plot #8
+1.000 UP
+1.000 UL
+LTb
+0.75 0.75 0.75 C LCb setrgbcolor
+4580 4130 M
+[ [(Helvetica) 180.0 0.0 true true 0 (no signal)]
+] -60.0 MRshow
+1.000 UP
+1.000 UL
+LTb
+0.75 0.75 0.75 C 4935 4130 CircleF
+% End plot #8
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+1080 4823 N
+0 -4247 V
+4319 0 V
+0 4247 V
+-4319 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Symbol Helvetica

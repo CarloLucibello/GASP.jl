@@ -1,0 +1,5211 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: RS_lambda_effect.eps
+%%Creator: gnuplot 5.0 patchlevel 3
+%%CreationDate: Tue Jan 15 11:15:52 2019
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 410 302
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape false def
+/Level1 false def
+/Level3 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -60 def
+/dl1 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 410 50 lineto 410 302 lineto 50 302 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 5.1 (Oct 2015)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Classic Line colors (version 5.0)
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default dash patterns (version 5.0)
+/LTB {BL [] LCb DL} def
+/LTw {PL [] 1 setgray} def
+/LTb {PL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
+/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
+/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
+/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
+/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/SL {[] 0 setdash} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+%
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {textshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
+     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
+     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (RS_lambda_effect.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 5.0 patchlevel 3)
+  /Author (luca)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Tue Jan 15 11:15:52 2019)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Support for boxed text - Ethan A Merritt May 2005
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { Boxing
+    { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if } def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox 1 1 1 setrgbcolor fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
+% redundant definitions for compatibility with prologue.ps older than 5.0.2
+/LTB {BL [] LCb DL} def
+/LTb {PL [] LCb DL} def
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.050 0.050 scale
+0 setgray
+newpath
+(Helvetica) findfont 180 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor true def
+/grayindex {/gidx 0 def
+  {GrayA gidx get grayv ge {exit} if /gidx gidx 1 add def} loop} def
+/dgdx {grayv GrayA gidx get sub GrayA gidx 1 sub get
+  GrayA gidx get sub div} def 
+/redvalue {RedA gidx get RedA gidx 1 sub get
+  RedA gidx get sub dgdxval mul add} def
+/greenvalue {GreenA gidx get GreenA gidx 1 sub get
+  GreenA gidx get sub dgdxval mul add} def
+/bluevalue {BlueA gidx get BlueA gidx 1 sub get
+  BlueA gidx get sub dgdxval mul add} def
+/interpolate {
+  grayindex grayv GrayA gidx get sub abs 1e-5 le
+    {RedA gidx get GreenA gidx get BlueA gidx get}
+    {/dgdxval dgdx def redvalue greenvalue bluevalue} ifelse} def
+/GrayA [0 1 ] def
+/RedA [0 1 ] def
+/GreenA [1 1 ] def
+/BlueA [1 0 ] def
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 Gamma mul div def
+/ColorSpace (RGB) def
+Color InterpolatedColor or { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 839 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 839 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 1.2)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 1277 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 1277 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 1.4)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 1714 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 1714 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 1.6)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 2152 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 2152 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 1.8)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 2590 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 2590 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 2)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 3028 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 3028 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 2.2)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 3466 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 3466 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 2.4)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 3904 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 3904 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 2.6)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 4341 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 4341 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 2.8)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1080 4779 M
+63 0 V
+4256 0 R
+-63 0 V
+stroke
+972 4779 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 3)]
+] -60.0 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1486 576 M
+0 31 V
+0 4216 R
+0 -31 V
+1741 576 M
+0 31 V
+0 4216 R
+0 -31 V
+1922 576 M
+0 31 V
+0 4216 R
+0 -31 V
+2063 576 M
+0 31 V
+0 4216 R
+0 -31 V
+2178 576 M
+0 31 V
+0 4216 R
+0 -31 V
+2275 576 M
+0 31 V
+0 4216 R
+0 -31 V
+2359 576 M
+0 31 V
+0 4216 R
+0 -31 V
+2433 576 M
+0 31 V
+0 4216 R
+0 -31 V
+2499 576 M
+0 63 V
+0 4184 R
+0 -63 V
+stroke
+2499 396 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 0.01)]
+] -60.0 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+2936 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3191 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3372 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3513 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3627 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3724 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3809 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3883 576 M
+0 31 V
+0 4216 R
+0 -31 V
+3949 576 M
+0 63 V
+0 4184 R
+0 -63 V
+stroke
+3949 396 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 0.1)]
+] -60.0 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+4386 576 M
+0 31 V
+0 4216 R
+0 -31 V
+4641 576 M
+0 31 V
+0 4216 R
+0 -31 V
+4822 576 M
+0 31 V
+0 4216 R
+0 -31 V
+4963 576 M
+0 31 V
+0 4216 R
+0 -31 V
+5077 576 M
+0 31 V
+0 4216 R
+0 -31 V
+5174 576 M
+0 31 V
+0 4216 R
+0 -31 V
+5258 576 M
+0 31 V
+0 4216 R
+0 -31 V
+5333 576 M
+0 31 V
+0 4216 R
+0 -31 V
+5399 576 M
+0 63 V
+0 4184 R
+0 -63 V
+stroke
+5399 396 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 1)]
+] -60.0 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+1080 4823 N
+0 -4247 V
+4319 0 V
+0 4247 V
+-4319 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+342 2699 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Symbol) 180.0 0.0 true true 0 (a)]
+] -60.0 MCshow
+grestore
+LTb
+LCb setrgbcolor
+3239 126 M
+[ [(Symbol) 180.0 0.0 true true 0 (l)]
+] -60.0 MCshow
+LTb
+% Begin plot #1
+1.500 UP
+1.000 UL
+LTb
+0 g .4062 g 1137 620 CircleF
+.4062 g 1137 620 CircleF
+.4264 g 1225 620 CircleF
+.4264 g 1225 620 CircleF
+.4471 g 1313 620 CircleF
+.4471 g 1313 620 CircleF
+.4685 g 1401 620 CircleF
+.4685 g 1401 620 CircleF
+.4908 g 1489 620 CircleF
+.4908 g 1489 620 CircleF
+.5151 g 1577 620 CircleF
+.5151 g 1577 620 CircleF
+.545 g 1665 620 CircleF
+.545 g 1665 620 CircleF
+.3717 g 1137 675 CircleF
+.3717 g 1137 675 CircleF
+.3909 g 1225 675 CircleF
+.3909 g 1225 675 CircleF
+.4102 g 1313 675 CircleF
+.4102 g 1313 675 CircleF
+.4297 g 1401 675 CircleF
+.4297 g 1401 675 CircleF
+.4493 g 1489 675 CircleF
+.4493 g 1489 675 CircleF
+.4692 g 1577 675 CircleF
+.4692 g 1577 675 CircleF
+.4895 g 1665 675 CircleF
+.4895 g 1665 675 CircleF
+.5103 g 1753 675 CircleF
+.5103 g 1753 675 CircleF
+.5318 g 1841 675 CircleF
+.5318 g 1841 675 CircleF
+.5546 g 1929 675 CircleF
+.5546 g 1929 675 CircleF
+.5802 g 2017 675 CircleF
+.5802 g 2017 675 CircleF
+.3456 g 1137 729 CircleF
+.3456 g 1137 729 CircleF
+.3645 g 1225 729 CircleF
+.3645 g 1225 729 CircleF
+.3834 g 1313 729 CircleF
+.3834 g 1313 729 CircleF
+.4023 g 1401 729 CircleF
+.4023 g 1401 729 CircleF
+.4214 g 1489 729 CircleF
+.4214 g 1489 729 CircleF
+.4405 g 1577 729 CircleF
+.4405 g 1577 729 CircleF
+.4597 g 1665 729 CircleF
+.4597 g 1665 729 CircleF
+.4791 g 1753 729 CircleF
+.4791 g 1753 729 CircleF
+.4987 g 1841 729 CircleF
+.4987 g 1841 729 CircleF
+.5186 g 1929 729 CircleF
+.5186 g 1929 729 CircleF
+.5388 g 2017 729 CircleF
+.5388 g 2017 729 CircleF
+.5595 g 2105 729 CircleF
+.5595 g 2105 729 CircleF
+.581 g 2193 729 CircleF
+.581 g 2193 729 CircleF
+.6039 g 2281 729 CircleF
+.6039 g 2281 729 CircleF
+.6301 g 2369 729 CircleF
+.6301 g 2369 729 CircleF
+.3243 g 1137 784 CircleF
+.3243 g 1137 784 CircleF
+.343 g 1225 784 CircleF
+.343 g 1225 784 CircleF
+.3617 g 1313 784 CircleF
+.3617 g 1313 784 CircleF
+.3805 g 1401 784 CircleF
+.3805 g 1401 784 CircleF
+.3992 g 1489 784 CircleF
+.3992 g 1489 784 CircleF
+.4181 g 1577 784 CircleF
+.4181 g 1577 784 CircleF
+.4369 g 1665 784 CircleF
+.4369 g 1665 784 CircleF
+.4559 g 1753 784 CircleF
+.4559 g 1753 784 CircleF
+.4749 g 1841 784 CircleF
+.4749 g 1841 784 CircleF
+.494 g 1929 784 CircleF
+.494 g 1929 784 CircleF
+.5133 g 2017 784 CircleF
+.5133 g 2017 784 CircleF
+.5327 g 2105 784 CircleF
+.5327 g 2105 784 CircleF
+.5523 g 2193 784 CircleF
+.5523 g 2193 784 CircleF
+.5723 g 2281 784 CircleF
+.5723 g 2281 784 CircleF
+.5926 g 2369 784 CircleF
+.5926 g 2369 784 CircleF
+.6136 g 2457 784 CircleF
+.6136 g 2457 784 CircleF
+.6358 g 2545 784 CircleF
+.6358 g 2545 784 CircleF
+.6602 g 2633 784 CircleF
+.6602 g 2633 784 CircleF
+.6977 g 2721 784 CircleF
+.6977 g 2721 784 CircleF
+.3061 g 1137 839 CircleF
+.3061 g 1137 839 CircleF
+.3247 g 1225 839 CircleF
+.3247 g 1225 839 CircleF
+.3434 g 1313 839 CircleF
+.3434 g 1313 839 CircleF
+.362 g 1401 839 CircleF
+.362 g 1401 839 CircleF
+.3807 g 1489 839 CircleF
+.3807 g 1489 839 CircleF
+.3993 g 1577 839 CircleF
+.3993 g 1577 839 CircleF
+.4181 g 1665 839 CircleF
+.4181 g 1665 839 CircleF
+.4368 g 1753 839 CircleF
+.4368 g 1753 839 CircleF
+.4556 g 1841 839 CircleF
+.4556 g 1841 839 CircleF
+.4744 g 1929 839 CircleF
+.4744 g 1929 839 CircleF
+.4933 g 2017 839 CircleF
+.4933 g 2017 839 CircleF
+.5122 g 2105 839 CircleF
+.5122 g 2105 839 CircleF
+.5312 g 2193 839 CircleF
+.5312 g 2193 839 CircleF
+.5504 g 2281 839 CircleF
+.5504 g 2281 839 CircleF
+.5697 g 2369 839 CircleF
+.5697 g 2369 839 CircleF
+.5892 g 2457 839 CircleF
+.5892 g 2457 839 CircleF
+.6089 g 2545 839 CircleF
+.6089 g 2545 839 CircleF
+.6291 g 2633 839 CircleF
+.6291 g 2633 839 CircleF
+.65 g 2721 839 CircleF
+.65 g 2721 839 CircleF
+.6719 g 2809 839 CircleF
+.6719 g 2809 839 CircleF
+.6961 g 2897 839 CircleF
+.6961 g 2897 839 CircleF
+.2902 g 1137 893 CircleF
+.2902 g 1137 893 CircleF
+.3088 g 1225 893 CircleF
+.3088 g 1225 893 CircleF
+.3274 g 1313 893 CircleF
+.3274 g 1313 893 CircleF
+.346 g 1401 893 CircleF
+.346 g 1401 893 CircleF
+.3646 g 1489 893 CircleF
+.3646 g 1489 893 CircleF
+.3832 g 1577 893 CircleF
+.3832 g 1577 893 CircleF
+.4018 g 1665 893 CircleF
+.4018 g 1665 893 CircleF
+.4204 g 1753 893 CircleF
+.4204 g 1753 893 CircleF
+.4391 g 1841 893 CircleF
+.4391 g 1841 893 CircleF
+.4577 g 1929 893 CircleF
+.4577 g 1929 893 CircleF
+.4764 g 2017 893 CircleF
+.4764 g 2017 893 CircleF
+.4951 g 2105 893 CircleF
+.4951 g 2105 893 CircleF
+.5139 g 2193 893 CircleF
+.5139 g 2193 893 CircleF
+.5327 g 2281 893 CircleF
+.5327 g 2281 893 CircleF
+.5516 g 2369 893 CircleF
+.5516 g 2369 893 CircleF
+.5705 g 2457 893 CircleF
+.5705 g 2457 893 CircleF
+.5896 g 2545 893 CircleF
+.5896 g 2545 893 CircleF
+.6088 g 2633 893 CircleF
+.6088 g 2633 893 CircleF
+.6282 g 2721 893 CircleF
+.6282 g 2721 893 CircleF
+.6479 g 2809 893 CircleF
+.6479 g 2809 893 CircleF
+.668 g 2897 893 CircleF
+.668 g 2897 893 CircleF
+.6889 g 2985 893 CircleF
+.6889 g 2985 893 CircleF
+.711 g 3073 893 CircleF
+.711 g 3073 893 CircleF
+.7363 g 3161 893 CircleF
+.7363 g 3161 893 CircleF
+.2761 g 1137 948 CircleF
+.2761 g 1137 948 CircleF
+.2946 g 1225 948 CircleF
+.2946 g 1225 948 CircleF
+.3132 g 1313 948 CircleF
+.3132 g 1313 948 CircleF
+.3317 g 1401 948 CircleF
+.3317 g 1401 948 CircleF
+.3503 g 1489 948 CircleF
+.3503 g 1489 948 CircleF
+.3689 g 1577 948 CircleF
+.3689 g 1577 948 CircleF
+.3874 g 1665 948 CircleF
+.3874 g 1665 948 CircleF
+.406 g 1753 948 CircleF
+.406 g 1753 948 CircleF
+.4246 g 1841 948 CircleF
+.4246 g 1841 948 CircleF
+.4432 g 1929 948 CircleF
+.4432 g 1929 948 CircleF
+.4617 g 2017 948 CircleF
+.4617 g 2017 948 CircleF
+.4803 g 2105 948 CircleF
+.4803 g 2105 948 CircleF
+.499 g 2193 948 CircleF
+.499 g 2193 948 CircleF
+.5176 g 2281 948 CircleF
+.5176 g 2281 948 CircleF
+.5362 g 2369 948 CircleF
+.5362 g 2369 948 CircleF
+.5549 g 2457 948 CircleF
+.5549 g 2457 948 CircleF
+.5737 g 2545 948 CircleF
+.5737 g 2545 948 CircleF
+.5924 g 2633 948 CircleF
+.5924 g 2633 948 CircleF
+.6113 g 2721 948 CircleF
+.6113 g 2721 948 CircleF
+.6303 g 2809 948 CircleF
+.6303 g 2809 948 CircleF
+.6494 g 2897 948 CircleF
+.6494 g 2897 948 CircleF
+.6687 g 2985 948 CircleF
+.6687 g 2985 948 CircleF
+.6884 g 3073 948 CircleF
+.6884 g 3073 948 CircleF
+.7086 g 3161 948 CircleF
+.7086 g 3161 948 CircleF
+.7297 g 3249 948 CircleF
+.7297 g 3249 948 CircleF
+.7527 g 3337 948 CircleF
+.7527 g 3337 948 CircleF
+.7834 g 3425 948 CircleF
+.7834 g 3425 948 CircleF
+.2633 g 1137 1003 CircleF
+.2633 g 1137 1003 CircleF
+.2819 g 1225 1003 CircleF
+.2819 g 1225 1003 CircleF
+.3004 g 1313 1003 CircleF
+.3004 g 1313 1003 CircleF
+.3189 g 1401 1003 CircleF
+.3189 g 1401 1003 CircleF
+.3375 g 1489 1003 CircleF
+.3375 g 1489 1003 CircleF
+.356 g 1577 1003 CircleF
+.356 g 1577 1003 CircleF
+.3746 g 1665 1003 CircleF
+.3746 g 1665 1003 CircleF
+.3931 g 1753 1003 CircleF
+.3931 g 1753 1003 CircleF
+.4116 g 1841 1003 CircleF
+.4116 g 1841 1003 CircleF
+.4302 g 1929 1003 CircleF
+.4302 g 1929 1003 CircleF
+.4487 g 2017 1003 CircleF
+.4487 g 2017 1003 CircleF
+.4672 g 2105 1003 CircleF
+.4672 g 2105 1003 CircleF
+.4858 g 2193 1003 CircleF
+.4858 g 2193 1003 CircleF
+.5043 g 2281 1003 CircleF
+.5043 g 2281 1003 CircleF
+.5228 g 2369 1003 CircleF
+.5228 g 2369 1003 CircleF
+.5414 g 2457 1003 CircleF
+.5414 g 2457 1003 CircleF
+.5599 g 2545 1003 CircleF
+.5599 g 2545 1003 CircleF
+.5785 g 2633 1003 CircleF
+.5785 g 2633 1003 CircleF
+.5971 g 2721 1003 CircleF
+.5971 g 2721 1003 CircleF
+.6157 g 2809 1003 CircleF
+.6157 g 2809 1003 CircleF
+.6344 g 2897 1003 CircleF
+.6344 g 2897 1003 CircleF
+.6532 g 2985 1003 CircleF
+.6532 g 2985 1003 CircleF
+.672 g 3073 1003 CircleF
+.672 g 3073 1003 CircleF
+.6911 g 3161 1003 CircleF
+.6911 g 3161 1003 CircleF
+.7104 g 3249 1003 CircleF
+.7104 g 3249 1003 CircleF
+.7301 g 3337 1003 CircleF
+.7301 g 3337 1003 CircleF
+.7505 g 3425 1003 CircleF
+.7505 g 3425 1003 CircleF
+.7724 g 3513 1003 CircleF
+.7724 g 3513 1003 CircleF
+.7981 g 3601 1003 CircleF
+.7981 g 3601 1003 CircleF
+.2517 g 1137 1058 CircleF
+.2517 g 1137 1058 CircleF
+.2703 g 1225 1058 CircleF
+.2703 g 1225 1058 CircleF
+.2888 g 1313 1058 CircleF
+.2888 g 1313 1058 CircleF
+.3073 g 1401 1058 CircleF
+.3073 g 1401 1058 CircleF
+.3258 g 1489 1058 CircleF
+.3258 g 1489 1058 CircleF
+.3444 g 1577 1058 CircleF
+.3444 g 1577 1058 CircleF
+.3629 g 1665 1058 CircleF
+.3629 g 1665 1058 CircleF
+.3814 g 1753 1058 CircleF
+.3814 g 1753 1058 CircleF
+.3999 g 1841 1058 CircleF
+.3999 g 1841 1058 CircleF
+.4184 g 1929 1058 CircleF
+.4184 g 1929 1058 CircleF
+.4369 g 2017 1058 CircleF
+.4369 g 2017 1058 CircleF
+.4554 g 2105 1058 CircleF
+.4554 g 2105 1058 CircleF
+.4739 g 2193 1058 CircleF
+.4739 g 2193 1058 CircleF
+.4923 g 2281 1058 CircleF
+.4923 g 2281 1058 CircleF
+.5108 g 2369 1058 CircleF
+.5108 g 2369 1058 CircleF
+.5293 g 2457 1058 CircleF
+.5293 g 2457 1058 CircleF
+.5477 g 2545 1058 CircleF
+.5477 g 2545 1058 CircleF
+.5662 g 2633 1058 CircleF
+.5662 g 2633 1058 CircleF
+.5846 g 2721 1058 CircleF
+.5846 g 2721 1058 CircleF
+.6031 g 2809 1058 CircleF
+.6031 g 2809 1058 CircleF
+.6215 g 2897 1058 CircleF
+.6215 g 2897 1058 CircleF
+.64 g 2985 1058 CircleF
+.64 g 2985 1058 CircleF
+.6585 g 3073 1058 CircleF
+.6585 g 3073 1058 CircleF
+.6771 g 3161 1058 CircleF
+.6771 g 3161 1058 CircleF
+.6957 g 3249 1058 CircleF
+.6957 g 3249 1058 CircleF
+.7145 g 3337 1058 CircleF
+.7145 g 3337 1058 CircleF
+.7335 g 3425 1058 CircleF
+.7335 g 3425 1058 CircleF
+.7528 g 3513 1058 CircleF
+.7528 g 3513 1058 CircleF
+.7727 g 3601 1058 CircleF
+.7727 g 3601 1058 CircleF
+.7937 g 3689 1058 CircleF
+.7937 g 3689 1058 CircleF
+.8176 g 3777 1058 CircleF
+.8176 g 3777 1058 CircleF
+.2411 g 1137 1112 CircleF
+.2411 g 1137 1112 CircleF
+.2596 g 1225 1112 CircleF
+.2596 g 1225 1112 CircleF
+.2781 g 1313 1112 CircleF
+.2781 g 1313 1112 CircleF
+.2966 g 1401 1112 CircleF
+.2966 g 1401 1112 CircleF
+.3152 g 1489 1112 CircleF
+.3152 g 1489 1112 CircleF
+.3337 g 1577 1112 CircleF
+.3337 g 1577 1112 CircleF
+.3522 g 1665 1112 CircleF
+.3522 g 1665 1112 CircleF
+.3707 g 1753 1112 CircleF
+.3707 g 1753 1112 CircleF
+.3892 g 1841 1112 CircleF
+.3892 g 1841 1112 CircleF
+.4076 g 1929 1112 CircleF
+.4076 g 1929 1112 CircleF
+.4261 g 2017 1112 CircleF
+.4261 g 2017 1112 CircleF
+.4446 g 2105 1112 CircleF
+.4446 g 2105 1112 CircleF
+.463 g 2193 1112 CircleF
+.463 g 2193 1112 CircleF
+.4815 g 2281 1112 CircleF
+.4815 g 2281 1112 CircleF
+.4999 g 2369 1112 CircleF
+.4999 g 2369 1112 CircleF
+.5183 g 2457 1112 CircleF
+.5183 g 2457 1112 CircleF
+.5367 g 2545 1112 CircleF
+.5367 g 2545 1112 CircleF
+.5551 g 2633 1112 CircleF
+.5551 g 2633 1112 CircleF
+.5735 g 2721 1112 CircleF
+.5735 g 2721 1112 CircleF
+.5918 g 2809 1112 CircleF
+.5918 g 2809 1112 CircleF
+.6102 g 2897 1112 CircleF
+.6102 g 2897 1112 CircleF
+.6285 g 2985 1112 CircleF
+.6285 g 2985 1112 CircleF
+.6468 g 3073 1112 CircleF
+.6468 g 3073 1112 CircleF
+.6651 g 3161 1112 CircleF
+.6651 g 3161 1112 CircleF
+.6834 g 3249 1112 CircleF
+.6834 g 3249 1112 CircleF
+.7017 g 3337 1112 CircleF
+.7017 g 3337 1112 CircleF
+.7201 g 3425 1112 CircleF
+.7201 g 3425 1112 CircleF
+.7386 g 3513 1112 CircleF
+.7386 g 3513 1112 CircleF
+.7573 g 3601 1112 CircleF
+.7573 g 3601 1112 CircleF
+.7762 g 3689 1112 CircleF
+.7762 g 3689 1112 CircleF
+.7957 g 3777 1112 CircleF
+.7957 g 3777 1112 CircleF
+.8161 g 3865 1112 CircleF
+.8161 g 3865 1112 CircleF
+.8388 g 3953 1112 CircleF
+.8388 g 3953 1112 CircleF
+.2312 g 1137 1167 CircleF
+.2312 g 1137 1167 CircleF
+.2497 g 1225 1167 CircleF
+.2497 g 1225 1167 CircleF
+.2683 g 1313 1167 CircleF
+.2683 g 1313 1167 CircleF
+.2868 g 1401 1167 CircleF
+.2868 g 1401 1167 CircleF
+.3053 g 1489 1167 CircleF
+.3053 g 1489 1167 CircleF
+.3238 g 1577 1167 CircleF
+.3238 g 1577 1167 CircleF
+.3423 g 1665 1167 CircleF
+.3423 g 1665 1167 CircleF
+.3608 g 1753 1167 CircleF
+.3608 g 1753 1167 CircleF
+.3793 g 1841 1167 CircleF
+.3793 g 1841 1167 CircleF
+.3977 g 1929 1167 CircleF
+.3977 g 1929 1167 CircleF
+.4162 g 2017 1167 CircleF
+.4162 g 2017 1167 CircleF
+.4347 g 2105 1167 CircleF
+.4347 g 2105 1167 CircleF
+.4531 g 2193 1167 CircleF
+.4531 g 2193 1167 CircleF
+.4715 g 2281 1167 CircleF
+.4715 g 2281 1167 CircleF
+.4899 g 2369 1167 CircleF
+.4899 g 2369 1167 CircleF
+.5083 g 2457 1167 CircleF
+.5083 g 2457 1167 CircleF
+.5267 g 2545 1167 CircleF
+.5267 g 2545 1167 CircleF
+.545 g 2633 1167 CircleF
+.545 g 2633 1167 CircleF
+.5633 g 2721 1167 CircleF
+.5633 g 2721 1167 CircleF
+.5816 g 2809 1167 CircleF
+.5816 g 2809 1167 CircleF
+.5999 g 2897 1167 CircleF
+.5999 g 2897 1167 CircleF
+.6181 g 2985 1167 CircleF
+.6181 g 2985 1167 CircleF
+.6363 g 3073 1167 CircleF
+.6363 g 3073 1167 CircleF
+.6545 g 3161 1167 CircleF
+.6545 g 3161 1167 CircleF
+.6726 g 3249 1167 CircleF
+.6726 g 3249 1167 CircleF
+.6907 g 3337 1167 CircleF
+.6907 g 3337 1167 CircleF
+.7088 g 3425 1167 CircleF
+.7088 g 3425 1167 CircleF
+.7269 g 3513 1167 CircleF
+.7269 g 3513 1167 CircleF
+.745 g 3601 1167 CircleF
+.745 g 3601 1167 CircleF
+.7632 g 3689 1167 CircleF
+.7632 g 3689 1167 CircleF
+.7815 g 3777 1167 CircleF
+.7815 g 3777 1167 CircleF
+.8001 g 3865 1167 CircleF
+.8001 g 3865 1167 CircleF
+.8191 g 3953 1167 CircleF
+.8191 g 3953 1167 CircleF
+.8389 g 4041 1167 CircleF
+.8389 g 4041 1167 CircleF
+.8607 g 4129 1167 CircleF
+.8607 g 4129 1167 CircleF
+.222 g 1137 1222 CircleF
+.222 g 1137 1222 CircleF
+.2406 g 1225 1222 CircleF
+.2406 g 1225 1222 CircleF
+.2591 g 1313 1222 CircleF
+.2591 g 1313 1222 CircleF
+.2776 g 1401 1222 CircleF
+.2776 g 1401 1222 CircleF
+.2961 g 1489 1222 CircleF
+.2961 g 1489 1222 CircleF
+.3146 g 1577 1222 CircleF
+.3146 g 1577 1222 CircleF
+.3331 g 1665 1222 CircleF
+.3331 g 1665 1222 CircleF
+.3516 g 1753 1222 CircleF
+.3516 g 1753 1222 CircleF
+.3701 g 1841 1222 CircleF
+.3701 g 1841 1222 CircleF
+.3885 g 1929 1222 CircleF
+.3885 g 1929 1222 CircleF
+.407 g 2017 1222 CircleF
+.407 g 2017 1222 CircleF
+.4254 g 2105 1222 CircleF
+.4254 g 2105 1222 CircleF
+.4439 g 2193 1222 CircleF
+.4439 g 2193 1222 CircleF
+.4623 g 2281 1222 CircleF
+.4623 g 2281 1222 CircleF
+.4807 g 2369 1222 CircleF
+.4807 g 2369 1222 CircleF
+.499 g 2457 1222 CircleF
+.499 g 2457 1222 CircleF
+.5174 g 2545 1222 CircleF
+.5174 g 2545 1222 CircleF
+.5357 g 2633 1222 CircleF
+.5357 g 2633 1222 CircleF
+.554 g 2721 1222 CircleF
+.554 g 2721 1222 CircleF
+.5722 g 2809 1222 CircleF
+.5722 g 2809 1222 CircleF
+.5905 g 2897 1222 CircleF
+.5905 g 2897 1222 CircleF
+.6086 g 2985 1222 CircleF
+.6086 g 2985 1222 CircleF
+.6268 g 3073 1222 CircleF
+.6268 g 3073 1222 CircleF
+.6449 g 3161 1222 CircleF
+.6449 g 3161 1222 CircleF
+.6629 g 3249 1222 CircleF
+.6629 g 3249 1222 CircleF
+.6809 g 3337 1222 CircleF
+.6809 g 3337 1222 CircleF
+.6988 g 3425 1222 CircleF
+.6988 g 3425 1222 CircleF
+.7167 g 3513 1222 CircleF
+.7167 g 3513 1222 CircleF
+.7345 g 3601 1222 CircleF
+.7345 g 3601 1222 CircleF
+.7524 g 3689 1222 CircleF
+.7524 g 3689 1222 CircleF
+.7702 g 3777 1222 CircleF
+.7702 g 3777 1222 CircleF
+.788 g 3865 1222 CircleF
+.788 g 3865 1222 CircleF
+.806 g 3953 1222 CircleF
+.806 g 3953 1222 CircleF
+.8241 g 4041 1222 CircleF
+.8241 g 4041 1222 CircleF
+.8426 g 4129 1222 CircleF
+.8426 g 4129 1222 CircleF
+.8619 g 4218 1222 CircleF
+.8619 g 4218 1222 CircleF
+.8828 g 4306 1222 CircleF
+.8828 g 4306 1222 CircleF
+.9113 g 4394 1222 CircleF
+.9113 g 4394 1222 CircleF
+.2135 g 1137 1277 CircleF
+.2135 g 1137 1277 CircleF
+.232 g 1225 1277 CircleF
+.232 g 1225 1277 CircleF
+.2505 g 1313 1277 CircleF
+.2505 g 1313 1277 CircleF
+.269 g 1401 1277 CircleF
+.269 g 1401 1277 CircleF
+.2875 g 1489 1277 CircleF
+.2875 g 1489 1277 CircleF
+.306 g 1577 1277 CircleF
+.306 g 1577 1277 CircleF
+.3245 g 1665 1277 CircleF
+.3245 g 1665 1277 CircleF
+.343 g 1753 1277 CircleF
+.343 g 1753 1277 CircleF
+.3615 g 1841 1277 CircleF
+.3615 g 1841 1277 CircleF
+.3799 g 1929 1277 CircleF
+.3799 g 1929 1277 CircleF
+.3984 g 2017 1277 CircleF
+.3984 g 2017 1277 CircleF
+.4168 g 2105 1277 CircleF
+.4168 g 2105 1277 CircleF
+.4353 g 2193 1277 CircleF
+.4353 g 2193 1277 CircleF
+.4537 g 2281 1277 CircleF
+.4537 g 2281 1277 CircleF
+.4721 g 2369 1277 CircleF
+.4721 g 2369 1277 CircleF
+.4904 g 2457 1277 CircleF
+.4904 g 2457 1277 CircleF
+.5088 g 2545 1277 CircleF
+.5088 g 2545 1277 CircleF
+.5271 g 2633 1277 CircleF
+.5271 g 2633 1277 CircleF
+.5453 g 2721 1277 CircleF
+.5453 g 2721 1277 CircleF
+.5636 g 2809 1277 CircleF
+.5636 g 2809 1277 CircleF
+.5818 g 2897 1277 CircleF
+.5818 g 2897 1277 CircleF
+.5999 g 2985 1277 CircleF
+.5999 g 2985 1277 CircleF
+.618 g 3073 1277 CircleF
+.618 g 3073 1277 CircleF
+.636 g 3161 1277 CircleF
+.636 g 3161 1277 CircleF
+.654 g 3249 1277 CircleF
+.654 g 3249 1277 CircleF
+.6719 g 3337 1277 CircleF
+.6719 g 3337 1277 CircleF
+.6898 g 3425 1277 CircleF
+.6898 g 3425 1277 CircleF
+.7075 g 3513 1277 CircleF
+.7075 g 3513 1277 CircleF
+.7252 g 3601 1277 CircleF
+.7252 g 3601 1277 CircleF
+.7429 g 3689 1277 CircleF
+.7429 g 3689 1277 CircleF
+.7604 g 3777 1277 CircleF
+.7604 g 3777 1277 CircleF
+.7779 g 3865 1277 CircleF
+.7779 g 3865 1277 CircleF
+.7954 g 3953 1277 CircleF
+.7954 g 3953 1277 CircleF
+.8129 g 4041 1277 CircleF
+.8129 g 4041 1277 CircleF
+.8304 g 4129 1277 CircleF
+.8304 g 4129 1277 CircleF
+.8481 g 4218 1277 CircleF
+.8481 g 4218 1277 CircleF
+.866 g 4306 1277 CircleF
+.866 g 4306 1277 CircleF
+.8846 g 4394 1277 CircleF
+.8846 g 4394 1277 CircleF
+.9045 g 4482 1277 CircleF
+.9045 g 4482 1277 CircleF
+.9288 g 4570 1277 CircleF
+.9288 g 4570 1277 CircleF
+.2054 g 1137 1331 CircleF
+.2054 g 1137 1331 CircleF
+.2239 g 1225 1331 CircleF
+.2239 g 1225 1331 CircleF
+.2425 g 1313 1331 CircleF
+.2425 g 1313 1331 CircleF
+.261 g 1401 1331 CircleF
+.261 g 1401 1331 CircleF
+.2795 g 1489 1331 CircleF
+.2795 g 1489 1331 CircleF
+.298 g 1577 1331 CircleF
+.298 g 1577 1331 CircleF
+.3165 g 1665 1331 CircleF
+.3165 g 1665 1331 CircleF
+.335 g 1753 1331 CircleF
+.335 g 1753 1331 CircleF
+.3534 g 1841 1331 CircleF
+.3534 g 1841 1331 CircleF
+.3719 g 1929 1331 CircleF
+.3719 g 1929 1331 CircleF
+.3903 g 2017 1331 CircleF
+.3903 g 2017 1331 CircleF
+.4088 g 2105 1331 CircleF
+.4088 g 2105 1331 CircleF
+.4272 g 2193 1331 CircleF
+.4272 g 2193 1331 CircleF
+.4456 g 2281 1331 CircleF
+.4456 g 2281 1331 CircleF
+.464 g 2369 1331 CircleF
+.464 g 2369 1331 CircleF
+.4823 g 2457 1331 CircleF
+.4823 g 2457 1331 CircleF
+.5007 g 2545 1331 CircleF
+.5007 g 2545 1331 CircleF
+.519 g 2633 1331 CircleF
+.519 g 2633 1331 CircleF
+.5372 g 2721 1331 CircleF
+.5372 g 2721 1331 CircleF
+.5555 g 2809 1331 CircleF
+.5555 g 2809 1331 CircleF
+.5736 g 2897 1331 CircleF
+.5736 g 2897 1331 CircleF
+.5918 g 2985 1331 CircleF
+.5918 g 2985 1331 CircleF
+.6099 g 3073 1331 CircleF
+.6099 g 3073 1331 CircleF
+.6279 g 3161 1331 CircleF
+.6279 g 3161 1331 CircleF
+.6458 g 3249 1331 CircleF
+.6458 g 3249 1331 CircleF
+.6637 g 3337 1331 CircleF
+.6637 g 3337 1331 CircleF
+.6815 g 3425 1331 CircleF
+.6815 g 3425 1331 CircleF
+.6992 g 3513 1331 CircleF
+.6992 g 3513 1331 CircleF
+.7168 g 3601 1331 CircleF
+.7168 g 3601 1331 CircleF
+.7343 g 3689 1331 CircleF
+.7343 g 3689 1331 CircleF
+.7518 g 3777 1331 CircleF
+.7518 g 3777 1331 CircleF
+.7691 g 3865 1331 CircleF
+.7691 g 3865 1331 CircleF
+.7863 g 3953 1331 CircleF
+.7863 g 3953 1331 CircleF
+.8034 g 4041 1331 CircleF
+.8034 g 4041 1331 CircleF
+.8205 g 4129 1331 CircleF
+.8205 g 4129 1331 CircleF
+.8375 g 4218 1331 CircleF
+.8375 g 4218 1331 CircleF
+.8546 g 4306 1331 CircleF
+.8546 g 4306 1331 CircleF
+.8717 g 4394 1331 CircleF
+.8717 g 4394 1331 CircleF
+.889 g 4482 1331 CircleF
+.889 g 4482 1331 CircleF
+.9067 g 4570 1331 CircleF
+.9067 g 4570 1331 CircleF
+.9254 g 4658 1331 CircleF
+.9254 g 4658 1331 CircleF
+.9464 g 4746 1331 CircleF
+.9464 g 4746 1331 CircleF
+.1978 g 1137 1386 CircleF
+.1978 g 1137 1386 CircleF
+.2164 g 1225 1386 CircleF
+.2164 g 1225 1386 CircleF
+.2349 g 1313 1386 CircleF
+.2349 g 1313 1386 CircleF
+.2534 g 1401 1386 CircleF
+.2534 g 1401 1386 CircleF
+.2719 g 1489 1386 CircleF
+.2719 g 1489 1386 CircleF
+.2904 g 1577 1386 CircleF
+.2904 g 1577 1386 CircleF
+.3089 g 1665 1386 CircleF
+.3089 g 1665 1386 CircleF
+.3274 g 1753 1386 CircleF
+.3274 g 1753 1386 CircleF
+.3458 g 1841 1386 CircleF
+.3458 g 1841 1386 CircleF
+.3643 g 1929 1386 CircleF
+.3643 g 1929 1386 CircleF
+.3828 g 2017 1386 CircleF
+.3828 g 2017 1386 CircleF
+.4012 g 2105 1386 CircleF
+.4012 g 2105 1386 CircleF
+.4196 g 2193 1386 CircleF
+.4196 g 2193 1386 CircleF
+.438 g 2281 1386 CircleF
+.438 g 2281 1386 CircleF
+.4564 g 2369 1386 CircleF
+.4564 g 2369 1386 CircleF
+.4748 g 2457 1386 CircleF
+.4748 g 2457 1386 CircleF
+.4931 g 2545 1386 CircleF
+.4931 g 2545 1386 CircleF
+.5114 g 2633 1386 CircleF
+.5114 g 2633 1386 CircleF
+.5297 g 2721 1386 CircleF
+.5297 g 2721 1386 CircleF
+.5479 g 2809 1386 CircleF
+.5479 g 2809 1386 CircleF
+.5661 g 2897 1386 CircleF
+.5661 g 2897 1386 CircleF
+.5842 g 2985 1386 CircleF
+.5842 g 2985 1386 CircleF
+.6022 g 3073 1386 CircleF
+.6022 g 3073 1386 CircleF
+.6203 g 3161 1386 CircleF
+.6203 g 3161 1386 CircleF
+.6382 g 3249 1386 CircleF
+.6382 g 3249 1386 CircleF
+.656 g 3337 1386 CircleF
+.656 g 3337 1386 CircleF
+.6738 g 3425 1386 CircleF
+.6738 g 3425 1386 CircleF
+.6915 g 3513 1386 CircleF
+.6915 g 3513 1386 CircleF
+.7091 g 3601 1386 CircleF
+.7091 g 3601 1386 CircleF
+.7265 g 3689 1386 CircleF
+.7265 g 3689 1386 CircleF
+.7439 g 3777 1386 CircleF
+.7439 g 3777 1386 CircleF
+.7611 g 3865 1386 CircleF
+.7611 g 3865 1386 CircleF
+.7782 g 3953 1386 CircleF
+.7782 g 3953 1386 CircleF
+.7951 g 4041 1386 CircleF
+.7951 g 4041 1386 CircleF
+.812 g 4129 1386 CircleF
+.812 g 4129 1386 CircleF
+.8287 g 4218 1386 CircleF
+.8287 g 4218 1386 CircleF
+.8453 g 4306 1386 CircleF
+.8453 g 4306 1386 CircleF
+.8618 g 4394 1386 CircleF
+.8618 g 4394 1386 CircleF
+.8782 g 4482 1386 CircleF
+.8782 g 4482 1386 CircleF
+.8947 g 4570 1386 CircleF
+.8947 g 4570 1386 CircleF
+.9112 g 4658 1386 CircleF
+.9112 g 4658 1386 CircleF
+.9279 g 4746 1386 CircleF
+.9279 g 4746 1386 CircleF
+.9452 g 4834 1386 CircleF
+.9452 g 4834 1386 CircleF
+.9633 g 4922 1386 CircleF
+.9633 g 4922 1386 CircleF
+.9841 g 5010 1386 CircleF
+.9841 g 5010 1386 CircleF
+.1907 g 1137 1441 CircleF
+.1907 g 1137 1441 CircleF
+.2092 g 1225 1441 CircleF
+.2092 g 1225 1441 CircleF
+.2277 g 1313 1441 CircleF
+.2277 g 1313 1441 CircleF
+.2462 g 1401 1441 CircleF
+.2462 g 1401 1441 CircleF
+.2647 g 1489 1441 CircleF
+.2647 g 1489 1441 CircleF
+.2832 g 1577 1441 CircleF
+.2832 g 1577 1441 CircleF
+.3017 g 1665 1441 CircleF
+.3017 g 1665 1441 CircleF
+.3202 g 1753 1441 CircleF
+.3202 g 1753 1441 CircleF
+.3387 g 1841 1441 CircleF
+.3387 g 1841 1441 CircleF
+.3571 g 1929 1441 CircleF
+.3571 g 1929 1441 CircleF
+.3756 g 2017 1441 CircleF
+.3756 g 2017 1441 CircleF
+.394 g 2105 1441 CircleF
+.394 g 2105 1441 CircleF
+.4125 g 2193 1441 CircleF
+.4125 g 2193 1441 CircleF
+.4309 g 2281 1441 CircleF
+.4309 g 2281 1441 CircleF
+.4492 g 2369 1441 CircleF
+.4492 g 2369 1441 CircleF
+.4676 g 2457 1441 CircleF
+.4676 g 2457 1441 CircleF
+.4859 g 2545 1441 CircleF
+.4859 g 2545 1441 CircleF
+.5042 g 2633 1441 CircleF
+.5042 g 2633 1441 CircleF
+.5225 g 2721 1441 CircleF
+.5225 g 2721 1441 CircleF
+.5407 g 2809 1441 CircleF
+.5407 g 2809 1441 CircleF
+.5589 g 2897 1441 CircleF
+.5589 g 2897 1441 CircleF
+.577 g 2985 1441 CircleF
+.577 g 2985 1441 CircleF
+.5951 g 3073 1441 CircleF
+.5951 g 3073 1441 CircleF
+.6131 g 3161 1441 CircleF
+.6131 g 3161 1441 CircleF
+.631 g 3249 1441 CircleF
+.631 g 3249 1441 CircleF
+.6489 g 3337 1441 CircleF
+.6489 g 3337 1441 CircleF
+.6666 g 3425 1441 CircleF
+.6666 g 3425 1441 CircleF
+.6843 g 3513 1441 CircleF
+.6843 g 3513 1441 CircleF
+.7018 g 3601 1441 CircleF
+.7018 g 3601 1441 CircleF
+.7193 g 3689 1441 CircleF
+.7193 g 3689 1441 CircleF
+.7366 g 3777 1441 CircleF
+.7366 g 3777 1441 CircleF
+.7538 g 3865 1441 CircleF
+.7538 g 3865 1441 CircleF
+.7708 g 3953 1441 CircleF
+.7708 g 3953 1441 CircleF
+.7876 g 4041 1441 CircleF
+.7876 g 4041 1441 CircleF
+.8043 g 4129 1441 CircleF
+.8043 g 4129 1441 CircleF
+.8209 g 4218 1441 CircleF
+.8209 g 4218 1441 CircleF
+.8373 g 4306 1441 CircleF
+.8373 g 4306 1441 CircleF
+.8535 g 4394 1441 CircleF
+.8535 g 4394 1441 CircleF
+.8695 g 4482 1441 CircleF
+.8695 g 4482 1441 CircleF
+.8854 g 4570 1441 CircleF
+.8854 g 4570 1441 CircleF
+.9012 g 4658 1441 CircleF
+.9012 g 4658 1441 CircleF
+.9168 g 4746 1441 CircleF
+.9168 g 4746 1441 CircleF
+.9324 g 4834 1441 CircleF
+.9324 g 4834 1441 CircleF
+.948 g 4922 1441 CircleF
+.948 g 4922 1441 CircleF
+.9636 g 5010 1441 CircleF
+.9636 g 5010 1441 CircleF
+.9794 g 5098 1441 CircleF
+.9794 g 5098 1441 CircleF
+.9954 g 5186 1441 CircleF
+.9954 g 5186 1441 CircleF
+.1839 g 1137 1495 CircleF
+.1839 g 1137 1495 CircleF
+.2024 g 1225 1495 CircleF
+.2024 g 1225 1495 CircleF
+.2209 g 1313 1495 CircleF
+.2209 g 1313 1495 CircleF
+.2394 g 1401 1495 CircleF
+.2394 g 1401 1495 CircleF
+.2579 g 1489 1495 CircleF
+.2579 g 1489 1495 CircleF
+.2764 g 1577 1495 CircleF
+.2764 g 1577 1495 CircleF
+.2949 g 1665 1495 CircleF
+.2949 g 1665 1495 CircleF
+.3134 g 1753 1495 CircleF
+.3134 g 1753 1495 CircleF
+.3319 g 1841 1495 CircleF
+.3319 g 1841 1495 CircleF
+.3503 g 1929 1495 CircleF
+.3503 g 1929 1495 CircleF
+.3688 g 2017 1495 CircleF
+.3688 g 2017 1495 CircleF
+.3872 g 2105 1495 CircleF
+.3872 g 2105 1495 CircleF
+.4057 g 2193 1495 CircleF
+.4057 g 2193 1495 CircleF
+.4241 g 2281 1495 CircleF
+.4241 g 2281 1495 CircleF
+.4425 g 2369 1495 CircleF
+.4425 g 2369 1495 CircleF
+.4608 g 2457 1495 CircleF
+.4608 g 2457 1495 CircleF
+.4792 g 2545 1495 CircleF
+.4792 g 2545 1495 CircleF
+.4975 g 2633 1495 CircleF
+.4975 g 2633 1495 CircleF
+.5157 g 2721 1495 CircleF
+.5157 g 2721 1495 CircleF
+.5339 g 2809 1495 CircleF
+.5339 g 2809 1495 CircleF
+.5521 g 2897 1495 CircleF
+.5521 g 2897 1495 CircleF
+.5703 g 2985 1495 CircleF
+.5703 g 2985 1495 CircleF
+.5883 g 3073 1495 CircleF
+.5883 g 3073 1495 CircleF
+.6063 g 3161 1495 CircleF
+.6063 g 3161 1495 CircleF
+.6243 g 3249 1495 CircleF
+.6243 g 3249 1495 CircleF
+.6421 g 3337 1495 CircleF
+.6421 g 3337 1495 CircleF
+.6599 g 3425 1495 CircleF
+.6599 g 3425 1495 CircleF
+.6775 g 3513 1495 CircleF
+.6775 g 3513 1495 CircleF
+.6951 g 3601 1495 CircleF
+.6951 g 3601 1495 CircleF
+.7125 g 3689 1495 CircleF
+.7125 g 3689 1495 CircleF
+.7298 g 3777 1495 CircleF
+.7298 g 3777 1495 CircleF
+.747 g 3865 1495 CircleF
+.747 g 3865 1495 CircleF
+.7639 g 3953 1495 CircleF
+.7639 g 3953 1495 CircleF
+.7808 g 4041 1495 CircleF
+.7808 g 4041 1495 CircleF
+.7974 g 4129 1495 CircleF
+.7974 g 4129 1495 CircleF
+.8138 g 4218 1495 CircleF
+.8138 g 4218 1495 CircleF
+.8301 g 4306 1495 CircleF
+.8301 g 4306 1495 CircleF
+.8462 g 4394 1495 CircleF
+.8462 g 4394 1495 CircleF
+.862 g 4482 1495 CircleF
+.862 g 4482 1495 CircleF
+.8776 g 4570 1495 CircleF
+.8776 g 4570 1495 CircleF
+.893 g 4658 1495 CircleF
+.893 g 4658 1495 CircleF
+.9082 g 4746 1495 CircleF
+.9082 g 4746 1495 CircleF
+.9232 g 4834 1495 CircleF
+.9232 g 4834 1495 CircleF
+.9379 g 4922 1495 CircleF
+.9379 g 4922 1495 CircleF
+.9525 g 5010 1495 CircleF
+.9525 g 5010 1495 CircleF
+.9668 g 5098 1495 CircleF
+.9668 g 5098 1495 CircleF
+.9808 g 5186 1495 CircleF
+.9808 g 5186 1495 CircleF
+.9945 g 5274 1495 CircleF
+.9945 g 5274 1495 CircleF
+.1774 g 1137 1550 CircleF
+.1774 g 1137 1550 CircleF
+.1959 g 1225 1550 CircleF
+.1959 g 1225 1550 CircleF
+.2144 g 1313 1550 CircleF
+.2144 g 1313 1550 CircleF
+.2329 g 1401 1550 CircleF
+.2329 g 1401 1550 CircleF
+.2515 g 1489 1550 CircleF
+.2515 g 1489 1550 CircleF
+.27 g 1577 1550 CircleF
+.27 g 1577 1550 CircleF
+.2884 g 1665 1550 CircleF
+.2884 g 1665 1550 CircleF
+.3069 g 1753 1550 CircleF
+.3069 g 1753 1550 CircleF
+.3254 g 1841 1550 CircleF
+.3254 g 1841 1550 CircleF
+.3439 g 1929 1550 CircleF
+.3439 g 1929 1550 CircleF
+.3623 g 2017 1550 CircleF
+.3623 g 2017 1550 CircleF
+.3808 g 2105 1550 CircleF
+.3808 g 2105 1550 CircleF
+.3992 g 2193 1550 CircleF
+.3992 g 2193 1550 CircleF
+.4176 g 2281 1550 CircleF
+.4176 g 2281 1550 CircleF
+.436 g 2369 1550 CircleF
+.436 g 2369 1550 CircleF
+.4544 g 2457 1550 CircleF
+.4544 g 2457 1550 CircleF
+.4727 g 2545 1550 CircleF
+.4727 g 2545 1550 CircleF
+.491 g 2633 1550 CircleF
+.491 g 2633 1550 CircleF
+.5093 g 2721 1550 CircleF
+.5093 g 2721 1550 CircleF
+.5275 g 2809 1550 CircleF
+.5275 g 2809 1550 CircleF
+.5457 g 2897 1550 CircleF
+.5457 g 2897 1550 CircleF
+.5638 g 2985 1550 CircleF
+.5638 g 2985 1550 CircleF
+.5819 g 3073 1550 CircleF
+.5819 g 3073 1550 CircleF
+.5999 g 3161 1550 CircleF
+.5999 g 3161 1550 CircleF
+.6179 g 3249 1550 CircleF
+.6179 g 3249 1550 CircleF
+.6357 g 3337 1550 CircleF
+.6357 g 3337 1550 CircleF
+.6535 g 3425 1550 CircleF
+.6535 g 3425 1550 CircleF
+.6712 g 3513 1550 CircleF
+.6712 g 3513 1550 CircleF
+.6887 g 3601 1550 CircleF
+.6887 g 3601 1550 CircleF
+.7062 g 3689 1550 CircleF
+.7062 g 3689 1550 CircleF
+.7234 g 3777 1550 CircleF
+.7234 g 3777 1550 CircleF
+.7406 g 3865 1550 CircleF
+.7406 g 3865 1550 CircleF
+.7576 g 3953 1550 CircleF
+.7576 g 3953 1550 CircleF
+.7744 g 4041 1550 CircleF
+.7744 g 4041 1550 CircleF
+.791 g 4129 1550 CircleF
+.791 g 4129 1550 CircleF
+.8074 g 4218 1550 CircleF
+.8074 g 4218 1550 CircleF
+.8236 g 4306 1550 CircleF
+.8236 g 4306 1550 CircleF
+.8395 g 4394 1550 CircleF
+.8395 g 4394 1550 CircleF
+.8553 g 4482 1550 CircleF
+.8553 g 4482 1550 CircleF
+.8708 g 4570 1550 CircleF
+.8708 g 4570 1550 CircleF
+.886 g 4658 1550 CircleF
+.886 g 4658 1550 CircleF
+.9009 g 4746 1550 CircleF
+.9009 g 4746 1550 CircleF
+.9156 g 4834 1550 CircleF
+.9156 g 4834 1550 CircleF
+.93 g 4922 1550 CircleF
+.93 g 4922 1550 CircleF
+.944 g 5010 1550 CircleF
+.944 g 5010 1550 CircleF
+.9578 g 5098 1550 CircleF
+.9578 g 5098 1550 CircleF
+.9711 g 5186 1550 CircleF
+.9711 g 5186 1550 CircleF
+.9841 g 5274 1550 CircleF
+.9841 g 5274 1550 CircleF
+.9966 g 5362 1550 CircleF
+.9966 g 5362 1550 CircleF
+.1712 g 1137 1605 CircleF
+.1712 g 1137 1605 CircleF
+.1897 g 1225 1605 CircleF
+.1897 g 1225 1605 CircleF
+.2083 g 1313 1605 CircleF
+.2083 g 1313 1605 CircleF
+.2268 g 1401 1605 CircleF
+.2268 g 1401 1605 CircleF
+.2453 g 1489 1605 CircleF
+.2453 g 1489 1605 CircleF
+.2638 g 1577 1605 CircleF
+.2638 g 1577 1605 CircleF
+.2823 g 1665 1605 CircleF
+.2823 g 1665 1605 CircleF
+.3008 g 1753 1605 CircleF
+.3008 g 1753 1605 CircleF
+.3193 g 1841 1605 CircleF
+.3193 g 1841 1605 CircleF
+.3377 g 1929 1605 CircleF
+.3377 g 1929 1605 CircleF
+.3562 g 2017 1605 CircleF
+.3562 g 2017 1605 CircleF
+.3746 g 2105 1605 CircleF
+.3746 g 2105 1605 CircleF
+.3931 g 2193 1605 CircleF
+.3931 g 2193 1605 CircleF
+.4115 g 2281 1605 CircleF
+.4115 g 2281 1605 CircleF
+.4299 g 2369 1605 CircleF
+.4299 g 2369 1605 CircleF
+.4482 g 2457 1605 CircleF
+.4482 g 2457 1605 CircleF
+.4666 g 2545 1605 CircleF
+.4666 g 2545 1605 CircleF
+.4849 g 2633 1605 CircleF
+.4849 g 2633 1605 CircleF
+.5032 g 2721 1605 CircleF
+.5032 g 2721 1605 CircleF
+.5214 g 2809 1605 CircleF
+.5214 g 2809 1605 CircleF
+.5396 g 2897 1605 CircleF
+.5396 g 2897 1605 CircleF
+.5577 g 2985 1605 CircleF
+.5577 g 2985 1605 CircleF
+.5758 g 3073 1605 CircleF
+.5758 g 3073 1605 CircleF
+.5939 g 3161 1605 CircleF
+.5939 g 3161 1605 CircleF
+.6118 g 3249 1605 CircleF
+.6118 g 3249 1605 CircleF
+.6297 g 3337 1605 CircleF
+.6297 g 3337 1605 CircleF
+.6475 g 3425 1605 CircleF
+.6475 g 3425 1605 CircleF
+.6651 g 3513 1605 CircleF
+.6651 g 3513 1605 CircleF
+.6827 g 3601 1605 CircleF
+.6827 g 3601 1605 CircleF
+.7001 g 3689 1605 CircleF
+.7001 g 3689 1605 CircleF
+.7174 g 3777 1605 CircleF
+.7174 g 3777 1605 CircleF
+.7346 g 3865 1605 CircleF
+.7346 g 3865 1605 CircleF
+.7516 g 3953 1605 CircleF
+.7516 g 3953 1605 CircleF
+.7684 g 4041 1605 CircleF
+.7684 g 4041 1605 CircleF
+.785 g 4129 1605 CircleF
+.785 g 4129 1605 CircleF
+.8014 g 4218 1605 CircleF
+.8014 g 4218 1605 CircleF
+.8175 g 4306 1605 CircleF
+.8175 g 4306 1605 CircleF
+.8335 g 4394 1605 CircleF
+.8335 g 4394 1605 CircleF
+.8492 g 4482 1605 CircleF
+.8492 g 4482 1605 CircleF
+.8646 g 4570 1605 CircleF
+.8646 g 4570 1605 CircleF
+.8797 g 4658 1605 CircleF
+.8797 g 4658 1605 CircleF
+.8945 g 4746 1605 CircleF
+.8945 g 4746 1605 CircleF
+.909 g 4834 1605 CircleF
+.909 g 4834 1605 CircleF
+.9232 g 4922 1605 CircleF
+.9232 g 4922 1605 CircleF
+.937 g 5010 1605 CircleF
+.937 g 5010 1605 CircleF
+.9505 g 5098 1605 CircleF
+.9505 g 5098 1605 CircleF
+.9636 g 5186 1605 CircleF
+.9636 g 5186 1605 CircleF
+.9762 g 5274 1605 CircleF
+.9762 g 5274 1605 CircleF
+.9883 g 5362 1605 CircleF
+.9883 g 5362 1605 CircleF
+.1653 g 1137 1660 CircleF
+.1653 g 1137 1660 CircleF
+.1838 g 1225 1660 CircleF
+.1838 g 1225 1660 CircleF
+.2024 g 1313 1660 CircleF
+.2024 g 1313 1660 CircleF
+.2209 g 1401 1660 CircleF
+.2209 g 1401 1660 CircleF
+.2394 g 1489 1660 CircleF
+.2394 g 1489 1660 CircleF
+.2579 g 1577 1660 CircleF
+.2579 g 1577 1660 CircleF
+.2764 g 1665 1660 CircleF
+.2764 g 1665 1660 CircleF
+.2949 g 1753 1660 CircleF
+.2949 g 1753 1660 CircleF
+.3134 g 1841 1660 CircleF
+.3134 g 1841 1660 CircleF
+.3318 g 1929 1660 CircleF
+.3318 g 1929 1660 CircleF
+.3503 g 2017 1660 CircleF
+.3503 g 2017 1660 CircleF
+.3688 g 2105 1660 CircleF
+.3688 g 2105 1660 CircleF
+.3872 g 2193 1660 CircleF
+.3872 g 2193 1660 CircleF
+.4056 g 2281 1660 CircleF
+.4056 g 2281 1660 CircleF
+.424 g 2369 1660 CircleF
+.424 g 2369 1660 CircleF
+.4424 g 2457 1660 CircleF
+.4424 g 2457 1660 CircleF
+.4607 g 2545 1660 CircleF
+.4607 g 2545 1660 CircleF
+.479 g 2633 1660 CircleF
+.479 g 2633 1660 CircleF
+.4973 g 2721 1660 CircleF
+.4973 g 2721 1660 CircleF
+.5156 g 2809 1660 CircleF
+.5156 g 2809 1660 CircleF
+.5338 g 2897 1660 CircleF
+.5338 g 2897 1660 CircleF
+.5519 g 2985 1660 CircleF
+.5519 g 2985 1660 CircleF
+.57 g 3073 1660 CircleF
+.57 g 3073 1660 CircleF
+.5881 g 3161 1660 CircleF
+.5881 g 3161 1660 CircleF
+.606 g 3249 1660 CircleF
+.606 g 3249 1660 CircleF
+.6239 g 3337 1660 CircleF
+.6239 g 3337 1660 CircleF
+.6417 g 3425 1660 CircleF
+.6417 g 3425 1660 CircleF
+.6594 g 3513 1660 CircleF
+.6594 g 3513 1660 CircleF
+.677 g 3601 1660 CircleF
+.677 g 3601 1660 CircleF
+.6944 g 3689 1660 CircleF
+.6944 g 3689 1660 CircleF
+.7118 g 3777 1660 CircleF
+.7118 g 3777 1660 CircleF
+.7289 g 3865 1660 CircleF
+.7289 g 3865 1660 CircleF
+.7459 g 3953 1660 CircleF
+.7459 g 3953 1660 CircleF
+.7627 g 4041 1660 CircleF
+.7627 g 4041 1660 CircleF
+.7793 g 4129 1660 CircleF
+.7793 g 4129 1660 CircleF
+.7957 g 4218 1660 CircleF
+.7957 g 4218 1660 CircleF
+.8119 g 4306 1660 CircleF
+.8119 g 4306 1660 CircleF
+.8278 g 4394 1660 CircleF
+.8278 g 4394 1660 CircleF
+.8435 g 4482 1660 CircleF
+.8435 g 4482 1660 CircleF
+.8589 g 4570 1660 CircleF
+.8589 g 4570 1660 CircleF
+.8739 g 4658 1660 CircleF
+.8739 g 4658 1660 CircleF
+.8887 g 4746 1660 CircleF
+.8887 g 4746 1660 CircleF
+.9031 g 4834 1660 CircleF
+.9031 g 4834 1660 CircleF
+.9172 g 4922 1660 CircleF
+.9172 g 4922 1660 CircleF
+.9309 g 5010 1660 CircleF
+.9309 g 5010 1660 CircleF
+.9443 g 5098 1660 CircleF
+.9443 g 5098 1660 CircleF
+.9572 g 5186 1660 CircleF
+.9572 g 5186 1660 CircleF
+.9696 g 5274 1660 CircleF
+.9696 g 5274 1660 CircleF
+.9816 g 5362 1660 CircleF
+.9816 g 5362 1660 CircleF
+.1597 g 1137 1714 CircleF
+.1782 g 1225 1714 CircleF
+.1967 g 1313 1714 CircleF
+.2152 g 1401 1714 CircleF
+.2338 g 1489 1714 CircleF
+.2523 g 1577 1714 CircleF
+.2708 g 1665 1714 CircleF
+.2893 g 1753 1714 CircleF
+.3077 g 1841 1714 CircleF
+.3262 g 1929 1714 CircleF
+.3447 g 2017 1714 CircleF
+.3631 g 2105 1714 CircleF
+.3816 g 2193 1714 CircleF
+.4 g 2281 1714 CircleF
+.4184 g 2369 1714 CircleF
+.4368 g 2457 1714 CircleF
+.4551 g 2545 1714 CircleF
+.4734 g 2633 1714 CircleF
+.4917 g 2721 1714 CircleF
+.51 g 2809 1714 CircleF
+.5282 g 2897 1714 CircleF
+.5464 g 2985 1714 CircleF
+.5645 g 3073 1714 CircleF
+.5825 g 3161 1714 CircleF
+.6005 g 3249 1714 CircleF
+.6184 g 3337 1714 CircleF
+.6362 g 3425 1714 CircleF
+.6539 g 3513 1714 CircleF
+.6715 g 3601 1714 CircleF
+.689 g 3689 1714 CircleF
+.7063 g 3777 1714 CircleF
+.7235 g 3865 1714 CircleF
+.7405 g 3953 1714 CircleF
+.7574 g 4041 1714 CircleF
+.774 g 4129 1714 CircleF
+.7904 g 4218 1714 CircleF
+.8066 g 4306 1714 CircleF
+.8225 g 4394 1714 CircleF
+.8382 g 4482 1714 CircleF
+.8536 g 4570 1714 CircleF
+.8686 g 4658 1714 CircleF
+.8834 g 4746 1714 CircleF
+.8978 g 4834 1714 CircleF
+.9118 g 4922 1714 CircleF
+.9255 g 5010 1714 CircleF
+.9388 g 5098 1714 CircleF
+.9516 g 5186 1714 CircleF
+.964 g 5274 1714 CircleF
+.9759 g 5362 1714 CircleF
+.1543 g 1137 1769 CircleF
+.1728 g 1225 1769 CircleF
+.1913 g 1313 1769 CircleF
+.2098 g 1401 1769 CircleF
+.2283 g 1489 1769 CircleF
+.2469 g 1577 1769 CircleF
+.2654 g 1665 1769 CircleF
+.2838 g 1753 1769 CircleF
+.3023 g 1841 1769 CircleF
+.3208 g 1929 1769 CircleF
+.3393 g 2017 1769 CircleF
+.3577 g 2105 1769 CircleF
+.3762 g 2193 1769 CircleF
+.3946 g 2281 1769 CircleF
+.413 g 2369 1769 CircleF
+.4314 g 2457 1769 CircleF
+.4497 g 2545 1769 CircleF
+.4681 g 2633 1769 CircleF
+.4864 g 2721 1769 CircleF
+.5046 g 2809 1769 CircleF
+.5228 g 2897 1769 CircleF
+.541 g 2985 1769 CircleF
+.5591 g 3073 1769 CircleF
+.5772 g 3161 1769 CircleF
+.5952 g 3249 1769 CircleF
+.6131 g 3337 1769 CircleF
+.6309 g 3425 1769 CircleF
+.6487 g 3513 1769 CircleF
+.6663 g 3601 1769 CircleF
+.6838 g 3689 1769 CircleF
+.7011 g 3777 1769 CircleF
+.7184 g 3865 1769 CircleF
+.7354 g 3953 1769 CircleF
+.7523 g 4041 1769 CircleF
+.7689 g 4129 1769 CircleF
+.7854 g 4218 1769 CircleF
+.8016 g 4306 1769 CircleF
+.8175 g 4394 1769 CircleF
+.8332 g 4482 1769 CircleF
+.8486 g 4570 1769 CircleF
+.8637 g 4658 1769 CircleF
+.8784 g 4746 1769 CircleF
+.8929 g 4834 1769 CircleF
+.9069 g 4922 1769 CircleF
+.9205 g 5010 1769 CircleF
+.9338 g 5098 1769 CircleF
+.9466 g 5186 1769 CircleF
+.9589 g 5274 1769 CircleF
+.9708 g 5362 1769 CircleF
+.1491 g 1137 1824 CircleF
+.1676 g 1225 1824 CircleF
+.1861 g 1313 1824 CircleF
+.2046 g 1401 1824 CircleF
+.2231 g 1489 1824 CircleF
+.2417 g 1577 1824 CircleF
+.2602 g 1665 1824 CircleF
+.2787 g 1753 1824 CircleF
+.2971 g 1841 1824 CircleF
+.3156 g 1929 1824 CircleF
+.3341 g 2017 1824 CircleF
+.3525 g 2105 1824 CircleF
+.371 g 2193 1824 CircleF
+.3894 g 2281 1824 CircleF
+.4078 g 2369 1824 CircleF
+.4262 g 2457 1824 CircleF
+.4446 g 2545 1824 CircleF
+.4629 g 2633 1824 CircleF
+.4812 g 2721 1824 CircleF
+.4995 g 2809 1824 CircleF
+.5177 g 2897 1824 CircleF
+.5359 g 2985 1824 CircleF
+.554 g 3073 1824 CircleF
+.5721 g 3161 1824 CircleF
+.5901 g 3249 1824 CircleF
+.608 g 3337 1824 CircleF
+.6259 g 3425 1824 CircleF
+.6436 g 3513 1824 CircleF
+.6613 g 3601 1824 CircleF
+.6788 g 3689 1824 CircleF
+.6962 g 3777 1824 CircleF
+.7134 g 3865 1824 CircleF
+.7305 g 3953 1824 CircleF
+.7474 g 4041 1824 CircleF
+.7641 g 4129 1824 CircleF
+.7806 g 4218 1824 CircleF
+.7968 g 4306 1824 CircleF
+.8128 g 4394 1824 CircleF
+.8285 g 4482 1824 CircleF
+.8439 g 4570 1824 CircleF
+.859 g 4658 1824 CircleF
+.8738 g 4746 1824 CircleF
+.8882 g 4834 1824 CircleF
+.9023 g 4922 1824 CircleF
+.9159 g 5010 1824 CircleF
+.9292 g 5098 1824 CircleF
+.942 g 5186 1824 CircleF
+.9544 g 5274 1824 CircleF
+.9662 g 5362 1824 CircleF
+.1441 g 1137 1879 CircleF
+.1626 g 1225 1879 CircleF
+.1811 g 1313 1879 CircleF
+.1996 g 1401 1879 CircleF
+.2181 g 1489 1879 CircleF
+.2367 g 1577 1879 CircleF
+.2552 g 1665 1879 CircleF
+.2737 g 1753 1879 CircleF
+.2921 g 1841 1879 CircleF
+.3106 g 1929 1879 CircleF
+.3291 g 2017 1879 CircleF
+.3476 g 2105 1879 CircleF
+.366 g 2193 1879 CircleF
+.3844 g 2281 1879 CircleF
+.4028 g 2369 1879 CircleF
+.4212 g 2457 1879 CircleF
+.4396 g 2545 1879 CircleF
+.4579 g 2633 1879 CircleF
+.4763 g 2721 1879 CircleF
+.4945 g 2809 1879 CircleF
+.5128 g 2897 1879 CircleF
+.531 g 2985 1879 CircleF
+.5491 g 3073 1879 CircleF
+.5672 g 3161 1879 CircleF
+.5852 g 3249 1879 CircleF
+.6032 g 3337 1879 CircleF
+.621 g 3425 1879 CircleF
+.6388 g 3513 1879 CircleF
+.6565 g 3601 1879 CircleF
+.674 g 3689 1879 CircleF
+.6914 g 3777 1879 CircleF
+.7087 g 3865 1879 CircleF
+.7258 g 3953 1879 CircleF
+.7427 g 4041 1879 CircleF
+.7594 g 4129 1879 CircleF
+.776 g 4218 1879 CircleF
+.7922 g 4306 1879 CircleF
+.8083 g 4394 1879 CircleF
+.824 g 4482 1879 CircleF
+.8395 g 4570 1879 CircleF
+.8546 g 4658 1879 CircleF
+.8694 g 4746 1879 CircleF
+.8839 g 4834 1879 CircleF
+.898 g 4922 1879 CircleF
+.9116 g 5010 1879 CircleF
+.9249 g 5098 1879 CircleF
+.9378 g 5186 1879 CircleF
+.9501 g 5274 1879 CircleF
+.962 g 5362 1879 CircleF
+.1392 g 1137 1933 CircleF
+.1578 g 1225 1933 CircleF
+.1763 g 1313 1933 CircleF
+.1948 g 1401 1933 CircleF
+.2133 g 1489 1933 CircleF
+.2318 g 1577 1933 CircleF
+.2503 g 1665 1933 CircleF
+.2688 g 1753 1933 CircleF
+.2873 g 1841 1933 CircleF
+.3058 g 1929 1933 CircleF
+.3243 g 2017 1933 CircleF
+.3427 g 2105 1933 CircleF
+.3612 g 2193 1933 CircleF
+.3796 g 2281 1933 CircleF
+.398 g 2369 1933 CircleF
+.4164 g 2457 1933 CircleF
+.4348 g 2545 1933 CircleF
+.4532 g 2633 1933 CircleF
+.4715 g 2721 1933 CircleF
+.4898 g 2809 1933 CircleF
+.508 g 2897 1933 CircleF
+.5262 g 2985 1933 CircleF
+.5444 g 3073 1933 CircleF
+.5625 g 3161 1933 CircleF
+.5805 g 3249 1933 CircleF
+.5985 g 3337 1933 CircleF
+.6164 g 3425 1933 CircleF
+.6341 g 3513 1933 CircleF
+.6518 g 3601 1933 CircleF
+.6694 g 3689 1933 CircleF
+.6868 g 3777 1933 CircleF
+.7041 g 3865 1933 CircleF
+.7213 g 3953 1933 CircleF
+.7382 g 4041 1933 CircleF
+.755 g 4129 1933 CircleF
+.7715 g 4218 1933 CircleF
+.7879 g 4306 1933 CircleF
+.8039 g 4394 1933 CircleF
+.8197 g 4482 1933 CircleF
+.8352 g 4570 1933 CircleF
+.8504 g 4658 1933 CircleF
+.8653 g 4746 1933 CircleF
+.8798 g 4834 1933 CircleF
+.8939 g 4922 1933 CircleF
+.9076 g 5010 1933 CircleF
+.9209 g 5098 1933 CircleF
+.9338 g 5186 1933 CircleF
+.9462 g 5274 1933 CircleF
+.9582 g 5362 1933 CircleF
+.1346 g 1137 1988 CircleF
+.1531 g 1225 1988 CircleF
+.1716 g 1313 1988 CircleF
+.1902 g 1401 1988 CircleF
+.2087 g 1489 1988 CircleF
+.2272 g 1577 1988 CircleF
+.2457 g 1665 1988 CircleF
+.2642 g 1753 1988 CircleF
+.2827 g 1841 1988 CircleF
+.3012 g 1929 1988 CircleF
+.3196 g 2017 1988 CircleF
+.3381 g 2105 1988 CircleF
+.3566 g 2193 1988 CircleF
+.375 g 2281 1988 CircleF
+.3934 g 2369 1988 CircleF
+.4118 g 2457 1988 CircleF
+.4302 g 2545 1988 CircleF
+.4486 g 2633 1988 CircleF
+.4669 g 2721 1988 CircleF
+.4852 g 2809 1988 CircleF
+.5034 g 2897 1988 CircleF
+.5216 g 2985 1988 CircleF
+.5398 g 3073 1988 CircleF
+.5579 g 3161 1988 CircleF
+.576 g 3249 1988 CircleF
+.5939 g 3337 1988 CircleF
+.6118 g 3425 1988 CircleF
+.6297 g 3513 1988 CircleF
+.6474 g 3601 1988 CircleF
+.665 g 3689 1988 CircleF
+.6824 g 3777 1988 CircleF
+.6997 g 3865 1988 CircleF
+.7169 g 3953 1988 CircleF
+.7339 g 4041 1988 CircleF
+.7507 g 4129 1988 CircleF
+.7673 g 4218 1988 CircleF
+.7837 g 4306 1988 CircleF
+.7998 g 4394 1988 CircleF
+.8156 g 4482 1988 CircleF
+.8312 g 4570 1988 CircleF
+.8464 g 4658 1988 CircleF
+.8613 g 4746 1988 CircleF
+.8758 g 4834 1988 CircleF
+.89 g 4922 1988 CircleF
+.9038 g 5010 1988 CircleF
+.9171 g 5098 1988 CircleF
+.9301 g 5186 1988 CircleF
+.9425 g 5274 1988 CircleF
+.9545 g 5362 1988 CircleF
+.1301 g 1137 2043 CircleF
+.1486 g 1225 2043 CircleF
+.1671 g 1313 2043 CircleF
+.1857 g 1401 2043 CircleF
+.2042 g 1489 2043 CircleF
+.2227 g 1577 2043 CircleF
+.2412 g 1665 2043 CircleF
+.2597 g 1753 2043 CircleF
+.2782 g 1841 2043 CircleF
+.2967 g 1929 2043 CircleF
+.3152 g 2017 2043 CircleF
+.3336 g 2105 2043 CircleF
+.3521 g 2193 2043 CircleF
+.3705 g 2281 2043 CircleF
+.389 g 2369 2043 CircleF
+.4074 g 2457 2043 CircleF
+.4257 g 2545 2043 CircleF
+.4441 g 2633 2043 CircleF
+.4624 g 2721 2043 CircleF
+.4807 g 2809 2043 CircleF
+.499 g 2897 2043 CircleF
+.5172 g 2985 2043 CircleF
+.5354 g 3073 2043 CircleF
+.5535 g 3161 2043 CircleF
+.5716 g 3249 2043 CircleF
+.5896 g 3337 2043 CircleF
+.6075 g 3425 2043 CircleF
+.6253 g 3513 2043 CircleF
+.643 g 3601 2043 CircleF
+.6607 g 3689 2043 CircleF
+.6782 g 3777 2043 CircleF
+.6955 g 3865 2043 CircleF
+.7127 g 3953 2043 CircleF
+.7297 g 4041 2043 CircleF
+.7466 g 4129 2043 CircleF
+.7632 g 4218 2043 CircleF
+.7796 g 4306 2043 CircleF
+.7958 g 4394 2043 CircleF
+.8117 g 4482 2043 CircleF
+.8272 g 4570 2043 CircleF
+.8425 g 4658 2043 CircleF
+.8575 g 4746 2043 CircleF
+.8721 g 4834 2043 CircleF
+.8863 g 4922 2043 CircleF
+.9001 g 5010 2043 CircleF
+.9135 g 5098 2043 CircleF
+.9265 g 5186 2043 CircleF
+.939 g 5274 2043 CircleF
+.9511 g 5362 2043 CircleF
+.1257 g 1137 2097 CircleF
+.1443 g 1225 2097 CircleF
+.1628 g 1313 2097 CircleF
+.1813 g 1401 2097 CircleF
+.1998 g 1489 2097 CircleF
+.2184 g 1577 2097 CircleF
+.2369 g 1665 2097 CircleF
+.2554 g 1753 2097 CircleF
+.2739 g 1841 2097 CircleF
+.2924 g 1929 2097 CircleF
+.3108 g 2017 2097 CircleF
+.3293 g 2105 2097 CircleF
+.3478 g 2193 2097 CircleF
+.3662 g 2281 2097 CircleF
+.3846 g 2369 2097 CircleF
+.403 g 2457 2097 CircleF
+.4214 g 2545 2097 CircleF
+.4398 g 2633 2097 CircleF
+.4581 g 2721 2097 CircleF
+.4764 g 2809 2097 CircleF
+.4947 g 2897 2097 CircleF
+.5129 g 2985 2097 CircleF
+.5311 g 3073 2097 CircleF
+.5493 g 3161 2097 CircleF
+.5673 g 3249 2097 CircleF
+.5853 g 3337 2097 CircleF
+.6033 g 3425 2097 CircleF
+.6211 g 3513 2097 CircleF
+.6389 g 3601 2097 CircleF
+.6565 g 3689 2097 CircleF
+.674 g 3777 2097 CircleF
+.6914 g 3865 2097 CircleF
+.7086 g 3953 2097 CircleF
+.7257 g 4041 2097 CircleF
+.7426 g 4129 2097 CircleF
+.7593 g 4218 2097 CircleF
+.7757 g 4306 2097 CircleF
+.7919 g 4394 2097 CircleF
+.8078 g 4482 2097 CircleF
+.8235 g 4570 2097 CircleF
+.8388 g 4658 2097 CircleF
+.8538 g 4746 2097 CircleF
+.8685 g 4834 2097 CircleF
+.8828 g 4922 2097 CircleF
+.8966 g 5010 2097 CircleF
+.9101 g 5098 2097 CircleF
+.9231 g 5186 2097 CircleF
+.9357 g 5274 2097 CircleF
+.9478 g 5362 2097 CircleF
+.1215 g 1137 2152 CircleF
+.1401 g 1225 2152 CircleF
+.1586 g 1313 2152 CircleF
+.1771 g 1401 2152 CircleF
+.1956 g 1489 2152 CircleF
+.2141 g 1577 2152 CircleF
+.2327 g 1665 2152 CircleF
+.2512 g 1753 2152 CircleF
+.2697 g 1841 2152 CircleF
+.2882 g 1929 2152 CircleF
+.3066 g 2017 2152 CircleF
+.3251 g 2105 2152 CircleF
+.3436 g 2193 2152 CircleF
+.362 g 2281 2152 CircleF
+.3804 g 2369 2152 CircleF
+.3989 g 2457 2152 CircleF
+.4172 g 2545 2152 CircleF
+.4356 g 2633 2152 CircleF
+.454 g 2721 2152 CircleF
+.4723 g 2809 2152 CircleF
+.4906 g 2897 2152 CircleF
+.5088 g 2985 2152 CircleF
+.527 g 3073 2152 CircleF
+.5451 g 3161 2152 CircleF
+.5632 g 3249 2152 CircleF
+.5813 g 3337 2152 CircleF
+.5992 g 3425 2152 CircleF
+.6171 g 3513 2152 CircleF
+.6348 g 3601 2152 CircleF
+.6525 g 3689 2152 CircleF
+.67 g 3777 2152 CircleF
+.6875 g 3865 2152 CircleF
+.7047 g 3953 2152 CircleF
+.7218 g 4041 2152 CircleF
+.7387 g 4129 2152 CircleF
+.7554 g 4218 2152 CircleF
+.7719 g 4306 2152 CircleF
+.7882 g 4394 2152 CircleF
+.8041 g 4482 2152 CircleF
+.8198 g 4570 2152 CircleF
+.8352 g 4658 2152 CircleF
+.8503 g 4746 2152 CircleF
+.865 g 4834 2152 CircleF
+.8793 g 4922 2152 CircleF
+.8933 g 5010 2152 CircleF
+.9068 g 5098 2152 CircleF
+.9199 g 5186 2152 CircleF
+.9326 g 5274 2152 CircleF
+.9447 g 5362 2152 CircleF
+.1175 g 1137 2207 CircleF
+.136 g 1225 2207 CircleF
+.1545 g 1313 2207 CircleF
+.173 g 1401 2207 CircleF
+.1916 g 1489 2207 CircleF
+.2101 g 1577 2207 CircleF
+.2286 g 1665 2207 CircleF
+.2471 g 1753 2207 CircleF
+.2656 g 1841 2207 CircleF
+.2841 g 1929 2207 CircleF
+.3026 g 2017 2207 CircleF
+.321 g 2105 2207 CircleF
+.3395 g 2193 2207 CircleF
+.3579 g 2281 2207 CircleF
+.3764 g 2369 2207 CircleF
+.3948 g 2457 2207 CircleF
+.4132 g 2545 2207 CircleF
+.4316 g 2633 2207 CircleF
+.4499 g 2721 2207 CircleF
+.4682 g 2809 2207 CircleF
+.4865 g 2897 2207 CircleF
+.5048 g 2985 2207 CircleF
+.523 g 3073 2207 CircleF
+.5411 g 3161 2207 CircleF
+.5592 g 3249 2207 CircleF
+.5773 g 3337 2207 CircleF
+.5952 g 3425 2207 CircleF
+.6131 g 3513 2207 CircleF
+.6309 g 3601 2207 CircleF
+.6486 g 3689 2207 CircleF
+.6662 g 3777 2207 CircleF
+.6836 g 3865 2207 CircleF
+.7009 g 3953 2207 CircleF
+.718 g 4041 2207 CircleF
+.735 g 4129 2207 CircleF
+.7517 g 4218 2207 CircleF
+.7683 g 4306 2207 CircleF
+.7846 g 4394 2207 CircleF
+.8006 g 4482 2207 CircleF
+.8163 g 4570 2207 CircleF
+.8318 g 4658 2207 CircleF
+.8469 g 4746 2207 CircleF
+.8617 g 4834 2207 CircleF
+.8761 g 4922 2207 CircleF
+.8901 g 5010 2207 CircleF
+.9037 g 5098 2207 CircleF
+.9168 g 5186 2207 CircleF
+.9295 g 5274 2207 CircleF
+.9418 g 5362 2207 CircleF
+.1135 g 1137 2262 CircleF
+.132 g 1225 2262 CircleF
+.1506 g 1313 2262 CircleF
+.1691 g 1401 2262 CircleF
+.1876 g 1489 2262 CircleF
+.2061 g 1577 2262 CircleF
+.2246 g 1665 2262 CircleF
+.2431 g 1753 2262 CircleF
+.2616 g 1841 2262 CircleF
+.2801 g 1929 2262 CircleF
+.2986 g 2017 2262 CircleF
+.3171 g 2105 2262 CircleF
+.3356 g 2193 2262 CircleF
+.354 g 2281 2262 CircleF
+.3724 g 2369 2262 CircleF
+.3909 g 2457 2262 CircleF
+.4093 g 2545 2262 CircleF
+.4276 g 2633 2262 CircleF
+.446 g 2721 2262 CircleF
+.4643 g 2809 2262 CircleF
+.4826 g 2897 2262 CircleF
+.5009 g 2985 2262 CircleF
+.5191 g 3073 2262 CircleF
+.5373 g 3161 2262 CircleF
+.5554 g 3249 2262 CircleF
+.5734 g 3337 2262 CircleF
+.5914 g 3425 2262 CircleF
+.6093 g 3513 2262 CircleF
+.6271 g 3601 2262 CircleF
+.6448 g 3689 2262 CircleF
+.6624 g 3777 2262 CircleF
+.6799 g 3865 2262 CircleF
+.6972 g 3953 2262 CircleF
+.7144 g 4041 2262 CircleF
+.7313 g 4129 2262 CircleF
+.7481 g 4218 2262 CircleF
+.7647 g 4306 2262 CircleF
+.781 g 4394 2262 CircleF
+.7971 g 4482 2262 CircleF
+.8129 g 4570 2262 CircleF
+.8284 g 4658 2262 CircleF
+.8436 g 4746 2262 CircleF
+.8584 g 4834 2262 CircleF
+.8729 g 4922 2262 CircleF
+.887 g 5010 2262 CircleF
+.9006 g 5098 2262 CircleF
+.9138 g 5186 2262 CircleF
+.9266 g 5274 2262 CircleF
+.9389 g 5362 2262 CircleF
+.1096 g 1137 2316 CircleF
+.1282 g 1225 2316 CircleF
+.1467 g 1313 2316 CircleF
+.1652 g 1401 2316 CircleF
+.1838 g 1489 2316 CircleF
+.2023 g 1577 2316 CircleF
+.2208 g 1665 2316 CircleF
+.2393 g 1753 2316 CircleF
+.2578 g 1841 2316 CircleF
+.2763 g 1929 2316 CircleF
+.2948 g 2017 2316 CircleF
+.3133 g 2105 2316 CircleF
+.3317 g 2193 2316 CircleF
+.3502 g 2281 2316 CircleF
+.3686 g 2369 2316 CircleF
+.387 g 2457 2316 CircleF
+.4055 g 2545 2316 CircleF
+.4238 g 2633 2316 CircleF
+.4422 g 2721 2316 CircleF
+.4605 g 2809 2316 CircleF
+.4788 g 2897 2316 CircleF
+.4971 g 2985 2316 CircleF
+.5153 g 3073 2316 CircleF
+.5335 g 3161 2316 CircleF
+.5516 g 3249 2316 CircleF
+.5697 g 3337 2316 CircleF
+.5877 g 3425 2316 CircleF
+.6056 g 3513 2316 CircleF
+.6234 g 3601 2316 CircleF
+.6412 g 3689 2316 CircleF
+.6588 g 3777 2316 CircleF
+.6763 g 3865 2316 CircleF
+.6936 g 3953 2316 CircleF
+.7108 g 4041 2316 CircleF
+.7278 g 4129 2316 CircleF
+.7446 g 4218 2316 CircleF
+.7613 g 4306 2316 CircleF
+.7776 g 4394 2316 CircleF
+.7938 g 4482 2316 CircleF
+.8096 g 4570 2316 CircleF
+.8252 g 4658 2316 CircleF
+.8404 g 4746 2316 CircleF
+.8553 g 4834 2316 CircleF
+.8698 g 4922 2316 CircleF
+.8839 g 5010 2316 CircleF
+.8977 g 5098 2316 CircleF
+.911 g 5186 2316 CircleF
+.9238 g 5274 2316 CircleF
+.9362 g 5362 2316 CircleF
+.1059 g 1137 2371 CircleF
+.1244 g 1225 2371 CircleF
+.143 g 1313 2371 CircleF
+.1615 g 1401 2371 CircleF
+.18 g 1489 2371 CircleF
+.1985 g 1577 2371 CircleF
+.2171 g 1665 2371 CircleF
+.2356 g 1753 2371 CircleF
+.2541 g 1841 2371 CircleF
+.2726 g 1929 2371 CircleF
+.2911 g 2017 2371 CircleF
+.3095 g 2105 2371 CircleF
+.328 g 2193 2371 CircleF
+.3465 g 2281 2371 CircleF
+.3649 g 2369 2371 CircleF
+.3833 g 2457 2371 CircleF
+.4017 g 2545 2371 CircleF
+.4201 g 2633 2371 CircleF
+.4385 g 2721 2371 CircleF
+.4568 g 2809 2371 CircleF
+.4751 g 2897 2371 CircleF
+.4934 g 2985 2371 CircleF
+.5117 g 3073 2371 CircleF
+.5298 g 3161 2371 CircleF
+.548 g 3249 2371 CircleF
+.566 g 3337 2371 CircleF
+.5841 g 3425 2371 CircleF
+.602 g 3513 2371 CircleF
+.6198 g 3601 2371 CircleF
+.6376 g 3689 2371 CircleF
+.6552 g 3777 2371 CircleF
+.6727 g 3865 2371 CircleF
+.6901 g 3953 2371 CircleF
+.7073 g 4041 2371 CircleF
+.7244 g 4129 2371 CircleF
+.7413 g 4218 2371 CircleF
+.7579 g 4306 2371 CircleF
+.7743 g 4394 2371 CircleF
+.7905 g 4482 2371 CircleF
+.8064 g 4570 2371 CircleF
+.822 g 4658 2371 CircleF
+.8373 g 4746 2371 CircleF
+.8522 g 4834 2371 CircleF
+.8668 g 4922 2371 CircleF
+.881 g 5010 2371 CircleF
+.8948 g 5098 2371 CircleF
+.9082 g 5186 2371 CircleF
+.9211 g 5274 2371 CircleF
+.9336 g 5362 2371 CircleF
+.1023 g 1137 2426 CircleF
+.1208 g 1225 2426 CircleF
+.1393 g 1313 2426 CircleF
+.1579 g 1401 2426 CircleF
+.1764 g 1489 2426 CircleF
+.1949 g 1577 2426 CircleF
+.2134 g 1665 2426 CircleF
+.2319 g 1753 2426 CircleF
+.2504 g 1841 2426 CircleF
+.2689 g 1929 2426 CircleF
+.2874 g 2017 2426 CircleF
+.3059 g 2105 2426 CircleF
+.3244 g 2193 2426 CircleF
+.3428 g 2281 2426 CircleF
+.3613 g 2369 2426 CircleF
+.3797 g 2457 2426 CircleF
+.3981 g 2545 2426 CircleF
+.4165 g 2633 2426 CircleF
+.4349 g 2721 2426 CircleF
+.4532 g 2809 2426 CircleF
+.4716 g 2897 2426 CircleF
+.4898 g 2985 2426 CircleF
+.5081 g 3073 2426 CircleF
+.5263 g 3161 2426 CircleF
+.5444 g 3249 2426 CircleF
+.5625 g 3337 2426 CircleF
+.5805 g 3425 2426 CircleF
+.5985 g 3513 2426 CircleF
+.6163 g 3601 2426 CircleF
+.6341 g 3689 2426 CircleF
+.6518 g 3777 2426 CircleF
+.6693 g 3865 2426 CircleF
+.6867 g 3953 2426 CircleF
+.704 g 4041 2426 CircleF
+.7211 g 4129 2426 CircleF
+.738 g 4218 2426 CircleF
+.7546 g 4306 2426 CircleF
+.7711 g 4394 2426 CircleF
+.7873 g 4482 2426 CircleF
+.8033 g 4570 2426 CircleF
+.8189 g 4658 2426 CircleF
+.8343 g 4746 2426 CircleF
+.8493 g 4834 2426 CircleF
+.8639 g 4922 2426 CircleF
+.8782 g 5010 2426 CircleF
+.8921 g 5098 2426 CircleF
+.9055 g 5186 2426 CircleF
+.9185 g 5274 2426 CircleF
+.931 g 5362 2426 CircleF
+.0987 g 1137 2481 CircleF
+.1173 g 1225 2481 CircleF
+.1358 g 1313 2481 CircleF
+.1543 g 1401 2481 CircleF
+.1729 g 1489 2481 CircleF
+.1914 g 1577 2481 CircleF
+.2099 g 1665 2481 CircleF
+.2284 g 1753 2481 CircleF
+.2469 g 1841 2481 CircleF
+.2654 g 1929 2481 CircleF
+.2839 g 2017 2481 CircleF
+.3024 g 2105 2481 CircleF
+.3209 g 2193 2481 CircleF
+.3393 g 2281 2481 CircleF
+.3578 g 2369 2481 CircleF
+.3762 g 2457 2481 CircleF
+.3946 g 2545 2481 CircleF
+.413 g 2633 2481 CircleF
+.4314 g 2721 2481 CircleF
+.4497 g 2809 2481 CircleF
+.4681 g 2897 2481 CircleF
+.4864 g 2985 2481 CircleF
+.5046 g 3073 2481 CircleF
+.5228 g 3161 2481 CircleF
+.541 g 3249 2481 CircleF
+.5591 g 3337 2481 CircleF
+.5771 g 3425 2481 CircleF
+.5951 g 3513 2481 CircleF
+.6129 g 3601 2481 CircleF
+.6307 g 3689 2481 CircleF
+.6484 g 3777 2481 CircleF
+.666 g 3865 2481 CircleF
+.6834 g 3953 2481 CircleF
+.7007 g 4041 2481 CircleF
+.7178 g 4129 2481 CircleF
+.7347 g 4218 2481 CircleF
+.7515 g 4306 2481 CircleF
+.768 g 4394 2481 CircleF
+.7842 g 4482 2481 CircleF
+.8002 g 4570 2481 CircleF
+.816 g 4658 2481 CircleF
+.8313 g 4746 2481 CircleF
+.8464 g 4834 2481 CircleF
+.8611 g 4922 2481 CircleF
+.8754 g 5010 2481 CircleF
+.8894 g 5098 2481 CircleF
+.9029 g 5186 2481 CircleF
+.9159 g 5274 2481 CircleF
+.9285 g 5362 2481 CircleF
+.0953 g 1137 2535 CircleF
+.1138 g 1225 2535 CircleF
+.1324 g 1313 2535 CircleF
+.1509 g 1401 2535 CircleF
+.1694 g 1489 2535 CircleF
+.1879 g 1577 2535 CircleF
+.2065 g 1665 2535 CircleF
+.225 g 1753 2535 CircleF
+.2435 g 1841 2535 CircleF
+.262 g 1929 2535 CircleF
+.2805 g 2017 2535 CircleF
+.299 g 2105 2535 CircleF
+.3174 g 2193 2535 CircleF
+.3359 g 2281 2535 CircleF
+.3543 g 2369 2535 CircleF
+.3728 g 2457 2535 CircleF
+.3912 g 2545 2535 CircleF
+.4096 g 2633 2535 CircleF
+.428 g 2721 2535 CircleF
+.4463 g 2809 2535 CircleF
+.4647 g 2897 2535 CircleF
+.483 g 2985 2535 CircleF
+.5012 g 3073 2535 CircleF
+.5194 g 3161 2535 CircleF
+.5376 g 3249 2535 CircleF
+.5557 g 3337 2535 CircleF
+.5738 g 3425 2535 CircleF
+.5917 g 3513 2535 CircleF
+.6096 g 3601 2535 CircleF
+.6274 g 3689 2535 CircleF
+.6451 g 3777 2535 CircleF
+.6627 g 3865 2535 CircleF
+.6802 g 3953 2535 CircleF
+.6975 g 4041 2535 CircleF
+.7146 g 4129 2535 CircleF
+.7316 g 4218 2535 CircleF
+.7484 g 4306 2535 CircleF
+.7649 g 4394 2535 CircleF
+.7812 g 4482 2535 CircleF
+.7973 g 4570 2535 CircleF
+.813 g 4658 2535 CircleF
+.8285 g 4746 2535 CircleF
+.8436 g 4834 2535 CircleF
+.8584 g 4922 2535 CircleF
+.8728 g 5010 2535 CircleF
+.8867 g 5098 2535 CircleF
+.9003 g 5186 2535 CircleF
+.9134 g 5274 2535 CircleF
+.9261 g 5362 2535 CircleF
+.0919 g 1137 2590 CircleF
+.1105 g 1225 2590 CircleF
+.129 g 1313 2590 CircleF
+.1475 g 1401 2590 CircleF
+.1661 g 1489 2590 CircleF
+.1846 g 1577 2590 CircleF
+.2031 g 1665 2590 CircleF
+.2216 g 1753 2590 CircleF
+.2401 g 1841 2590 CircleF
+.2586 g 1929 2590 CircleF
+.2771 g 2017 2590 CircleF
+.2956 g 2105 2590 CircleF
+.3141 g 2193 2590 CircleF
+.3325 g 2281 2590 CircleF
+.351 g 2369 2590 CircleF
+.3694 g 2457 2590 CircleF
+.3879 g 2545 2590 CircleF
+.4063 g 2633 2590 CircleF
+.4247 g 2721 2590 CircleF
+.443 g 2809 2590 CircleF
+.4613 g 2897 2590 CircleF
+.4796 g 2985 2590 CircleF
+.4979 g 3073 2590 CircleF
+.5161 g 3161 2590 CircleF
+.5343 g 3249 2590 CircleF
+.5524 g 3337 2590 CircleF
+.5705 g 3425 2590 CircleF
+.5885 g 3513 2590 CircleF
+.6064 g 3601 2590 CircleF
+.6242 g 3689 2590 CircleF
+.6419 g 3777 2590 CircleF
+.6595 g 3865 2590 CircleF
+.677 g 3953 2590 CircleF
+.6944 g 4041 2590 CircleF
+.7115 g 4129 2590 CircleF
+.7285 g 4218 2590 CircleF
+.7453 g 4306 2590 CircleF
+.7619 g 4394 2590 CircleF
+.7783 g 4482 2590 CircleF
+.7944 g 4570 2590 CircleF
+.8102 g 4658 2590 CircleF
+.8257 g 4746 2590 CircleF
+.8409 g 4834 2590 CircleF
+.8557 g 4922 2590 CircleF
+.8701 g 5010 2590 CircleF
+.8842 g 5098 2590 CircleF
+.8978 g 5186 2590 CircleF
+.911 g 5274 2590 CircleF
+.9238 g 5362 2590 CircleF
+.0887 g 1137 2645 CircleF
+.1072 g 1225 2645 CircleF
+.1257 g 1313 2645 CircleF
+.1443 g 1401 2645 CircleF
+.1628 g 1489 2645 CircleF
+.1813 g 1577 2645 CircleF
+.1998 g 1665 2645 CircleF
+.2183 g 1753 2645 CircleF
+.2369 g 1841 2645 CircleF
+.2554 g 1929 2645 CircleF
+.2739 g 2017 2645 CircleF
+.2923 g 2105 2645 CircleF
+.3108 g 2193 2645 CircleF
+.3293 g 2281 2645 CircleF
+.3477 g 2369 2645 CircleF
+.3662 g 2457 2645 CircleF
+.3846 g 2545 2645 CircleF
+.403 g 2633 2645 CircleF
+.4214 g 2721 2645 CircleF
+.4398 g 2809 2645 CircleF
+.4581 g 2897 2645 CircleF
+.4764 g 2985 2645 CircleF
+.4947 g 3073 2645 CircleF
+.5129 g 3161 2645 CircleF
+.5311 g 3249 2645 CircleF
+.5492 g 3337 2645 CircleF
+.5673 g 3425 2645 CircleF
+.5853 g 3513 2645 CircleF
+.6032 g 3601 2645 CircleF
+.6211 g 3689 2645 CircleF
+.6388 g 3777 2645 CircleF
+.6564 g 3865 2645 CircleF
+.6739 g 3953 2645 CircleF
+.6913 g 4041 2645 CircleF
+.7085 g 4129 2645 CircleF
+.7256 g 4218 2645 CircleF
+.7424 g 4306 2645 CircleF
+.759 g 4394 2645 CircleF
+.7754 g 4482 2645 CircleF
+.7916 g 4570 2645 CircleF
+.8074 g 4658 2645 CircleF
+.823 g 4746 2645 CircleF
+.8382 g 4834 2645 CircleF
+.8531 g 4922 2645 CircleF
+.8676 g 5010 2645 CircleF
+.8817 g 5098 2645 CircleF
+.8954 g 5186 2645 CircleF
+.9087 g 5274 2645 CircleF
+.9215 g 5362 2645 CircleF
+.0855 g 1137 2699 CircleF
+.104 g 1225 2699 CircleF
+.1225 g 1313 2699 CircleF
+.1411 g 1401 2699 CircleF
+.1596 g 1489 2699 CircleF
+.1781 g 1577 2699 CircleF
+.1966 g 1665 2699 CircleF
+.2152 g 1753 2699 CircleF
+.2337 g 1841 2699 CircleF
+.2522 g 1929 2699 CircleF
+.2707 g 2017 2699 CircleF
+.2892 g 2105 2699 CircleF
+.3076 g 2193 2699 CircleF
+.3261 g 2281 2699 CircleF
+.3446 g 2369 2699 CircleF
+.363 g 2457 2699 CircleF
+.3814 g 2545 2699 CircleF
+.3999 g 2633 2699 CircleF
+.4182 g 2721 2699 CircleF
+.4366 g 2809 2699 CircleF
+.455 g 2897 2699 CircleF
+.4733 g 2985 2699 CircleF
+.4915 g 3073 2699 CircleF
+.5098 g 3161 2699 CircleF
+.528 g 3249 2699 CircleF
+.5461 g 3337 2699 CircleF
+.5642 g 3425 2699 CircleF
+.5822 g 3513 2699 CircleF
+.6002 g 3601 2699 CircleF
+.618 g 3689 2699 CircleF
+.6358 g 3777 2699 CircleF
+.6534 g 3865 2699 CircleF
+.6709 g 3953 2699 CircleF
+.6883 g 4041 2699 CircleF
+.7056 g 4129 2699 CircleF
+.7226 g 4218 2699 CircleF
+.7395 g 4306 2699 CircleF
+.7562 g 4394 2699 CircleF
+.7726 g 4482 2699 CircleF
+.7888 g 4570 2699 CircleF
+.8047 g 4658 2699 CircleF
+.8203 g 4746 2699 CircleF
+.8356 g 4834 2699 CircleF
+.8505 g 4922 2699 CircleF
+.8651 g 5010 2699 CircleF
+.8793 g 5098 2699 CircleF
+.893 g 5186 2699 CircleF
+.9064 g 5274 2699 CircleF
+.9192 g 5362 2699 CircleF
+.0823 g 1137 2754 CircleF
+.1009 g 1225 2754 CircleF
+.1194 g 1313 2754 CircleF
+.1379 g 1401 2754 CircleF
+.1565 g 1489 2754 CircleF
+.175 g 1577 2754 CircleF
+.1935 g 1665 2754 CircleF
+.212 g 1753 2754 CircleF
+.2305 g 1841 2754 CircleF
+.2491 g 1929 2754 CircleF
+.2676 g 2017 2754 CircleF
+.286 g 2105 2754 CircleF
+.3045 g 2193 2754 CircleF
+.323 g 2281 2754 CircleF
+.3415 g 2369 2754 CircleF
+.3599 g 2457 2754 CircleF
+.3783 g 2545 2754 CircleF
+.3968 g 2633 2754 CircleF
+.4152 g 2721 2754 CircleF
+.4335 g 2809 2754 CircleF
+.4519 g 2897 2754 CircleF
+.4702 g 2985 2754 CircleF
+.4885 g 3073 2754 CircleF
+.5067 g 3161 2754 CircleF
+.5249 g 3249 2754 CircleF
+.5431 g 3337 2754 CircleF
+.5612 g 3425 2754 CircleF
+.5792 g 3513 2754 CircleF
+.5971 g 3601 2754 CircleF
+.615 g 3689 2754 CircleF
+.6328 g 3777 2754 CircleF
+.6505 g 3865 2754 CircleF
+.668 g 3953 2754 CircleF
+.6854 g 4041 2754 CircleF
+.7027 g 4129 2754 CircleF
+.7198 g 4218 2754 CircleF
+.7367 g 4306 2754 CircleF
+.7534 g 4394 2754 CircleF
+.7699 g 4482 2754 CircleF
+.7861 g 4570 2754 CircleF
+.802 g 4658 2754 CircleF
+.8177 g 4746 2754 CircleF
+.833 g 4834 2754 CircleF
+.848 g 4922 2754 CircleF
+.8627 g 5010 2754 CircleF
+.8769 g 5098 2754 CircleF
+.8907 g 5186 2754 CircleF
+.9041 g 5274 2754 CircleF
+.9171 g 5362 2754 CircleF
+.0793 g 1137 2809 CircleF
+.0978 g 1225 2809 CircleF
+.1164 g 1313 2809 CircleF
+.1349 g 1401 2809 CircleF
+.1534 g 1489 2809 CircleF
+.172 g 1577 2809 CircleF
+.1905 g 1665 2809 CircleF
+.209 g 1753 2809 CircleF
+.2275 g 1841 2809 CircleF
+.246 g 1929 2809 CircleF
+.2645 g 2017 2809 CircleF
+.283 g 2105 2809 CircleF
+.3015 g 2193 2809 CircleF
+.32 g 2281 2809 CircleF
+.3384 g 2369 2809 CircleF
+.3569 g 2457 2809 CircleF
+.3753 g 2545 2809 CircleF
+.3937 g 2633 2809 CircleF
+.4121 g 2721 2809 CircleF
+.4305 g 2809 2809 CircleF
+.4489 g 2897 2809 CircleF
+.4672 g 2985 2809 CircleF
+.4855 g 3073 2809 CircleF
+.5037 g 3161 2809 CircleF
+.5219 g 3249 2809 CircleF
+.5401 g 3337 2809 CircleF
+.5582 g 3425 2809 CircleF
+.5762 g 3513 2809 CircleF
+.5942 g 3601 2809 CircleF
+.6121 g 3689 2809 CircleF
+.6299 g 3777 2809 CircleF
+.6476 g 3865 2809 CircleF
+.6651 g 3953 2809 CircleF
+.6826 g 4041 2809 CircleF
+.6999 g 4129 2809 CircleF
+.717 g 4218 2809 CircleF
+.7339 g 4306 2809 CircleF
+.7507 g 4394 2809 CircleF
+.7672 g 4482 2809 CircleF
+.7835 g 4570 2809 CircleF
+.7995 g 4658 2809 CircleF
+.8152 g 4746 2809 CircleF
+.8305 g 4834 2809 CircleF
+.8456 g 4922 2809 CircleF
+.8603 g 5010 2809 CircleF
+.8746 g 5098 2809 CircleF
+.8885 g 5186 2809 CircleF
+.9019 g 5274 2809 CircleF
+.9149 g 5362 2809 CircleF
+.0763 g 1137 2864 CircleF
+.0949 g 1225 2864 CircleF
+.1134 g 1313 2864 CircleF
+.1319 g 1401 2864 CircleF
+.1504 g 1489 2864 CircleF
+.169 g 1577 2864 CircleF
+.1875 g 1665 2864 CircleF
+.206 g 1753 2864 CircleF
+.2245 g 1841 2864 CircleF
+.243 g 1929 2864 CircleF
+.2615 g 2017 2864 CircleF
+.28 g 2105 2864 CircleF
+.2985 g 2193 2864 CircleF
+.317 g 2281 2864 CircleF
+.3355 g 2369 2864 CircleF
+.3539 g 2457 2864 CircleF
+.3723 g 2545 2864 CircleF
+.3908 g 2633 2864 CircleF
+.4092 g 2721 2864 CircleF
+.4276 g 2809 2864 CircleF
+.4459 g 2897 2864 CircleF
+.4642 g 2985 2864 CircleF
+.4825 g 3073 2864 CircleF
+.5008 g 3161 2864 CircleF
+.519 g 3249 2864 CircleF
+.5372 g 3337 2864 CircleF
+.5553 g 3425 2864 CircleF
+.5733 g 3513 2864 CircleF
+.5913 g 3601 2864 CircleF
+.6092 g 3689 2864 CircleF
+.627 g 3777 2864 CircleF
+.6447 g 3865 2864 CircleF
+.6623 g 3953 2864 CircleF
+.6798 g 4041 2864 CircleF
+.6971 g 4129 2864 CircleF
+.7143 g 4218 2864 CircleF
+.7312 g 4306 2864 CircleF
+.748 g 4394 2864 CircleF
+.7646 g 4482 2864 CircleF
+.7809 g 4570 2864 CircleF
+.7969 g 4658 2864 CircleF
+.8127 g 4746 2864 CircleF
+.8281 g 4834 2864 CircleF
+.8432 g 4922 2864 CircleF
+.858 g 5010 2864 CircleF
+.8723 g 5098 2864 CircleF
+.8863 g 5186 2864 CircleF
+.8998 g 5274 2864 CircleF
+.9129 g 5362 2864 CircleF
+.0734 g 1137 2918 CircleF
+.0919 g 1225 2918 CircleF
+.1105 g 1313 2918 CircleF
+.129 g 1401 2918 CircleF
+.1475 g 1489 2918 CircleF
+.1661 g 1577 2918 CircleF
+.1846 g 1665 2918 CircleF
+.2031 g 1753 2918 CircleF
+.2216 g 1841 2918 CircleF
+.2401 g 1929 2918 CircleF
+.2586 g 2017 2918 CircleF
+.2771 g 2105 2918 CircleF
+.2956 g 2193 2918 CircleF
+.3141 g 2281 2918 CircleF
+.3326 g 2369 2918 CircleF
+.351 g 2457 2918 CircleF
+.3695 g 2545 2918 CircleF
+.3879 g 2633 2918 CircleF
+.4063 g 2721 2918 CircleF
+.4247 g 2809 2918 CircleF
+.443 g 2897 2918 CircleF
+.4614 g 2985 2918 CircleF
+.4797 g 3073 2918 CircleF
+.4979 g 3161 2918 CircleF
+.5162 g 3249 2918 CircleF
+.5343 g 3337 2918 CircleF
+.5525 g 3425 2918 CircleF
+.5705 g 3513 2918 CircleF
+.5885 g 3601 2918 CircleF
+.6064 g 3689 2918 CircleF
+.6242 g 3777 2918 CircleF
+.642 g 3865 2918 CircleF
+.6596 g 3953 2918 CircleF
+.6771 g 4041 2918 CircleF
+.6944 g 4129 2918 CircleF
+.7116 g 4218 2918 CircleF
+.7286 g 4306 2918 CircleF
+.7454 g 4394 2918 CircleF
+.762 g 4482 2918 CircleF
+.7783 g 4570 2918 CircleF
+.7944 g 4658 2918 CircleF
+.8102 g 4746 2918 CircleF
+.8257 g 4834 2918 CircleF
+.8409 g 4922 2918 CircleF
+.8557 g 5010 2918 CircleF
+.8701 g 5098 2918 CircleF
+.8841 g 5186 2918 CircleF
+.8977 g 5274 2918 CircleF
+.9108 g 5362 2918 CircleF
+.0706 g 1137 2973 CircleF
+.0891 g 1225 2973 CircleF
+.1076 g 1313 2973 CircleF
+.1262 g 1401 2973 CircleF
+.1447 g 1489 2973 CircleF
+.1632 g 1577 2973 CircleF
+.1817 g 1665 2973 CircleF
+.2003 g 1753 2973 CircleF
+.2188 g 1841 2973 CircleF
+.2373 g 1929 2973 CircleF
+.2558 g 2017 2973 CircleF
+.2743 g 2105 2973 CircleF
+.2928 g 2193 2973 CircleF
+.3112 g 2281 2973 CircleF
+.3297 g 2369 2973 CircleF
+.3482 g 2457 2973 CircleF
+.3666 g 2545 2973 CircleF
+.385 g 2633 2973 CircleF
+.4035 g 2721 2973 CircleF
+.4218 g 2809 2973 CircleF
+.4402 g 2897 2973 CircleF
+.4585 g 2985 2973 CircleF
+.4769 g 3073 2973 CircleF
+.4951 g 3161 2973 CircleF
+.5134 g 3249 2973 CircleF
+.5315 g 3337 2973 CircleF
+.5497 g 3425 2973 CircleF
+.5677 g 3513 2973 CircleF
+.5857 g 3601 2973 CircleF
+.6037 g 3689 2973 CircleF
+.6215 g 3777 2973 CircleF
+.6393 g 3865 2973 CircleF
+.6569 g 3953 2973 CircleF
+.6744 g 4041 2973 CircleF
+.6918 g 4129 2973 CircleF
+.709 g 4218 2973 CircleF
+.726 g 4306 2973 CircleF
+.7428 g 4394 2973 CircleF
+.7595 g 4482 2973 CircleF
+.7758 g 4570 2973 CircleF
+.792 g 4658 2973 CircleF
+.8078 g 4746 2973 CircleF
+.8234 g 4834 2973 CircleF
+.8386 g 4922 2973 CircleF
+.8534 g 5010 2973 CircleF
+.8679 g 5098 2973 CircleF
+.882 g 5186 2973 CircleF
+.8956 g 5274 2973 CircleF
+.9088 g 5362 2973 CircleF
+.0678 g 1137 3028 CircleF
+.0863 g 1225 3028 CircleF
+.1048 g 1313 3028 CircleF
+.1234 g 1401 3028 CircleF
+.1419 g 1489 3028 CircleF
+.1604 g 1577 3028 CircleF
+.1789 g 1665 3028 CircleF
+.1975 g 1753 3028 CircleF
+.216 g 1841 3028 CircleF
+.2345 g 1929 3028 CircleF
+.253 g 2017 3028 CircleF
+.2715 g 2105 3028 CircleF
+.29 g 2193 3028 CircleF
+.3085 g 2281 3028 CircleF
+.3269 g 2369 3028 CircleF
+.3454 g 2457 3028 CircleF
+.3638 g 2545 3028 CircleF
+.3823 g 2633 3028 CircleF
+.4007 g 2721 3028 CircleF
+.4191 g 2809 3028 CircleF
+.4374 g 2897 3028 CircleF
+.4558 g 2985 3028 CircleF
+.4741 g 3073 3028 CircleF
+.4924 g 3161 3028 CircleF
+.5106 g 3249 3028 CircleF
+.5288 g 3337 3028 CircleF
+.5469 g 3425 3028 CircleF
+.565 g 3513 3028 CircleF
+.583 g 3601 3028 CircleF
+.601 g 3689 3028 CircleF
+.6188 g 3777 3028 CircleF
+.6366 g 3865 3028 CircleF
+.6542 g 3953 3028 CircleF
+.6718 g 4041 3028 CircleF
+.6892 g 4129 3028 CircleF
+.7064 g 4218 3028 CircleF
+.7235 g 4306 3028 CircleF
+.7403 g 4394 3028 CircleF
+.757 g 4482 3028 CircleF
+.7734 g 4570 3028 CircleF
+.7896 g 4658 3028 CircleF
+.8055 g 4746 3028 CircleF
+.8211 g 4834 3028 CircleF
+.8363 g 4922 3028 CircleF
+.8512 g 5010 3028 CircleF
+.8658 g 5098 3028 CircleF
+.8799 g 5186 3028 CircleF
+.8936 g 5274 3028 CircleF
+.9069 g 5362 3028 CircleF
+.065 g 1137 3083 CircleF
+.0836 g 1225 3083 CircleF
+.1021 g 1313 3083 CircleF
+.1206 g 1401 3083 CircleF
+.1392 g 1489 3083 CircleF
+.1577 g 1577 3083 CircleF
+.1762 g 1665 3083 CircleF
+.1947 g 1753 3083 CircleF
+.2132 g 1841 3083 CircleF
+.2318 g 1929 3083 CircleF
+.2503 g 2017 3083 CircleF
+.2688 g 2105 3083 CircleF
+.2873 g 2193 3083 CircleF
+.3057 g 2281 3083 CircleF
+.3242 g 2369 3083 CircleF
+.3427 g 2457 3083 CircleF
+.3611 g 2545 3083 CircleF
+.3796 g 2633 3083 CircleF
+.398 g 2721 3083 CircleF
+.4164 g 2809 3083 CircleF
+.4347 g 2897 3083 CircleF
+.4531 g 2985 3083 CircleF
+.4714 g 3073 3083 CircleF
+.4897 g 3161 3083 CircleF
+.5079 g 3249 3083 CircleF
+.5261 g 3337 3083 CircleF
+.5443 g 3425 3083 CircleF
+.5624 g 3513 3083 CircleF
+.5804 g 3601 3083 CircleF
+.5984 g 3689 3083 CircleF
+.6162 g 3777 3083 CircleF
+.634 g 3865 3083 CircleF
+.6517 g 3953 3083 CircleF
+.6692 g 4041 3083 CircleF
+.6866 g 4129 3083 CircleF
+.7039 g 4218 3083 CircleF
+.721 g 4306 3083 CircleF
+.7379 g 4394 3083 CircleF
+.7546 g 4482 3083 CircleF
+.771 g 4570 3083 CircleF
+.7872 g 4658 3083 CircleF
+.8032 g 4746 3083 CircleF
+.8188 g 4834 3083 CircleF
+.8341 g 4922 3083 CircleF
+.8491 g 5010 3083 CircleF
+.8637 g 5098 3083 CircleF
+.8778 g 5186 3083 CircleF
+.8916 g 5274 3083 CircleF
+.9049 g 5362 3083 CircleF
+.0623 g 1137 3137 CircleF
+.0809 g 1225 3137 CircleF
+.0994 g 1313 3137 CircleF
+.118 g 1401 3137 CircleF
+.1365 g 1489 3137 CircleF
+.155 g 1577 3137 CircleF
+.1735 g 1665 3137 CircleF
+.1921 g 1753 3137 CircleF
+.2106 g 1841 3137 CircleF
+.2291 g 1929 3137 CircleF
+.2476 g 2017 3137 CircleF
+.2661 g 2105 3137 CircleF
+.2846 g 2193 3137 CircleF
+.3031 g 2281 3137 CircleF
+.3215 g 2369 3137 CircleF
+.34 g 2457 3137 CircleF
+.3585 g 2545 3137 CircleF
+.3769 g 2633 3137 CircleF
+.3953 g 2721 3137 CircleF
+.4137 g 2809 3137 CircleF
+.4321 g 2897 3137 CircleF
+.4504 g 2985 3137 CircleF
+.4688 g 3073 3137 CircleF
+.487 g 3161 3137 CircleF
+.5053 g 3249 3137 CircleF
+.5235 g 3337 3137 CircleF
+.5417 g 3425 3137 CircleF
+.5598 g 3513 3137 CircleF
+.5778 g 3601 3137 CircleF
+.5958 g 3689 3137 CircleF
+.6137 g 3777 3137 CircleF
+.6314 g 3865 3137 CircleF
+.6491 g 3953 3137 CircleF
+.6667 g 4041 3137 CircleF
+.6841 g 4129 3137 CircleF
+.7014 g 4218 3137 CircleF
+.7185 g 4306 3137 CircleF
+.7355 g 4394 3137 CircleF
+.7522 g 4482 3137 CircleF
+.7687 g 4570 3137 CircleF
+.7849 g 4658 3137 CircleF
+.8009 g 4746 3137 CircleF
+.8166 g 4834 3137 CircleF
+.8319 g 4922 3137 CircleF
+.8469 g 5010 3137 CircleF
+.8616 g 5098 3137 CircleF
+.8758 g 5186 3137 CircleF
+.8897 g 5274 3137 CircleF
+.9031 g 5362 3137 CircleF
+.0597 g 1137 3192 CircleF
+.0783 g 1225 3192 CircleF
+.0968 g 1313 3192 CircleF
+.1153 g 1401 3192 CircleF
+.1339 g 1489 3192 CircleF
+.1524 g 1577 3192 CircleF
+.1709 g 1665 3192 CircleF
+.1894 g 1753 3192 CircleF
+.208 g 1841 3192 CircleF
+.2265 g 1929 3192 CircleF
+.245 g 2017 3192 CircleF
+.2635 g 2105 3192 CircleF
+.282 g 2193 3192 CircleF
+.3005 g 2281 3192 CircleF
+.3189 g 2369 3192 CircleF
+.3374 g 2457 3192 CircleF
+.3558 g 2545 3192 CircleF
+.3743 g 2633 3192 CircleF
+.3927 g 2721 3192 CircleF
+.4111 g 2809 3192 CircleF
+.4295 g 2897 3192 CircleF
+.4478 g 2985 3192 CircleF
+.4662 g 3073 3192 CircleF
+.4845 g 3161 3192 CircleF
+.5027 g 3249 3192 CircleF
+.5209 g 3337 3192 CircleF
+.5391 g 3425 3192 CircleF
+.5572 g 3513 3192 CircleF
+.5753 g 3601 3192 CircleF
+.5932 g 3689 3192 CircleF
+.6111 g 3777 3192 CircleF
+.6289 g 3865 3192 CircleF
+.6466 g 3953 3192 CircleF
+.6642 g 4041 3192 CircleF
+.6817 g 4129 3192 CircleF
+.699 g 4218 3192 CircleF
+.7161 g 4306 3192 CircleF
+.7331 g 4394 3192 CircleF
+.7498 g 4482 3192 CircleF
+.7664 g 4570 3192 CircleF
+.7827 g 4658 3192 CircleF
+.7987 g 4746 3192 CircleF
+.8144 g 4834 3192 CircleF
+.8298 g 4922 3192 CircleF
+.8449 g 5010 3192 CircleF
+.8596 g 5098 3192 CircleF
+.8739 g 5186 3192 CircleF
+.8877 g 5274 3192 CircleF
+.9012 g 5362 3192 CircleF
+.0571 g 1137 3247 CircleF
+.0757 g 1225 3247 CircleF
+.0942 g 1313 3247 CircleF
+.1128 g 1401 3247 CircleF
+.1313 g 1489 3247 CircleF
+.1498 g 1577 3247 CircleF
+.1683 g 1665 3247 CircleF
+.1869 g 1753 3247 CircleF
+.2054 g 1841 3247 CircleF
+.2239 g 1929 3247 CircleF
+.2424 g 2017 3247 CircleF
+.2609 g 2105 3247 CircleF
+.2794 g 2193 3247 CircleF
+.2979 g 2281 3247 CircleF
+.3164 g 2369 3247 CircleF
+.3348 g 2457 3247 CircleF
+.3533 g 2545 3247 CircleF
+.3717 g 2633 3247 CircleF
+.3901 g 2721 3247 CircleF
+.4086 g 2809 3247 CircleF
+.4269 g 2897 3247 CircleF
+.4453 g 2985 3247 CircleF
+.4636 g 3073 3247 CircleF
+.4819 g 3161 3247 CircleF
+.5002 g 3249 3247 CircleF
+.5184 g 3337 3247 CircleF
+.5366 g 3425 3247 CircleF
+.5547 g 3513 3247 CircleF
+.5728 g 3601 3247 CircleF
+.5908 g 3689 3247 CircleF
+.6087 g 3777 3247 CircleF
+.6265 g 3865 3247 CircleF
+.6442 g 3953 3247 CircleF
+.6618 g 4041 3247 CircleF
+.6793 g 4129 3247 CircleF
+.6966 g 4218 3247 CircleF
+.7138 g 4306 3247 CircleF
+.7308 g 4394 3247 CircleF
+.7475 g 4482 3247 CircleF
+.7641 g 4570 3247 CircleF
+.7804 g 4658 3247 CircleF
+.7965 g 4746 3247 CircleF
+.8122 g 4834 3247 CircleF
+.8277 g 4922 3247 CircleF
+.8428 g 5010 3247 CircleF
+.8576 g 5098 3247 CircleF
+.8719 g 5186 3247 CircleF
+.8859 g 5274 3247 CircleF
+.8994 g 5362 3247 CircleF
+.0546 g 1137 3302 CircleF
+.0732 g 1225 3302 CircleF
+.0917 g 1313 3302 CircleF
+.1102 g 1401 3302 CircleF
+.1288 g 1489 3302 CircleF
+.1473 g 1577 3302 CircleF
+.1658 g 1665 3302 CircleF
+.1843 g 1753 3302 CircleF
+.2029 g 1841 3302 CircleF
+.2214 g 1929 3302 CircleF
+.2399 g 2017 3302 CircleF
+.2584 g 2105 3302 CircleF
+.2769 g 2193 3302 CircleF
+.2954 g 2281 3302 CircleF
+.3138 g 2369 3302 CircleF
+.3323 g 2457 3302 CircleF
+.3508 g 2545 3302 CircleF
+.3692 g 2633 3302 CircleF
+.3876 g 2721 3302 CircleF
+.406 g 2809 3302 CircleF
+.4244 g 2897 3302 CircleF
+.4428 g 2985 3302 CircleF
+.4611 g 3073 3302 CircleF
+.4794 g 3161 3302 CircleF
+.4977 g 3249 3302 CircleF
+.5159 g 3337 3302 CircleF
+.5341 g 3425 3302 CircleF
+.5522 g 3513 3302 CircleF
+.5703 g 3601 3302 CircleF
+.5883 g 3689 3302 CircleF
+.6062 g 3777 3302 CircleF
+.6241 g 3865 3302 CircleF
+.6418 g 3953 3302 CircleF
+.6594 g 4041 3302 CircleF
+.6769 g 4129 3302 CircleF
+.6943 g 4218 3302 CircleF
+.7115 g 4306 3302 CircleF
+.7285 g 4394 3302 CircleF
+.7453 g 4482 3302 CircleF
+.7619 g 4570 3302 CircleF
+.7782 g 4658 3302 CircleF
+.7943 g 4746 3302 CircleF
+.8101 g 4834 3302 CircleF
+.8256 g 4922 3302 CircleF
+.8408 g 5010 3302 CircleF
+.8556 g 5098 3302 CircleF
+.87 g 5186 3302 CircleF
+.884 g 5274 3302 CircleF
+.8976 g 5362 3302 CircleF
+.0521 g 1137 3356 CircleF
+.0707 g 1225 3356 CircleF
+.0892 g 1313 3356 CircleF
+.1077 g 1401 3356 CircleF
+.1263 g 1489 3356 CircleF
+.1448 g 1577 3356 CircleF
+.1633 g 1665 3356 CircleF
+.1819 g 1753 3356 CircleF
+.2004 g 1841 3356 CircleF
+.2189 g 1929 3356 CircleF
+.2374 g 2017 3356 CircleF
+.2559 g 2105 3356 CircleF
+.2744 g 2193 3356 CircleF
+.2929 g 2281 3356 CircleF
+.3114 g 2369 3356 CircleF
+.3298 g 2457 3356 CircleF
+.3483 g 2545 3356 CircleF
+.3667 g 2633 3356 CircleF
+.3852 g 2721 3356 CircleF
+.4036 g 2809 3356 CircleF
+.422 g 2897 3356 CircleF
+.4403 g 2985 3356 CircleF
+.4587 g 3073 3356 CircleF
+.477 g 3161 3356 CircleF
+.4953 g 3249 3356 CircleF
+.5135 g 3337 3356 CircleF
+.5317 g 3425 3356 CircleF
+.5498 g 3513 3356 CircleF
+.5679 g 3601 3356 CircleF
+.5859 g 3689 3356 CircleF
+.6038 g 3777 3356 CircleF
+.6217 g 3865 3356 CircleF
+.6394 g 3953 3356 CircleF
+.6571 g 4041 3356 CircleF
+.6746 g 4129 3356 CircleF
+.692 g 4218 3356 CircleF
+.7092 g 4306 3356 CircleF
+.7262 g 4394 3356 CircleF
+.7431 g 4482 3356 CircleF
+.7597 g 4570 3356 CircleF
+.7761 g 4658 3356 CircleF
+.7922 g 4746 3356 CircleF
+.8081 g 4834 3356 CircleF
+.8236 g 4922 3356 CircleF
+.8388 g 5010 3356 CircleF
+.8537 g 5098 3356 CircleF
+.8681 g 5186 3356 CircleF
+.8822 g 5274 3356 CircleF
+.8958 g 5362 3356 CircleF
+.0497 g 1137 3411 CircleF
+.0682 g 1225 3411 CircleF
+.0868 g 1313 3411 CircleF
+.1053 g 1401 3411 CircleF
+.1238 g 1489 3411 CircleF
+.1424 g 1577 3411 CircleF
+.1609 g 1665 3411 CircleF
+.1794 g 1753 3411 CircleF
+.1979 g 1841 3411 CircleF
+.2165 g 1929 3411 CircleF
+.235 g 2017 3411 CircleF
+.2535 g 2105 3411 CircleF
+.272 g 2193 3411 CircleF
+.2905 g 2281 3411 CircleF
+.3089 g 2369 3411 CircleF
+.3274 g 2457 3411 CircleF
+.3459 g 2545 3411 CircleF
+.3643 g 2633 3411 CircleF
+.3828 g 2721 3411 CircleF
+.4012 g 2809 3411 CircleF
+.4196 g 2897 3411 CircleF
+.4379 g 2985 3411 CircleF
+.4563 g 3073 3411 CircleF
+.4746 g 3161 3411 CircleF
+.4929 g 3249 3411 CircleF
+.5111 g 3337 3411 CircleF
+.5293 g 3425 3411 CircleF
+.5475 g 3513 3411 CircleF
+.5655 g 3601 3411 CircleF
+.5836 g 3689 3411 CircleF
+.6015 g 3777 3411 CircleF
+.6194 g 3865 3411 CircleF
+.6371 g 3953 3411 CircleF
+.6548 g 4041 3411 CircleF
+.6723 g 4129 3411 CircleF
+.6897 g 4218 3411 CircleF
+.7069 g 4306 3411 CircleF
+.724 g 4394 3411 CircleF
+.7409 g 4482 3411 CircleF
+.7575 g 4570 3411 CircleF
+.774 g 4658 3411 CircleF
+.7901 g 4746 3411 CircleF
+.806 g 4834 3411 CircleF
+.8216 g 4922 3411 CircleF
+.8369 g 5010 3411 CircleF
+.8518 g 5098 3411 CircleF
+.8663 g 5186 3411 CircleF
+.8804 g 5274 3411 CircleF
+.8941 g 5362 3411 CircleF
+.0473 g 1137 3466 CircleF
+.0659 g 1225 3466 CircleF
+.0844 g 1313 3466 CircleF
+.1029 g 1401 3466 CircleF
+.1215 g 1489 3466 CircleF
+.14 g 1577 3466 CircleF
+.1585 g 1665 3466 CircleF
+.177 g 1753 3466 CircleF
+.1956 g 1841 3466 CircleF
+.2141 g 1929 3466 CircleF
+.2326 g 2017 3466 CircleF
+.2511 g 2105 3466 CircleF
+.2696 g 2193 3466 CircleF
+.2881 g 2281 3466 CircleF
+.3066 g 2369 3466 CircleF
+.325 g 2457 3466 CircleF
+.3435 g 2545 3466 CircleF
+.362 g 2633 3466 CircleF
+.3804 g 2721 3466 CircleF
+.3988 g 2809 3466 CircleF
+.4172 g 2897 3466 CircleF
+.4356 g 2985 3466 CircleF
+.4539 g 3073 3466 CircleF
+.4722 g 3161 3466 CircleF
+.4905 g 3249 3466 CircleF
+.5088 g 3337 3466 CircleF
+.527 g 3425 3466 CircleF
+.5451 g 3513 3466 CircleF
+.5632 g 3601 3466 CircleF
+.5812 g 3689 3466 CircleF
+.5992 g 3777 3466 CircleF
+.6171 g 3865 3466 CircleF
+.6349 g 3953 3466 CircleF
+.6525 g 4041 3466 CircleF
+.6701 g 4129 3466 CircleF
+.6875 g 4218 3466 CircleF
+.7047 g 4306 3466 CircleF
+.7218 g 4394 3466 CircleF
+.7387 g 4482 3466 CircleF
+.7554 g 4570 3466 CircleF
+.7719 g 4658 3466 CircleF
+.7881 g 4746 3466 CircleF
+.804 g 4834 3466 CircleF
+.8196 g 4922 3466 CircleF
+.8349 g 5010 3466 CircleF
+.8499 g 5098 3466 CircleF
+.8645 g 5186 3466 CircleF
+.8786 g 5274 3466 CircleF
+.8924 g 5362 3466 CircleF
+.045 g 1137 3520 CircleF
+.0635 g 1225 3520 CircleF
+.082 g 1313 3520 CircleF
+.1006 g 1401 3520 CircleF
+.1191 g 1489 3520 CircleF
+.1376 g 1577 3520 CircleF
+.1562 g 1665 3520 CircleF
+.1747 g 1753 3520 CircleF
+.1932 g 1841 3520 CircleF
+.2117 g 1929 3520 CircleF
+.2302 g 2017 3520 CircleF
+.2488 g 2105 3520 CircleF
+.2673 g 2193 3520 CircleF
+.2857 g 2281 3520 CircleF
+.3042 g 2369 3520 CircleF
+.3227 g 2457 3520 CircleF
+.3412 g 2545 3520 CircleF
+.3596 g 2633 3520 CircleF
+.3781 g 2721 3520 CircleF
+.3965 g 2809 3520 CircleF
+.4149 g 2897 3520 CircleF
+.4332 g 2985 3520 CircleF
+.4516 g 3073 3520 CircleF
+.4699 g 3161 3520 CircleF
+.4882 g 3249 3520 CircleF
+.5065 g 3337 3520 CircleF
+.5247 g 3425 3520 CircleF
+.5428 g 3513 3520 CircleF
+.5609 g 3601 3520 CircleF
+.579 g 3689 3520 CircleF
+.5969 g 3777 3520 CircleF
+.6148 g 3865 3520 CircleF
+.6326 g 3953 3520 CircleF
+.6503 g 4041 3520 CircleF
+.6679 g 4129 3520 CircleF
+.6853 g 4218 3520 CircleF
+.7026 g 4306 3520 CircleF
+.7197 g 4394 3520 CircleF
+.7366 g 4482 3520 CircleF
+.7533 g 4570 3520 CircleF
+.7698 g 4658 3520 CircleF
+.7861 g 4746 3520 CircleF
+.802 g 4834 3520 CircleF
+.8177 g 4922 3520 CircleF
+.8331 g 5010 3520 CircleF
+.848 g 5098 3520 CircleF
+.8627 g 5186 3520 CircleF
+.8769 g 5274 3520 CircleF
+.8907 g 5362 3520 CircleF
+.0427 g 1137 3575 CircleF
+.0612 g 1225 3575 CircleF
+.0797 g 1313 3575 CircleF
+.0983 g 1401 3575 CircleF
+.1168 g 1489 3575 CircleF
+.1353 g 1577 3575 CircleF
+.1539 g 1665 3575 CircleF
+.1724 g 1753 3575 CircleF
+.1909 g 1841 3575 CircleF
+.2094 g 1929 3575 CircleF
+.2279 g 2017 3575 CircleF
+.2464 g 2105 3575 CircleF
+.265 g 2193 3575 CircleF
+.2834 g 2281 3575 CircleF
+.3019 g 2369 3575 CircleF
+.3204 g 2457 3575 CircleF
+.3389 g 2545 3575 CircleF
+.3573 g 2633 3575 CircleF
+.3758 g 2721 3575 CircleF
+.3942 g 2809 3575 CircleF
+.4126 g 2897 3575 CircleF
+.431 g 2985 3575 CircleF
+.4493 g 3073 3575 CircleF
+.4676 g 3161 3575 CircleF
+.4859 g 3249 3575 CircleF
+.5042 g 3337 3575 CircleF
+.5224 g 3425 3575 CircleF
+.5406 g 3513 3575 CircleF
+.5587 g 3601 3575 CircleF
+.5767 g 3689 3575 CircleF
+.5947 g 3777 3575 CircleF
+.6126 g 3865 3575 CircleF
+.6304 g 3953 3575 CircleF
+.6481 g 4041 3575 CircleF
+.6657 g 4129 3575 CircleF
+.6832 g 4218 3575 CircleF
+.7005 g 4306 3575 CircleF
+.7176 g 4394 3575 CircleF
+.7345 g 4482 3575 CircleF
+.7513 g 4570 3575 CircleF
+.7678 g 4658 3575 CircleF
+.7841 g 4746 3575 CircleF
+.8001 g 4834 3575 CircleF
+.8158 g 4922 3575 CircleF
+.8312 g 5010 3575 CircleF
+.8462 g 5098 3575 CircleF
+.8609 g 5186 3575 CircleF
+.8752 g 5274 3575 CircleF
+.889 g 5362 3575 CircleF
+.0404 g 1137 3630 CircleF
+.0589 g 1225 3630 CircleF
+.0775 g 1313 3630 CircleF
+.096 g 1401 3630 CircleF
+.1145 g 1489 3630 CircleF
+.1331 g 1577 3630 CircleF
+.1516 g 1665 3630 CircleF
+.1701 g 1753 3630 CircleF
+.1886 g 1841 3630 CircleF
+.2072 g 1929 3630 CircleF
+.2257 g 2017 3630 CircleF
+.2442 g 2105 3630 CircleF
+.2627 g 2193 3630 CircleF
+.2812 g 2281 3630 CircleF
+.2997 g 2369 3630 CircleF
+.3181 g 2457 3630 CircleF
+.3366 g 2545 3630 CircleF
+.3551 g 2633 3630 CircleF
+.3735 g 2721 3630 CircleF
+.3919 g 2809 3630 CircleF
+.4103 g 2897 3630 CircleF
+.4287 g 2985 3630 CircleF
+.4471 g 3073 3630 CircleF
+.4654 g 3161 3630 CircleF
+.4837 g 3249 3630 CircleF
+.502 g 3337 3630 CircleF
+.5202 g 3425 3630 CircleF
+.5384 g 3513 3630 CircleF
+.5565 g 3601 3630 CircleF
+.5745 g 3689 3630 CircleF
+.5925 g 3777 3630 CircleF
+.6104 g 3865 3630 CircleF
+.6283 g 3953 3630 CircleF
+.646 g 4041 3630 CircleF
+.6636 g 4129 3630 CircleF
+.681 g 4218 3630 CircleF
+.6984 g 4306 3630 CircleF
+.7155 g 4394 3630 CircleF
+.7325 g 4482 3630 CircleF
+.7493 g 4570 3630 CircleF
+.7658 g 4658 3630 CircleF
+.7821 g 4746 3630 CircleF
+.7982 g 4834 3630 CircleF
+.8139 g 4922 3630 CircleF
+.8294 g 5010 3630 CircleF
+.8444 g 5098 3630 CircleF
+.8592 g 5186 3630 CircleF
+.8735 g 5274 3630 CircleF
+.8874 g 5362 3630 CircleF
+.0382 g 1137 3685 CircleF
+.0567 g 1225 3685 CircleF
+.0752 g 1313 3685 CircleF
+.0938 g 1401 3685 CircleF
+.1123 g 1489 3685 CircleF
+.1308 g 1577 3685 CircleF
+.1494 g 1665 3685 CircleF
+.1679 g 1753 3685 CircleF
+.1864 g 1841 3685 CircleF
+.2049 g 1929 3685 CircleF
+.2235 g 2017 3685 CircleF
+.242 g 2105 3685 CircleF
+.2605 g 2193 3685 CircleF
+.279 g 2281 3685 CircleF
+.2974 g 2369 3685 CircleF
+.3159 g 2457 3685 CircleF
+.3344 g 2545 3685 CircleF
+.3529 g 2633 3685 CircleF
+.3713 g 2721 3685 CircleF
+.3897 g 2809 3685 CircleF
+.4081 g 2897 3685 CircleF
+.4265 g 2985 3685 CircleF
+.4449 g 3073 3685 CircleF
+.4632 g 3161 3685 CircleF
+.4815 g 3249 3685 CircleF
+.4998 g 3337 3685 CircleF
+.518 g 3425 3685 CircleF
+.5362 g 3513 3685 CircleF
+.5543 g 3601 3685 CircleF
+.5724 g 3689 3685 CircleF
+.5904 g 3777 3685 CircleF
+.6083 g 3865 3685 CircleF
+.6261 g 3953 3685 CircleF
+.6439 g 4041 3685 CircleF
+.6615 g 4129 3685 CircleF
+.679 g 4218 3685 CircleF
+.6963 g 4306 3685 CircleF
+.7135 g 4394 3685 CircleF
+.7305 g 4482 3685 CircleF
+.7473 g 4570 3685 CircleF
+.7639 g 4658 3685 CircleF
+.7802 g 4746 3685 CircleF
+.7963 g 4834 3685 CircleF
+.8121 g 4922 3685 CircleF
+.8275 g 5010 3685 CircleF
+.8427 g 5098 3685 CircleF
+.8574 g 5186 3685 CircleF
+.8718 g 5274 3685 CircleF
+.8858 g 5362 3685 CircleF
+.036 g 1137 3739 CircleF
+.0545 g 1225 3739 CircleF
+.073 g 1313 3739 CircleF
+.0916 g 1401 3739 CircleF
+.1101 g 1489 3739 CircleF
+.1287 g 1577 3739 CircleF
+.1472 g 1665 3739 CircleF
+.1657 g 1753 3739 CircleF
+.1842 g 1841 3739 CircleF
+.2027 g 1929 3739 CircleF
+.2213 g 2017 3739 CircleF
+.2398 g 2105 3739 CircleF
+.2583 g 2193 3739 CircleF
+.2768 g 2281 3739 CircleF
+.2953 g 2369 3739 CircleF
+.3137 g 2457 3739 CircleF
+.3322 g 2545 3739 CircleF
+.3507 g 2633 3739 CircleF
+.3691 g 2721 3739 CircleF
+.3875 g 2809 3739 CircleF
+.406 g 2897 3739 CircleF
+.4243 g 2985 3739 CircleF
+.4427 g 3073 3739 CircleF
+.461 g 3161 3739 CircleF
+.4794 g 3249 3739 CircleF
+.4976 g 3337 3739 CircleF
+.5159 g 3425 3739 CircleF
+.534 g 3513 3739 CircleF
+.5522 g 3601 3739 CircleF
+.5703 g 3689 3739 CircleF
+.5883 g 3777 3739 CircleF
+.6062 g 3865 3739 CircleF
+.624 g 3953 3739 CircleF
+.6418 g 4041 3739 CircleF
+.6594 g 4129 3739 CircleF
+.6769 g 4218 3739 CircleF
+.6943 g 4306 3739 CircleF
+.7115 g 4394 3739 CircleF
+.7285 g 4482 3739 CircleF
+.7453 g 4570 3739 CircleF
+.762 g 4658 3739 CircleF
+.7783 g 4746 3739 CircleF
+.7944 g 4834 3739 CircleF
+.8103 g 4922 3739 CircleF
+.8258 g 5010 3739 CircleF
+.8409 g 5098 3739 CircleF
+.8557 g 5186 3739 CircleF
+.8702 g 5274 3739 CircleF
+.8842 g 5362 3739 CircleF
+.0338 g 1137 3794 CircleF
+.0524 g 1225 3794 CircleF
+.0709 g 1313 3794 CircleF
+.0894 g 1401 3794 CircleF
+.108 g 1489 3794 CircleF
+.1265 g 1577 3794 CircleF
+.145 g 1665 3794 CircleF
+.1636 g 1753 3794 CircleF
+.1821 g 1841 3794 CircleF
+.2006 g 1929 3794 CircleF
+.2191 g 2017 3794 CircleF
+.2376 g 2105 3794 CircleF
+.2561 g 2193 3794 CircleF
+.2746 g 2281 3794 CircleF
+.2931 g 2369 3794 CircleF
+.3116 g 2457 3794 CircleF
+.3301 g 2545 3794 CircleF
+.3485 g 2633 3794 CircleF
+.367 g 2721 3794 CircleF
+.3854 g 2809 3794 CircleF
+.4038 g 2897 3794 CircleF
+.4222 g 2985 3794 CircleF
+.4406 g 3073 3794 CircleF
+.4589 g 3161 3794 CircleF
+.4772 g 3249 3794 CircleF
+.4955 g 3337 3794 CircleF
+.5137 g 3425 3794 CircleF
+.5319 g 3513 3794 CircleF
+.5501 g 3601 3794 CircleF
+.5682 g 3689 3794 CircleF
+.5862 g 3777 3794 CircleF
+.6041 g 3865 3794 CircleF
+.622 g 3953 3794 CircleF
+.6397 g 4041 3794 CircleF
+.6574 g 4129 3794 CircleF
+.6749 g 4218 3794 CircleF
+.6923 g 4306 3794 CircleF
+.7095 g 4394 3794 CircleF
+.7266 g 4482 3794 CircleF
+.7434 g 4570 3794 CircleF
+.7601 g 4658 3794 CircleF
+.7765 g 4746 3794 CircleF
+.7926 g 4834 3794 CircleF
+.8085 g 4922 3794 CircleF
+.824 g 5010 3794 CircleF
+.8392 g 5098 3794 CircleF
+.8541 g 5186 3794 CircleF
+.8685 g 5274 3794 CircleF
+.8826 g 5362 3794 CircleF
+.0317 g 1137 3849 CircleF
+.0502 g 1225 3849 CircleF
+.0688 g 1313 3849 CircleF
+.0873 g 1401 3849 CircleF
+.1058 g 1489 3849 CircleF
+.1244 g 1577 3849 CircleF
+.1429 g 1665 3849 CircleF
+.1614 g 1753 3849 CircleF
+.18 g 1841 3849 CircleF
+.1985 g 1929 3849 CircleF
+.217 g 2017 3849 CircleF
+.2355 g 2105 3849 CircleF
+.254 g 2193 3849 CircleF
+.2725 g 2281 3849 CircleF
+.291 g 2369 3849 CircleF
+.3095 g 2457 3849 CircleF
+.328 g 2545 3849 CircleF
+.3464 g 2633 3849 CircleF
+.3649 g 2721 3849 CircleF
+.3833 g 2809 3849 CircleF
+.4017 g 2897 3849 CircleF
+.4201 g 2985 3849 CircleF
+.4385 g 3073 3849 CircleF
+.4568 g 3161 3849 CircleF
+.4751 g 3249 3849 CircleF
+.4934 g 3337 3849 CircleF
+.5117 g 3425 3849 CircleF
+.5299 g 3513 3849 CircleF
+.548 g 3601 3849 CircleF
+.5661 g 3689 3849 CircleF
+.5841 g 3777 3849 CircleF
+.6021 g 3865 3849 CircleF
+.6199 g 3953 3849 CircleF
+.6377 g 4041 3849 CircleF
+.6554 g 4129 3849 CircleF
+.6729 g 4218 3849 CircleF
+.6903 g 4306 3849 CircleF
+.7076 g 4394 3849 CircleF
+.7246 g 4482 3849 CircleF
+.7415 g 4570 3849 CircleF
+.7582 g 4658 3849 CircleF
+.7746 g 4746 3849 CircleF
+.7908 g 4834 3849 CircleF
+.8067 g 4922 3849 CircleF
+.8223 g 5010 3849 CircleF
+.8375 g 5098 3849 CircleF
+.8524 g 5186 3849 CircleF
+.8669 g 5274 3849 CircleF
+.881 g 5362 3849 CircleF
+.0296 g 1137 3904 CircleF
+.0481 g 1225 3904 CircleF
+.0667 g 1313 3904 CircleF
+.0852 g 1401 3904 CircleF
+.1038 g 1489 3904 CircleF
+.1223 g 1577 3904 CircleF
+.1408 g 1665 3904 CircleF
+.1593 g 1753 3904 CircleF
+.1779 g 1841 3904 CircleF
+.1964 g 1929 3904 CircleF
+.2149 g 2017 3904 CircleF
+.2334 g 2105 3904 CircleF
+.2519 g 2193 3904 CircleF
+.2704 g 2281 3904 CircleF
+.2889 g 2369 3904 CircleF
+.3074 g 2457 3904 CircleF
+.3259 g 2545 3904 CircleF
+.3443 g 2633 3904 CircleF
+.3628 g 2721 3904 CircleF
+.3812 g 2809 3904 CircleF
+.3996 g 2897 3904 CircleF
+.418 g 2985 3904 CircleF
+.4364 g 3073 3904 CircleF
+.4548 g 3161 3904 CircleF
+.4731 g 3249 3904 CircleF
+.4914 g 3337 3904 CircleF
+.5096 g 3425 3904 CircleF
+.5278 g 3513 3904 CircleF
+.546 g 3601 3904 CircleF
+.5641 g 3689 3904 CircleF
+.5821 g 3777 3904 CircleF
+.6001 g 3865 3904 CircleF
+.6179 g 3953 3904 CircleF
+.6357 g 4041 3904 CircleF
+.6534 g 4129 3904 CircleF
+.671 g 4218 3904 CircleF
+.6884 g 4306 3904 CircleF
+.7056 g 4394 3904 CircleF
+.7227 g 4482 3904 CircleF
+.7396 g 4570 3904 CircleF
+.7563 g 4658 3904 CircleF
+.7728 g 4746 3904 CircleF
+.789 g 4834 3904 CircleF
+.8049 g 4922 3904 CircleF
+.8206 g 5010 3904 CircleF
+.8359 g 5098 3904 CircleF
+.8508 g 5186 3904 CircleF
+.8654 g 5274 3904 CircleF
+.8795 g 5362 3904 CircleF
+.0275 g 1137 3958 CircleF
+.0461 g 1225 3958 CircleF
+.0646 g 1313 3958 CircleF
+.0832 g 1401 3958 CircleF
+.1017 g 1489 3958 CircleF
+.1202 g 1577 3958 CircleF
+.1388 g 1665 3958 CircleF
+.1573 g 1753 3958 CircleF
+.1758 g 1841 3958 CircleF
+.1943 g 1929 3958 CircleF
+.2129 g 2017 3958 CircleF
+.2314 g 2105 3958 CircleF
+.2499 g 2193 3958 CircleF
+.2684 g 2281 3958 CircleF
+.2869 g 2369 3958 CircleF
+.3054 g 2457 3958 CircleF
+.3238 g 2545 3958 CircleF
+.3423 g 2633 3958 CircleF
+.3607 g 2721 3958 CircleF
+.3792 g 2809 3958 CircleF
+.3976 g 2897 3958 CircleF
+.416 g 2985 3958 CircleF
+.4344 g 3073 3958 CircleF
+.4527 g 3161 3958 CircleF
+.4711 g 3249 3958 CircleF
+.4893 g 3337 3958 CircleF
+.5076 g 3425 3958 CircleF
+.5258 g 3513 3958 CircleF
+.544 g 3601 3958 CircleF
+.5621 g 3689 3958 CircleF
+.5801 g 3777 3958 CircleF
+.5981 g 3865 3958 CircleF
+.616 g 3953 3958 CircleF
+.6338 g 4041 3958 CircleF
+.6515 g 4129 3958 CircleF
+.669 g 4218 3958 CircleF
+.6865 g 4306 3958 CircleF
+.7037 g 4394 3958 CircleF
+.7209 g 4482 3958 CircleF
+.7378 g 4570 3958 CircleF
+.7545 g 4658 3958 CircleF
+.771 g 4746 3958 CircleF
+.7872 g 4834 3958 CircleF
+.8032 g 4922 3958 CircleF
+.8189 g 5010 3958 CircleF
+.8342 g 5098 3958 CircleF
+.8492 g 5186 3958 CircleF
+.8638 g 5274 3958 CircleF
+.878 g 5362 3958 CircleF
+.0255 g 1137 4013 CircleF
+.0441 g 1225 4013 CircleF
+.0626 g 1313 4013 CircleF
+.0811 g 1401 4013 CircleF
+.0997 g 1489 4013 CircleF
+.1182 g 1577 4013 CircleF
+.1367 g 1665 4013 CircleF
+.1553 g 1753 4013 CircleF
+.1738 g 1841 4013 CircleF
+.1923 g 1929 4013 CircleF
+.2108 g 2017 4013 CircleF
+.2293 g 2105 4013 CircleF
+.2479 g 2193 4013 CircleF
+.2664 g 2281 4013 CircleF
+.2848 g 2369 4013 CircleF
+.3033 g 2457 4013 CircleF
+.3218 g 2545 4013 CircleF
+.3403 g 2633 4013 CircleF
+.3587 g 2721 4013 CircleF
+.3772 g 2809 4013 CircleF
+.3956 g 2897 4013 CircleF
+.414 g 2985 4013 CircleF
+.4324 g 3073 4013 CircleF
+.4507 g 3161 4013 CircleF
+.4691 g 3249 4013 CircleF
+.4874 g 3337 4013 CircleF
+.5056 g 3425 4013 CircleF
+.5238 g 3513 4013 CircleF
+.542 g 3601 4013 CircleF
+.5601 g 3689 4013 CircleF
+.5782 g 3777 4013 CircleF
+.5961 g 3865 4013 CircleF
+.614 g 3953 4013 CircleF
+.6318 g 4041 4013 CircleF
+.6495 g 4129 4013 CircleF
+.6671 g 4218 4013 CircleF
+.6846 g 4306 4013 CircleF
+.7019 g 4394 4013 CircleF
+.719 g 4482 4013 CircleF
+.736 g 4570 4013 CircleF
+.7527 g 4658 4013 CircleF
+.7692 g 4746 4013 CircleF
+.7855 g 4834 4013 CircleF
+.8015 g 4922 4013 CircleF
+.8172 g 5010 4013 CircleF
+.8326 g 5098 4013 CircleF
+.8476 g 5186 4013 CircleF
+.8622 g 5274 4013 CircleF
+.8765 g 5362 4013 CircleF
+.0235 g 1137 4068 CircleF
+.0421 g 1225 4068 CircleF
+.0606 g 1313 4068 CircleF
+.0791 g 1401 4068 CircleF
+.0977 g 1489 4068 CircleF
+.1162 g 1577 4068 CircleF
+.1347 g 1665 4068 CircleF
+.1533 g 1753 4068 CircleF
+.1718 g 1841 4068 CircleF
+.1903 g 1929 4068 CircleF
+.2088 g 2017 4068 CircleF
+.2274 g 2105 4068 CircleF
+.2459 g 2193 4068 CircleF
+.2644 g 2281 4068 CircleF
+.2829 g 2369 4068 CircleF
+.3013 g 2457 4068 CircleF
+.3198 g 2545 4068 CircleF
+.3383 g 2633 4068 CircleF
+.3567 g 2721 4068 CircleF
+.3752 g 2809 4068 CircleF
+.3936 g 2897 4068 CircleF
+.412 g 2985 4068 CircleF
+.4304 g 3073 4068 CircleF
+.4488 g 3161 4068 CircleF
+.4671 g 3249 4068 CircleF
+.4854 g 3337 4068 CircleF
+.5037 g 3425 4068 CircleF
+.5219 g 3513 4068 CircleF
+.54 g 3601 4068 CircleF
+.5582 g 3689 4068 CircleF
+.5762 g 3777 4068 CircleF
+.5942 g 3865 4068 CircleF
+.6121 g 3953 4068 CircleF
+.6299 g 4041 4068 CircleF
+.6476 g 4129 4068 CircleF
+.6652 g 4218 4068 CircleF
+.6827 g 4306 4068 CircleF
+.7 g 4394 4068 CircleF
+.7172 g 4482 4068 CircleF
+.7342 g 4570 4068 CircleF
+.7509 g 4658 4068 CircleF
+.7675 g 4746 4068 CircleF
+.7838 g 4834 4068 CircleF
+.7998 g 4922 4068 CircleF
+.8156 g 5010 4068 CircleF
+.831 g 5098 4068 CircleF
+.846 g 5186 4068 CircleF
+.8607 g 5274 4068 CircleF
+.875 g 5362 4068 CircleF
+.0216 g 1137 4122 CircleF
+.0401 g 1225 4122 CircleF
+.0586 g 1313 4122 CircleF
+.0772 g 1401 4122 CircleF
+.0957 g 1489 4122 CircleF
+.1142 g 1577 4122 CircleF
+.1328 g 1665 4122 CircleF
+.1513 g 1753 4122 CircleF
+.1698 g 1841 4122 CircleF
+.1884 g 1929 4122 CircleF
+.2069 g 2017 4122 CircleF
+.2254 g 2105 4122 CircleF
+.2439 g 2193 4122 CircleF
+.2624 g 2281 4122 CircleF
+.2809 g 2369 4122 CircleF
+.2994 g 2457 4122 CircleF
+.3179 g 2545 4122 CircleF
+.3363 g 2633 4122 CircleF
+.3548 g 2721 4122 CircleF
+.3732 g 2809 4122 CircleF
+.3917 g 2897 4122 CircleF
+.4101 g 2985 4122 CircleF
+.4285 g 3073 4122 CircleF
+.4468 g 3161 4122 CircleF
+.4651 g 3249 4122 CircleF
+.4835 g 3337 4122 CircleF
+.5017 g 3425 4122 CircleF
+.5199 g 3513 4122 CircleF
+.5381 g 3601 4122 CircleF
+.5563 g 3689 4122 CircleF
+.5743 g 3777 4122 CircleF
+.5923 g 3865 4122 CircleF
+.6102 g 3953 4122 CircleF
+.6281 g 4041 4122 CircleF
+.6458 g 4129 4122 CircleF
+.6634 g 4218 4122 CircleF
+.6809 g 4306 4122 CircleF
+.6982 g 4394 4122 CircleF
+.7154 g 4482 4122 CircleF
+.7324 g 4570 4122 CircleF
+.7492 g 4658 4122 CircleF
+.7658 g 4746 4122 CircleF
+.7821 g 4834 4122 CircleF
+.7982 g 4922 4122 CircleF
+.8139 g 5010 4122 CircleF
+.8294 g 5098 4122 CircleF
+.8445 g 5186 4122 CircleF
+.8592 g 5274 4122 CircleF
+.8736 g 5362 4122 CircleF
+.0196 g 1137 4177 CircleF
+.0382 g 1225 4177 CircleF
+.0567 g 1313 4177 CircleF
+.0752 g 1401 4177 CircleF
+.0938 g 1489 4177 CircleF
+.1123 g 1577 4177 CircleF
+.1308 g 1665 4177 CircleF
+.1494 g 1753 4177 CircleF
+.1679 g 1841 4177 CircleF
+.1864 g 1929 4177 CircleF
+.2049 g 2017 4177 CircleF
+.2235 g 2105 4177 CircleF
+.242 g 2193 4177 CircleF
+.2605 g 2281 4177 CircleF
+.279 g 2369 4177 CircleF
+.2975 g 2457 4177 CircleF
+.3159 g 2545 4177 CircleF
+.3344 g 2633 4177 CircleF
+.3529 g 2721 4177 CircleF
+.3713 g 2809 4177 CircleF
+.3897 g 2897 4177 CircleF
+.4081 g 2985 4177 CircleF
+.4265 g 3073 4177 CircleF
+.4449 g 3161 4177 CircleF
+.4632 g 3249 4177 CircleF
+.4815 g 3337 4177 CircleF
+.4998 g 3425 4177 CircleF
+.5181 g 3513 4177 CircleF
+.5362 g 3601 4177 CircleF
+.5544 g 3689 4177 CircleF
+.5724 g 3777 4177 CircleF
+.5904 g 3865 4177 CircleF
+.6084 g 3953 4177 CircleF
+.6262 g 4041 4177 CircleF
+.644 g 4129 4177 CircleF
+.6616 g 4218 4177 CircleF
+.6791 g 4306 4177 CircleF
+.6964 g 4394 4177 CircleF
+.7136 g 4482 4177 CircleF
+.7307 g 4570 4177 CircleF
+.7475 g 4658 4177 CircleF
+.7641 g 4746 4177 CircleF
+.7804 g 4834 4177 CircleF
+.7965 g 4922 4177 CircleF
+.8123 g 5010 4177 CircleF
+.8278 g 5098 4177 CircleF
+.843 g 5186 4177 CircleF
+.8577 g 5274 4177 CircleF
+.8721 g 5362 4177 CircleF
+.0177 g 1137 4232 CircleF
+.0363 g 1225 4232 CircleF
+.0548 g 1313 4232 CircleF
+.0733 g 1401 4232 CircleF
+.0919 g 1489 4232 CircleF
+.1104 g 1577 4232 CircleF
+.1289 g 1665 4232 CircleF
+.1475 g 1753 4232 CircleF
+.166 g 1841 4232 CircleF
+.1845 g 1929 4232 CircleF
+.203 g 2017 4232 CircleF
+.2216 g 2105 4232 CircleF
+.2401 g 2193 4232 CircleF
+.2586 g 2281 4232 CircleF
+.2771 g 2369 4232 CircleF
+.2956 g 2457 4232 CircleF
+.314 g 2545 4232 CircleF
+.3325 g 2633 4232 CircleF
+.351 g 2721 4232 CircleF
+.3694 g 2809 4232 CircleF
+.3878 g 2897 4232 CircleF
+.4063 g 2985 4232 CircleF
+.4246 g 3073 4232 CircleF
+.443 g 3161 4232 CircleF
+.4614 g 3249 4232 CircleF
+.4797 g 3337 4232 CircleF
+.4979 g 3425 4232 CircleF
+.5162 g 3513 4232 CircleF
+.5344 g 3601 4232 CircleF
+.5525 g 3689 4232 CircleF
+.5706 g 3777 4232 CircleF
+.5886 g 3865 4232 CircleF
+.6065 g 3953 4232 CircleF
+.6244 g 4041 4232 CircleF
+.6421 g 4129 4232 CircleF
+.6598 g 4218 4232 CircleF
+.6773 g 4306 4232 CircleF
+.6947 g 4394 4232 CircleF
+.7119 g 4482 4232 CircleF
+.7289 g 4570 4232 CircleF
+.7458 g 4658 4232 CircleF
+.7624 g 4746 4232 CircleF
+.7788 g 4834 4232 CircleF
+.7949 g 4922 4232 CircleF
+.8107 g 5010 4232 CircleF
+.8263 g 5098 4232 CircleF
+.8414 g 5186 4232 CircleF
+.8563 g 5274 4232 CircleF
+.8707 g 5362 4232 CircleF
+.0158 g 1137 4287 CircleF
+.0344 g 1225 4287 CircleF
+.0529 g 1313 4287 CircleF
+.0715 g 1401 4287 CircleF
+.09 g 1489 4287 CircleF
+.1085 g 1577 4287 CircleF
+.1271 g 1665 4287 CircleF
+.1456 g 1753 4287 CircleF
+.1641 g 1841 4287 CircleF
+.1826 g 1929 4287 CircleF
+.2012 g 2017 4287 CircleF
+.2197 g 2105 4287 CircleF
+.2382 g 2193 4287 CircleF
+.2567 g 2281 4287 CircleF
+.2752 g 2369 4287 CircleF
+.2937 g 2457 4287 CircleF
+.3122 g 2545 4287 CircleF
+.3306 g 2633 4287 CircleF
+.3491 g 2721 4287 CircleF
+.3675 g 2809 4287 CircleF
+.386 g 2897 4287 CircleF
+.4044 g 2985 4287 CircleF
+.4228 g 3073 4287 CircleF
+.4412 g 3161 4287 CircleF
+.4595 g 3249 4287 CircleF
+.4778 g 3337 4287 CircleF
+.4961 g 3425 4287 CircleF
+.5143 g 3513 4287 CircleF
+.5325 g 3601 4287 CircleF
+.5507 g 3689 4287 CircleF
+.5688 g 3777 4287 CircleF
+.5868 g 3865 4287 CircleF
+.6047 g 3953 4287 CircleF
+.6226 g 4041 4287 CircleF
+.6404 g 4129 4287 CircleF
+.658 g 4218 4287 CircleF
+.6755 g 4306 4287 CircleF
+.6929 g 4394 4287 CircleF
+.7102 g 4482 4287 CircleF
+.7272 g 4570 4287 CircleF
+.7441 g 4658 4287 CircleF
+.7607 g 4746 4287 CircleF
+.7772 g 4834 4287 CircleF
+.7933 g 4922 4287 CircleF
+.8092 g 5010 4287 CircleF
+.8247 g 5098 4287 CircleF
+.84 g 5186 4287 CircleF
+.8548 g 5274 4287 CircleF
+.8693 g 5362 4287 CircleF
+.014 g 1137 4341 CircleF
+.0325 g 1225 4341 CircleF
+.0511 g 1313 4341 CircleF
+.0696 g 1401 4341 CircleF
+.0881 g 1489 4341 CircleF
+.1067 g 1577 4341 CircleF
+.1252 g 1665 4341 CircleF
+.1437 g 1753 4341 CircleF
+.1623 g 1841 4341 CircleF
+.1808 g 1929 4341 CircleF
+.1993 g 2017 4341 CircleF
+.2178 g 2105 4341 CircleF
+.2363 g 2193 4341 CircleF
+.2548 g 2281 4341 CircleF
+.2733 g 2369 4341 CircleF
+.2918 g 2457 4341 CircleF
+.3103 g 2545 4341 CircleF
+.3288 g 2633 4341 CircleF
+.3472 g 2721 4341 CircleF
+.3657 g 2809 4341 CircleF
+.3841 g 2897 4341 CircleF
+.4025 g 2985 4341 CircleF
+.4209 g 3073 4341 CircleF
+.4393 g 3161 4341 CircleF
+.4577 g 3249 4341 CircleF
+.476 g 3337 4341 CircleF
+.4943 g 3425 4341 CircleF
+.5125 g 3513 4341 CircleF
+.5307 g 3601 4341 CircleF
+.5489 g 3689 4341 CircleF
+.567 g 3777 4341 CircleF
+.585 g 3865 4341 CircleF
+.6029 g 3953 4341 CircleF
+.6208 g 4041 4341 CircleF
+.6386 g 4129 4341 CircleF
+.6563 g 4218 4341 CircleF
+.6738 g 4306 4341 CircleF
+.6912 g 4394 4341 CircleF
+.7085 g 4482 4341 CircleF
+.7255 g 4570 4341 CircleF
+.7424 g 4658 4341 CircleF
+.7591 g 4746 4341 CircleF
+.7756 g 4834 4341 CircleF
+.7917 g 4922 4341 CircleF
+.8076 g 5010 4341 CircleF
+.8232 g 5098 4341 CircleF
+.8385 g 5186 4341 CircleF
+.8534 g 5274 4341 CircleF
+.8679 g 5362 4341 CircleF
+.0121 g 1137 4396 CircleF
+.0307 g 1225 4396 CircleF
+.0492 g 1313 4396 CircleF
+.0678 g 1401 4396 CircleF
+.0863 g 1489 4396 CircleF
+.1048 g 1577 4396 CircleF
+.1234 g 1665 4396 CircleF
+.1419 g 1753 4396 CircleF
+.1604 g 1841 4396 CircleF
+.179 g 1929 4396 CircleF
+.1975 g 2017 4396 CircleF
+.216 g 2105 4396 CircleF
+.2345 g 2193 4396 CircleF
+.253 g 2281 4396 CircleF
+.2715 g 2369 4396 CircleF
+.29 g 2457 4396 CircleF
+.3085 g 2545 4396 CircleF
+.327 g 2633 4396 CircleF
+.3454 g 2721 4396 CircleF
+.3639 g 2809 4396 CircleF
+.3823 g 2897 4396 CircleF
+.4007 g 2985 4396 CircleF
+.4191 g 3073 4396 CircleF
+.4375 g 3161 4396 CircleF
+.4559 g 3249 4396 CircleF
+.4742 g 3337 4396 CircleF
+.4925 g 3425 4396 CircleF
+.5107 g 3513 4396 CircleF
+.5289 g 3601 4396 CircleF
+.5471 g 3689 4396 CircleF
+.5652 g 3777 4396 CircleF
+.5832 g 3865 4396 CircleF
+.6012 g 3953 4396 CircleF
+.6191 g 4041 4396 CircleF
+.6368 g 4129 4396 CircleF
+.6545 g 4218 4396 CircleF
+.6721 g 4306 4396 CircleF
+.6895 g 4394 4396 CircleF
+.7068 g 4482 4396 CircleF
+.7239 g 4570 4396 CircleF
+.7408 g 4658 4396 CircleF
+.7575 g 4746 4396 CircleF
+.774 g 4834 4396 CircleF
+.7902 g 4922 4396 CircleF
+.8061 g 5010 4396 CircleF
+.8217 g 5098 4396 CircleF
+.837 g 5186 4396 CircleF
+.852 g 5274 4396 CircleF
+.8665 g 5362 4396 CircleF
+.0103 g 1137 4451 CircleF
+.0289 g 1225 4451 CircleF
+.0474 g 1313 4451 CircleF
+.066 g 1401 4451 CircleF
+.0845 g 1489 4451 CircleF
+.103 g 1577 4451 CircleF
+.1216 g 1665 4451 CircleF
+.1401 g 1753 4451 CircleF
+.1586 g 1841 4451 CircleF
+.1772 g 1929 4451 CircleF
+.1957 g 2017 4451 CircleF
+.2142 g 2105 4451 CircleF
+.2327 g 2193 4451 CircleF
+.2512 g 2281 4451 CircleF
+.2697 g 2369 4451 CircleF
+.2882 g 2457 4451 CircleF
+.3067 g 2545 4451 CircleF
+.3252 g 2633 4451 CircleF
+.3436 g 2721 4451 CircleF
+.3621 g 2809 4451 CircleF
+.3805 g 2897 4451 CircleF
+.3989 g 2985 4451 CircleF
+.4173 g 3073 4451 CircleF
+.4357 g 3161 4451 CircleF
+.4541 g 3249 4451 CircleF
+.4724 g 3337 4451 CircleF
+.4907 g 3425 4451 CircleF
+.5089 g 3513 4451 CircleF
+.5272 g 3601 4451 CircleF
+.5453 g 3689 4451 CircleF
+.5634 g 3777 4451 CircleF
+.5815 g 3865 4451 CircleF
+.5994 g 3953 4451 CircleF
+.6173 g 4041 4451 CircleF
+.6351 g 4129 4451 CircleF
+.6528 g 4218 4451 CircleF
+.6704 g 4306 4451 CircleF
+.6878 g 4394 4451 CircleF
+.7051 g 4482 4451 CircleF
+.7222 g 4570 4451 CircleF
+.7392 g 4658 4451 CircleF
+.7559 g 4746 4451 CircleF
+.7724 g 4834 4451 CircleF
+.7886 g 4922 4451 CircleF
+.8046 g 5010 4451 CircleF
+.8203 g 5098 4451 CircleF
+.8356 g 5186 4451 CircleF
+.8505 g 5274 4451 CircleF
+.8651 g 5362 4451 CircleF
+.0086 g 1137 4506 CircleF
+.0271 g 1225 4506 CircleF
+.0456 g 1313 4506 CircleF
+.0642 g 1401 4506 CircleF
+.0827 g 1489 4506 CircleF
+.1013 g 1577 4506 CircleF
+.1198 g 1665 4506 CircleF
+.1383 g 1753 4506 CircleF
+.1568 g 1841 4506 CircleF
+.1754 g 1929 4506 CircleF
+.1939 g 2017 4506 CircleF
+.2124 g 2105 4506 CircleF
+.2309 g 2193 4506 CircleF
+.2494 g 2281 4506 CircleF
+.2679 g 2369 4506 CircleF
+.2864 g 2457 4506 CircleF
+.3049 g 2545 4506 CircleF
+.3234 g 2633 4506 CircleF
+.3419 g 2721 4506 CircleF
+.3603 g 2809 4506 CircleF
+.3788 g 2897 4506 CircleF
+.3972 g 2985 4506 CircleF
+.4156 g 3073 4506 CircleF
+.434 g 3161 4506 CircleF
+.4523 g 3249 4506 CircleF
+.4706 g 3337 4506 CircleF
+.4889 g 3425 4506 CircleF
+.5072 g 3513 4506 CircleF
+.5254 g 3601 4506 CircleF
+.5436 g 3689 4506 CircleF
+.5617 g 3777 4506 CircleF
+.5798 g 3865 4506 CircleF
+.5977 g 3953 4506 CircleF
+.6156 g 4041 4506 CircleF
+.6334 g 4129 4506 CircleF
+.6511 g 4218 4506 CircleF
+.6687 g 4306 4506 CircleF
+.6862 g 4394 4506 CircleF
+.7035 g 4482 4506 CircleF
+.7206 g 4570 4506 CircleF
+.7376 g 4658 4506 CircleF
+.7543 g 4746 4506 CircleF
+.7708 g 4834 4506 CircleF
+.7871 g 4922 4506 CircleF
+.8031 g 5010 4506 CircleF
+.8188 g 5098 4506 CircleF
+.8342 g 5186 4506 CircleF
+.8492 g 5274 4506 CircleF
+.8638 g 5362 4506 CircleF
+.0068 g 1137 4560 CircleF
+.0253 g 1225 4560 CircleF
+.0439 g 1313 4560 CircleF
+.0624 g 1401 4560 CircleF
+.081 g 1489 4560 CircleF
+.0995 g 1577 4560 CircleF
+.118 g 1665 4560 CircleF
+.1366 g 1753 4560 CircleF
+.1551 g 1841 4560 CircleF
+.1736 g 1929 4560 CircleF
+.1921 g 2017 4560 CircleF
+.2107 g 2105 4560 CircleF
+.2292 g 2193 4560 CircleF
+.2477 g 2281 4560 CircleF
+.2662 g 2369 4560 CircleF
+.2847 g 2457 4560 CircleF
+.3032 g 2545 4560 CircleF
+.3216 g 2633 4560 CircleF
+.3401 g 2721 4560 CircleF
+.3586 g 2809 4560 CircleF
+.377 g 2897 4560 CircleF
+.3954 g 2985 4560 CircleF
+.4138 g 3073 4560 CircleF
+.4322 g 3161 4560 CircleF
+.4506 g 3249 4560 CircleF
+.4689 g 3337 4560 CircleF
+.4872 g 3425 4560 CircleF
+.5055 g 3513 4560 CircleF
+.5237 g 3601 4560 CircleF
+.5419 g 3689 4560 CircleF
+.56 g 3777 4560 CircleF
+.578 g 3865 4560 CircleF
+.596 g 3953 4560 CircleF
+.6139 g 4041 4560 CircleF
+.6318 g 4129 4560 CircleF
+.6495 g 4218 4560 CircleF
+.6671 g 4306 4560 CircleF
+.6845 g 4394 4560 CircleF
+.7019 g 4482 4560 CircleF
+.719 g 4570 4560 CircleF
+.736 g 4658 4560 CircleF
+.7528 g 4746 4560 CircleF
+.7693 g 4834 4560 CircleF
+.7856 g 4922 4560 CircleF
+.8016 g 5010 4560 CircleF
+.8173 g 5098 4560 CircleF
+.8327 g 5186 4560 CircleF
+.8478 g 5274 4560 CircleF
+.8624 g 5362 4560 CircleF
+.0051 g 1137 4615 CircleF
+.0236 g 1225 4615 CircleF
+.0422 g 1313 4615 CircleF
+.0607 g 1401 4615 CircleF
+.0792 g 1489 4615 CircleF
+.0978 g 1577 4615 CircleF
+.1163 g 1665 4615 CircleF
+.1348 g 1753 4615 CircleF
+.1534 g 1841 4615 CircleF
+.1719 g 1929 4615 CircleF
+.1904 g 2017 4615 CircleF
+.2089 g 2105 4615 CircleF
+.2274 g 2193 4615 CircleF
+.246 g 2281 4615 CircleF
+.2645 g 2369 4615 CircleF
+.283 g 2457 4615 CircleF
+.3014 g 2545 4615 CircleF
+.3199 g 2633 4615 CircleF
+.3384 g 2721 4615 CircleF
+.3568 g 2809 4615 CircleF
+.3753 g 2897 4615 CircleF
+.3937 g 2985 4615 CircleF
+.4121 g 3073 4615 CircleF
+.4305 g 3161 4615 CircleF
+.4489 g 3249 4615 CircleF
+.4672 g 3337 4615 CircleF
+.4855 g 3425 4615 CircleF
+.5038 g 3513 4615 CircleF
+.522 g 3601 4615 CircleF
+.5402 g 3689 4615 CircleF
+.5583 g 3777 4615 CircleF
+.5764 g 3865 4615 CircleF
+.5944 g 3953 4615 CircleF
+.6123 g 4041 4615 CircleF
+.6301 g 4129 4615 CircleF
+.6478 g 4218 4615 CircleF
+.6654 g 4306 4615 CircleF
+.6829 g 4394 4615 CircleF
+.7003 g 4482 4615 CircleF
+.7174 g 4570 4615 CircleF
+.7344 g 4658 4615 CircleF
+.7512 g 4746 4615 CircleF
+.7678 g 4834 4615 CircleF
+.7841 g 4922 4615 CircleF
+.8002 g 5010 4615 CircleF
+.8159 g 5098 4615 CircleF
+.8313 g 5186 4615 CircleF
+.8464 g 5274 4615 CircleF
+.8611 g 5362 4615 CircleF
+.0034 g 1137 4670 CircleF
+.0219 g 1225 4670 CircleF
+.0404 g 1313 4670 CircleF
+.059 g 1401 4670 CircleF
+.0775 g 1489 4670 CircleF
+.0961 g 1577 4670 CircleF
+.1146 g 1665 4670 CircleF
+.1331 g 1753 4670 CircleF
+.1517 g 1841 4670 CircleF
+.1702 g 1929 4670 CircleF
+.1887 g 2017 4670 CircleF
+.2072 g 2105 4670 CircleF
+.2257 g 2193 4670 CircleF
+.2442 g 2281 4670 CircleF
+.2627 g 2369 4670 CircleF
+.2812 g 2457 4670 CircleF
+.2997 g 2545 4670 CircleF
+.3182 g 2633 4670 CircleF
+.3367 g 2721 4670 CircleF
+.3551 g 2809 4670 CircleF
+.3736 g 2897 4670 CircleF
+.392 g 2985 4670 CircleF
+.4104 g 3073 4670 CircleF
+.4288 g 3161 4670 CircleF
+.4472 g 3249 4670 CircleF
+.4655 g 3337 4670 CircleF
+.4838 g 3425 4670 CircleF
+.5021 g 3513 4670 CircleF
+.5203 g 3601 4670 CircleF
+.5385 g 3689 4670 CircleF
+.5566 g 3777 4670 CircleF
+.5747 g 3865 4670 CircleF
+.5927 g 3953 4670 CircleF
+.6106 g 4041 4670 CircleF
+.6285 g 4129 4670 CircleF
+.6462 g 4218 4670 CircleF
+.6638 g 4306 4670 CircleF
+.6813 g 4394 4670 CircleF
+.6987 g 4482 4670 CircleF
+.7159 g 4570 4670 CircleF
+.7329 g 4658 4670 CircleF
+.7497 g 4746 4670 CircleF
+.7663 g 4834 4670 CircleF
+.7826 g 4922 4670 CircleF
+.7987 g 5010 4670 CircleF
+.8145 g 5098 4670 CircleF
+.83 g 5186 4670 CircleF
+.8451 g 5274 4670 CircleF
+.8598 g 5362 4670 CircleF
+.0017 g 1137 4724 CircleF
+.0202 g 1225 4724 CircleF
+.0388 g 1313 4724 CircleF
+.0573 g 1401 4724 CircleF
+.0758 g 1489 4724 CircleF
+.0944 g 1577 4724 CircleF
+.1129 g 1665 4724 CircleF
+.1314 g 1753 4724 CircleF
+.15 g 1841 4724 CircleF
+.1685 g 1929 4724 CircleF
+.187 g 2017 4724 CircleF
+.2055 g 2105 4724 CircleF
+.224 g 2193 4724 CircleF
+.2426 g 2281 4724 CircleF
+.2611 g 2369 4724 CircleF
+.2796 g 2457 4724 CircleF
+.298 g 2545 4724 CircleF
+.3165 g 2633 4724 CircleF
+.335 g 2721 4724 CircleF
+.3535 g 2809 4724 CircleF
+.3719 g 2897 4724 CircleF
+.3903 g 2985 4724 CircleF
+.4087 g 3073 4724 CircleF
+.4271 g 3161 4724 CircleF
+.4455 g 3249 4724 CircleF
+.4638 g 3337 4724 CircleF
+.4822 g 3425 4724 CircleF
+.5004 g 3513 4724 CircleF
+.5187 g 3601 4724 CircleF
+.5369 g 3689 4724 CircleF
+.555 g 3777 4724 CircleF
+.5731 g 3865 4724 CircleF
+.5911 g 3953 4724 CircleF
+.609 g 4041 4724 CircleF
+.6269 g 4129 4724 CircleF
+.6446 g 4218 4724 CircleF
+.6622 g 4306 4724 CircleF
+.6798 g 4394 4724 CircleF
+.6971 g 4482 4724 CircleF
+.7143 g 4570 4724 CircleF
+.7314 g 4658 4724 CircleF
+.7482 g 4746 4724 CircleF
+.7648 g 4834 4724 CircleF
+.7812 g 4922 4724 CircleF
+.7973 g 5010 4724 CircleF
+.8131 g 5098 4724 CircleF
+.8286 g 5186 4724 CircleF
+.8437 g 5274 4724 CircleF
+.8585 g 5362 4724 CircleF
+0 g 1137 4779 CircleF
+.0185 g 1225 4779 CircleF
+.0371 g 1313 4779 CircleF
+.0556 g 1401 4779 CircleF
+.0742 g 1489 4779 CircleF
+.0927 g 1577 4779 CircleF
+.1112 g 1665 4779 CircleF
+.1298 g 1753 4779 CircleF
+.1483 g 1841 4779 CircleF
+.1668 g 1929 4779 CircleF
+.1853 g 2017 4779 CircleF
+.2039 g 2105 4779 CircleF
+.2224 g 2193 4779 CircleF
+.2409 g 2281 4779 CircleF
+.2594 g 2369 4779 CircleF
+.2779 g 2457 4779 CircleF
+.2964 g 2545 4779 CircleF
+.3149 g 2633 4779 CircleF
+.3333 g 2721 4779 CircleF
+.3518 g 2809 4779 CircleF
+.3702 g 2897 4779 CircleF
+.3887 g 2985 4779 CircleF
+.4071 g 3073 4779 CircleF
+.4255 g 3161 4779 CircleF
+.4439 g 3249 4779 CircleF
+.4622 g 3337 4779 CircleF
+.4805 g 3425 4779 CircleF
+.4988 g 3513 4779 CircleF
+.517 g 3601 4779 CircleF
+.5352 g 3689 4779 CircleF
+.5534 g 3777 4779 CircleF
+.5715 g 3865 4779 CircleF
+.5895 g 3953 4779 CircleF
+.6074 g 4041 4779 CircleF
+.6253 g 4129 4779 CircleF
+.643 g 4218 4779 CircleF
+.6607 g 4306 4779 CircleF
+.6782 g 4394 4779 CircleF
+.6956 g 4482 4779 CircleF
+.7128 g 4570 4779 CircleF
+.7299 g 4658 4779 CircleF
+.7467 g 4746 4779 CircleF
+.7633 g 4834 4779 CircleF
+.7797 g 4922 4779 CircleF
+.7959 g 5010 4779 CircleF
+.8117 g 5098 4779 CircleF
+.8272 g 5186 4779 CircleF
+.8424 g 5274 4779 CircleF
+.8572 g 5362 4779 CircleF
+% End plot #1
+% Begin plot #2
+1.000 UL
+LTb
+0.00 0.00 0.00 C 5399 3196 M
+-37 23 V
+-88 -164 V
+-88 -164 V
+-88 -164 V
+-88 -164 V
+-88 -110 V
+-88 -109 V
+-88 -110 V
+-88 -109 V
+-88 -110 V
+-88 -54 V
+-88 -110 V
+-88 0 V
+-88 55 V
+-89 164 V
+-88 110 V
+-88 164 V
+-88 219 V
+-88 164 V
+-88 109 V
+-88 165 V
+-88 54 V
+-88 110 V
+-88 54 V
+-88 55 V
+-88 55 V
+-88 55 V
+-88 0 V
+-88 54 V
+-88 0 V
+-88 55 V
+-88 0 V
+-88 0 V
+-88 55 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 55 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-57 0 V
+% End plot #2
+% Begin plot #3
+stroke
+LTb
+0.00 0.00 0.00 C 5399 1523 M
+-37 0 V
+-88 -55 V
+-88 -55 V
+-88 0 V
+-88 -54 V
+-88 0 V
+-88 0 V
+-88 -55 V
+-88 0 V
+-88 -55 V
+-88 0 V
+-88 -55 V
+-88 0 V
+-88 0 V
+-89 -54 V
+-88 54 V
+-88 -54 V
+-88 164 V
+-88 0 V
+-88 -55 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-57 0 V
+% End plot #3
+% Begin plot #4
+stroke
+LTb
+0.00 0.00 0.00 C 4129 1140 M
+-88 0 V
+-88 -55 V
+-88 0 V
+-88 -55 V
+-88 0 V
+-88 -54 V
+-88 0 V
+-88 -55 V
+-88 0 V
+-88 0 V
+-88 -55 V
+-88 0 V
+-88 0 V
+-88 -55 V
+-88 0 V
+-88 -54 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 -55 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 -55 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 -55 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-88 0 V
+-57 0 V
+% End plot #4
+stroke
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+1080 4823 N
+0 -4247 V
+4319 0 V
+0 4247 V
+-4319 0 V
+Z stroke
+stroke gsave	%% draw gray scale smooth box
+maxcolors 0 gt {/imax maxcolors def} {/imax 1024 def} ifelse
+5507 576 translate 215 4247 scale 0 setlinewidth
+/ystep 1 imax div def /y0 0 def /ii 0 def
+{ y0 g 0 y0 N 1 0 V 0 ystep V -1 0 f
+/y0 y0 ystep add def /ii ii 1 add def
+ii imax ge {exit} if } loop
+grestore 0 setgray
+1.000 UL
+LTb
+LCb setrgbcolor
+5507 576 N
+215 0 V
+0 4247 V
+-215 0 V
+0 -4247 V
+Z stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTb
+LCb setrgbcolor
+5722 1278 M
+-63 0 V
+stroke
+5830 1278 M
+[ [(Helvetica) 180.0 0.0 true true 0 (0.999)]
+] -60.0 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
+5507 1278 M
+63 0 V
+152 1298 R
+-63 0 V
+stroke
+5830 2576 M
+[ [(Helvetica) 180.0 0.0 true true 0 (0.99)]
+] -60.0 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
+5507 2576 M
+63 0 V
+152 1298 R
+-63 0 V
+stroke
+5830 3874 M
+[ [(Helvetica) 180.0 0.0 true true 0 (0.9)]
+] -60.0 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
+5507 3874 M
+63 0 V
+stroke
+LCb setrgbcolor
+6424 2699 M
+[ [(Symbol) 180.0 0.0 true true 0 (r)]
+] -60.0 MCshow
+LTb
+1.000 UP
+LCb setrgbcolor
+3949 3466 M
+[ [(Helvetica) 220.0 0.0 true true 0 (easy)]
+] -73.3 MLshow
+LCb setrgbcolor
+2087 2371 M
+[ [(Helvetica) 220.0 0.0 true true 0 (hard)]
+] -73.3 MLshow
+LCb setrgbcolor
+1601 992 M
+[ [(Helvetica) 220.0 0.0 true true 0 (impossible)]
+] -73.3 MLshow
+LCb setrgbcolor
+4204 992 M
+[ [(Helvetica) 220.0 0.0 true true 0 (no signal)]
+] -73.3 MLshow
+1.000 UL
+LTb
+LCb setrgbcolor
+grestore % colour palette end
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Symbol Helvetica

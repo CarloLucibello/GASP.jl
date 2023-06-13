@@ -1,0 +1,29 @@
+set term postscript eps enhanced color dashed "Helvetica" 24
+set fit results
+
+
+#set title "log(#sol of binary perc) at fixed d from sign(w)"
+set output "losses.eps"
+set log y
+#set ylabel "Parisi Franz Entropy"
+set xlabel "{/Symbol a}"
+#set xr[0.:0.15]
+#set yr[:]
+#set key leferrorl
+plot    "<awk '$1==200' gd_lr0.1_abs2.dat " u 2:10:11  w errorl t "N=200 train loss",\
+        "<awk '$1==200' gd_lr0.1_abs2.dat " u 2:12:13  w errorl t "N=200 test loss",\
+        "<awk '$1==200' gd_lr0.1_abs2.dat " u 2:14:15  w errorl t "N=200 prob sat",\
+        0 ls 0 not
+
+reset
+
+set output "rho.eps"
+#set ylabel "Parisi Franz Entropy"
+set xlabel "{/Symbol a}"
+#set xr[0.:0.15]
+#set yr[:]
+#set key leferrorl
+plot    "<awk '$1==200' gd_lr0.1_abs2.dat " u 2:8:9  w errorl t "N=200 rho init",\
+        "<awk '$1==200' gd_lr0.1_abs2.dat " u 2:14:15  w errorl t "N=200 rho final",\
+        0 ls 0 not
+reset

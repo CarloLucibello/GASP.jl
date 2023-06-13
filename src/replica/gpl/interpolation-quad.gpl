@@ -1,0 +1,6 @@
+set print "-"
+set fit quiet
+f(x) = b*x**2+c*x +d
+fit f(x) filename u 2:1 via b,c,d
+print b, c, d
+print d

@@ -1,0 +1,436 @@
+set term postscript eps enhanced color dashed "Helvetica" 18
+set fit results
+
+
+set output "RS_Delta_effect.eps"
+set style fill transparent solid 0.1 noborder
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol D}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set logscale x
+set yrange [1.08:3.02]
+set xrange [0.00105:1.]
+
+set pm3d map
+set pm3d clip4in
+set palette defined (0.7 "cyan", 1.00 "yellow")
+set colorbox vertical
+set logscale cb
+set cbtics ("0.9" 0.1,"0.99" 0.01,"0.999" 0.001, "0.9999" 0.0001, "0.99999" 0.00001)
+set cblabel "{/Symbol r}" rotate by 0
+
+set label 1 "easy" at 0.005,2.75 front font ",22"
+set label 2 "hard" at 0.0052,2.16 front font ",22"
+set  label 3 "impossible" at 0.0038,1.66 front font ",22"
+set label 4 "no signal" at 0.1,1.91 front font ",22"
+
+plot "<awk '$3<0.001 && $5>0. && $2>0.001' RS_Delta_lambda_phase_plan.txt" u 2:1:(1-$5) w p ls 7 ps 1.5 lc palette t "",\
+     "<awk '$3==0' RS_phase_curves_Delta.txt" u 2:1 w l lc "black" t "",\
+     "<awk '$3==1' RS_phase_curves_Delta.txt" u 2:1 w l lc "black" t "",\
+     "<awk '$3==2' RS_phase_curves_Delta.txt" u 2:1 w l lc "black" t ""
+reset
+
+
+set output "lambda0.1_+1.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol D}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set logscale x
+set yrange [1.035:3.065]
+set xrange [0.0008:0.9]
+
+set key box opaque bottom right
+
+p   "<awk '($3!=-1 && $6!=1) && $6-$3<1e-6 && $6-$3>-1e-6 && $3>1e-5' lambda0.1_+1.txt" u 2:1 w p ls 5 ps 3 lc "green" t "easy",\
+    "<awk '(($3!=-1 && $6!=1) && ($6-$3>1e-6 || $6-$3<-1e-6) && $7>$4) || $6==1' lambda0.1_+1.txt" u 2:1 w p ls 5 ps 3 lc "yellow" t "hard",\
+    "<awk '($3!=-1 && $6!=1) && ($6-$3>1e-6 || $6-$3<-1e-6) && $4>$7' lambda0.1_+1.txt" u 2:1 w p ls 5 ps 3 lc "red" t "impossible",\
+    "<awk '($3!=-1 && $6!=1) && $6-$3<1e-6 && $6-$3>-1e-6 && $3<1e-5' lambda0.1_+1.txt" u 2:1 w p ls 5 ps 3 lc "grey" t "no signal"
+
+reset
+
+set output "lambda1_+1.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol D}"
+
+set lmargin at screen 0.2
+set rmargin at screen 0.8
+
+set logscale x
+set yrange [1.035:3.065]
+set xrange [0.0008:0.9]
+
+set key box opaque bottom right
+
+p   "<awk '($3!=-1 && $6!=1) && $6-$3<1e-6 && $6-$3>-1e-6 && $3>1e-3' lambda1_+1.txt" u 2:1 w p ls 5 ps 3 lc "green" t "easy",\
+    "<awk '(($3!=-1 && $6!=1) && ($6-$3>1e-6 || $6-$3<-1e-6) && $7>$4) || $6==1' lambda1_+1.txt" u 2:1 w p ls 5 ps 3 lc "yellow" t "hard",\
+    "<awk '($3!=-1 && $6!=1) && ($6-$3>1e-6 || $6-$3<-1e-6) && $4>$7' lambda1_+1.txt" u 2:1 w p ls 5 ps 3 lc "red" t "impossible",\
+    "<awk '($3!=-1 && $6!=1) && $6-$3<1e-6 && $6-$3>-1e-6 && $3<1e-3' lambda1_+1.txt" u 2:1 w p ls 5 ps 3 lc "grey" t "no signal"
+
+reset
+
+set output "lambda0.01_+1.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol D}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set logscale x
+set yrange [1.035:3.065]
+set xrange [0.0008:0.9]
+
+set key box opaque bottom right
+
+p   "<awk '($3!=-1 && $6!=1) && $6-$3<1e-6 && $6-$3>-1e-6 && $3>1e-3' lambda0.01_+1.txt" u 2:1 w p ls 5 ps 3 lc "green" t "easy",\
+    "<awk '(($3!=-1 && $6!=1) && ($6-$3>1e-6 || $6-$3<-1e-6) && $7>$4) || $6==1' lambda0.01_+1.txt" u 2:1 w p ls 5 ps 3 lc "yellow" t "hard",\
+    "<awk '($3!=-1 && $6!=1) && ($6-$3>1e-6 || $6-$3<-1e-6) && $4>$7' lambda0.01_+1.txt" u 2:1 w p ls 5 ps 3 lc "red" t "impossible",\
+    "<awk '($3!=-1 && $6!=1) && $6-$3<1e-6 && $6-$3>-1e-6 && $3<1e-3' lambda0.01_+1.txt" u 2:1 w p ls 5 ps 3 lc "grey" t "no signal"
+
+reset
+
+
+
+set output "RS_delta_effect_final1.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol l}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set logscale x
+set yrange [1.09:3.01]
+
+set dgrid3d 20,20
+set pm3d map interpolate 6,6
+set contour base
+set cntrparam levels discrete 0.5, 1.5, 2.5
+set cntrparam bspline
+set linetype 2 lc rgb 'black'
+
+set label 1 "easy" at 0.1,2.4 front font ",22"
+set label 2 "hard" at 0.0062,1.9 front font ",22"
+set  label 3 "impossible" at 0.0024,1.27 front font ",22"
+
+
+set colorbox vertical
+set palette defined (0. "red", 0.5 "yellow",  1. "cyan")
+set cblabel "{/Symbol r}" rotate by 0
+set cbrange [0:1]
+
+splot  "<awk '$2<1.' temp1.txt" u 2:1:3 w pm3d notitle nocontour ,\
+       "<awk '$2<1.' temp1.txt" u 2:1:4 w lines notitle nosurface lw 2.2
+
+reset
+
+
+set output "RS_delta_effect_final0.1.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol l}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set logscale x
+set yrange [1.09:3.01]
+
+set dgrid3d 20,20
+set pm3d map interpolate 6,6
+set contour base
+set cntrparam levels discrete 0.5, 1.5, 2.5
+set cntrparam bspline
+set linetype 2 lc rgb 'black'
+
+set label 1 "easy" at 0.1,2.4 front font ",22"
+set label 2 "hard" at 0.0062,1.9 front font ",22"
+set  label 3 "impossible" at 0.0024,1.27 front font ",22"
+
+
+set colorbox vertical
+set palette defined (0. "red", 0.5 "yellow",  1. "cyan")
+set cblabel "{/Symbol r}" rotate by 0
+set cbrange [0:1]
+
+splot  "<awk '$2<1.' temp0.1.txt" u 2:1:3 w pm3d notitle nocontour ,\
+       "<awk '$2<1.' temp0.1.txt" u 2:1:4 w lines notitle nosurface lw 2.2
+
+reset
+
+
+set output "RS_delta_effect_final0.01.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol l}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set logscale x
+set yrange [1.09:3.01]
+
+set dgrid3d 20,20
+set pm3d map interpolate 6,6
+set contour base
+set cntrparam levels discrete 0.5, 1.5, 2.5
+set cntrparam bspline
+set linetype 2 lc rgb 'black'
+
+set label 1 "easy" at 0.1,2.4 front font ",22"
+set label 2 "hard" at 0.0062,1.9 front font ",22"
+set  label 3 "impossible" at 0.0024,1.27 front font ",22"
+
+
+set colorbox vertical
+set palette defined (0. "red", 0.5 "yellow",  1. "cyan")
+set cblabel "{/Symbol r}" rotate by 0
+set cbrange [0:1]
+
+splot  "<awk '$2<1.' temp0.01.txt" u 2:1:3 w pm3d notitle nocontour ,\
+       "<awk '$2<1.' temp0.01.txt" u 2:1:4 w lines notitle nosurface lw 2.2
+
+reset
+
+
+
+set output "SE_RS_lambda1.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol D}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set yrange [1.09:3.01]
+set xrange [-3:-0.13]
+set xtics ("0.001" -3, "0.01" -2, "0.1" -1)
+set label 1 "retrieval" at -2,2.7 front font ",22"
+
+
+set dgrid3d 20,20
+set pm3d map interpolate 1,1
+set contour base
+set cntrparam levels discrete 0.000001
+set linetype 2 lc rgb 'black'
+unset clabel
+
+
+set colorbox vertical
+set palette defined (0. "red", 0.5 "yellow",  1. "cyan")
+set cblabel "{/Symbol r}" rotate by 0
+set cbrange [0:1]
+
+splot  "<awk '$2<1.' SE_RS_lambda1.txt" u (log10($2)):1:3 w pm3d notitle nocontour ,\
+       "<awk '{print}' SE_RS_lambda1.txt" u (log10($2)):1:($4-$3) w lines notitle nosurface lw 2.2 lc "black"
+
+
+
+reset
+
+set output "SE_RS_lambda0.1.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol D}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set yrange [1.09:3.01]
+set xrange [-3:-0.13]
+set xtics ("0.001" -3, "0.01" -2, "0.1" -1)
+set label 1 "retrieval" at -2,2.7 front font ",22"
+
+set dgrid3d 20,20
+set pm3d map interpolate 1,1
+set contour base
+set cntrparam levels discrete 0.000001
+set linetype 2 lc rgb 'black'
+unset clabel
+
+
+
+set colorbox vertical
+set palette defined (0. "red", 0.5 "yellow",  1. "cyan")
+set cblabel "{/Symbol r}" rotate by 0
+set cbrange [0:1]
+
+splot  "<awk '$2<1.' SE_RS_lambda0.1.txt" u (log10($2)):1:3 w pm3d notitle nocontour ,\
+       "<awk '$2<1.' SE_RS_lambda0.1.txt" u (log10($2)):1:($4-$3) w lines notitle nosurface lw 2.2 lc "black"
+
+
+
+reset
+
+set output "SE_RS_lambda0.01.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol D}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set yrange [1.09:3.01]
+set xrange [-3:-0.13]
+set xtics ("0.001" -3, "0.01" -2, "0.1" -1)
+set label 1 "retrieval" at -2,2.7 front font ",22"
+
+set dgrid3d 20,20
+set pm3d map interpolate 1,1
+set contour base
+set cntrparam levels discrete 0.000001
+set linetype 2 lc rgb 'black'
+unset clabel
+
+
+set colorbox vertical
+set palette defined (0. "red", 0.5 "yellow",  1. "cyan")
+set cblabel "{/Symbol r}" rotate by 0
+set cbrange [0:1]
+
+splot  "<awk '$2<1.' SE_RS_lambda0.01.txt" u (log10($2)):1:3 w pm3d notitle nocontour ,\
+       "<awk '$2<1.' SE_RS_lambda0.01.txt" u (log10($2)):1:($4-$3) w lines notitle nosurface lw 2.2 lc "black"
+
+
+
+reset
+
+
+set output "SE_1RSB_lambda1.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol D}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set yrange [1.09:3.01]
+set xrange [-3:-0.13]
+set xtics ("0.001" -3, "0.01" -2, "0.1" -1)
+set label 1 "retrieval" at -2,2.7 front font ",22"
+
+set dgrid3d 20,20
+set pm3d map interpolate 1,1
+set contour base
+set cntrparam levels discrete 0.000001
+set linetype 2 lc rgb 'black'
+unset clabel
+
+set colorbox vertical
+set palette defined (0. "red", 0.5 "yellow",  1. "cyan")
+set cblabel "{/Symbol r}" rotate by 0
+set cbrange [0:1]
+
+splot  "<awk '$2<1.' SE_mstar_lambda1.txt" u (log10($2)):1:4 w pm3d notitle nocontour ,\
+       "<awk '$2<1.' SE_mstar_lambda1.txt" u (log10($2)):1:($5-$4) w lines notitle nosurface lw 2.2 lc "black"
+
+
+
+reset
+
+set output "SE_1RSB_lambda0.1.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol D}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set yrange [1.09:3.01]
+set xrange [-3:-0.13]
+set xtics ("0.001" -3, "0.01" -2, "0.1" -1)
+set label 1 "retrieval" at -2,2.7 front font ",22"
+
+set dgrid3d 20,20
+set pm3d map interpolate 1,1
+set contour base
+set cntrparam levels discrete 0.000001
+set cntrparam bspline
+set linetype 2 lc rgb 'black'
+unset clabel
+
+
+set colorbox vertical
+set palette defined (0. "red", 0.5 "yellow",  1. "cyan")
+set cblabel "{/Symbol r}" rotate by 0
+set cbrange [0:1]
+
+splot  "<awk '$2<1.' SE_mstar_lambda0.1.txt" u (log10($2)):1:4 w pm3d notitle nocontour ,\
+       "<awk '$2<1.' SE_mstar_lambda0.1.txt" u (log10($2)):1:($5-$4) w lines notitle nosurface lw 2.2 lc "black"
+
+
+
+reset
+
+
+set output "SE_1RSB_lambda0.01.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol D}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set yrange [1.09:3.01]
+set xrange [-3:-0.13]
+set xtics ("0.001" -3, "0.01" -2, "0.1" -1)
+set label 1 "retrieval" at -2,2.7 front font ",22"
+
+set dgrid3d 20,20
+set pm3d map interpolate 1,1
+set contour base
+set cntrparam levels discrete 0.000001
+set linetype 2 lc rgb 'black'
+unset clabel
+
+
+set colorbox vertical
+set palette defined (0. "red", 0.5 "yellow",  1. "cyan")
+set cblabel "{/Symbol r}" rotate by 0
+set cbrange [0:1]
+
+splot  "<awk '$2<1.' SE_mstar_lambda0.01.txt" u (log10($2)):1:4 w pm3d notitle nocontour ,\
+       "<awk '$2<1.' SE_mstar_lambda0.01.txt" u (log10($2)):1:($5-$4) w lines notitle nosurface lw 2.2 lc "black"
+
+
+
+reset
+
+
+
+set output "SE_all_lambda.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol D}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set key bottom right
+
+set yrange [1.09:3.01]
+set xrange [-3:-0.13]
+set xtics ("0.001" -3, "0.01" -2, "0.1" -1)
+
+set dgrid3d 20,20
+set pm3d map
+set contour base
+set cntrparam levels discrete 0.000001
+set linetype 2 lc rgb 'black'
+unset clabel
+
+
+set colorbox vertical
+set palette defined (0. "red", 0.5 "yellow",  1. "cyan")
+set cblabel "{/Symbol r}" rotate by 0
+set cbrange [0:1]
+
+splot   "<awk '$2<1.' SE_RS_lambda0.01.txt" u (log10($2)):1:($4-$3) w lines notitle nosurface lw 2.2 lc "blue" ,\
+        "<awk '$2<1.' SE_RS_lambda0.1.txt" u (log10($2)):1:($4-$3) w lines notitle nosurface lw 2.2 lc "blue" ,\
+        "<awk '$2<1.' SE_RS_lambda1.txt" u (log10($2)):1:($4-$3) w lines notitle nosurface lw 2.2 lc "blue" ,\
+        "<awk '$2<1.' SE_mstar_lambda0.01.txt" u (log10($2)):1:($5-$4) w lines notitle nosurface lw 2.2 lc "red" ,\
+        "<awk '$2<1.' SE_mstar_lambda0.1.txt" u (log10($2)):1:($5-$4) w lines notitle nosurface lw 2.2 lc "red" ,\
+        "<awk '$2<1.' SE_mstar_lambda1.txt" u (log10($2)):1:($5-$4) w lines notitle nosurface lw 2.2 lc "red" ,\
+        1/0 w p ls 5 ps 2.2 lc "blue"  t "RS" ,\
+        1/0 w p ls 5 ps 2.2 lc "red" t "1RSB" ,\
+        1/0 w l lw 2.2 lc "black" t "{/Symbol l}=0.01" ,\
+        1/0 w l lw 2.2 lc "black" t "{/Symbol l}=0.1" ,\
+        1/0 w l lw 2.2 lc "black" t "{/Symbol l}=1."
+
+
+reset

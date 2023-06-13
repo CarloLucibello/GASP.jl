@@ -1,0 +1,50 @@
+set term postscript eps enhanced color dashed "Helvetica" 18
+set fit results
+
+
+set output "1RSB_unconstrained_energy.eps"
+set style fill transparent solid 0.1 noborder
+set ylabel "E"
+set xlabel "{/Symbol r}"
+
+plot            "ff1.tmp" u 1:2:3 w filledcurves lc "purple" t "",\
+                "<awk '$1==3.' RS_plot_data.txt" u 2:(-$4) w l lc "purple" t "",\
+                "<awk '$1==3.' 1RSB_plot_data_maximum.txt" u 7:6 w l ls "dashed" lc "purple" t "",\
+                "<awk '$1==3.' 1RSB_plot_data.txt" u 7:6 w l lc "purple" lw 3 t "",\
+                "ff2.tmp" u 1:2:3 w filledcurves lc "red" t "",\
+                "<awk '$1==2.' RS_plot_data.txt" u 2:(-$4) w l lc "red" t "",\
+                "<awk '$1==2.' 1RSB_plot_data2_maximum.txt" u 7:6 w l ls "dashed" lc "red"  t "",\
+                "<awk '$1==2.' 1RSB_plot_data2.txt" u 7:6 w l lc "red" lw 3 t "",\
+                "ff3.tmp" u 1:2:3 w filledcurves lc "blue" t "",\
+                "<awk '$1==1.5' RS_plot_data.txt" u 2:(-$4) w l lc "blue" t "",\
+                "<awk '$1==1.5' 1RSB_plot_data3_maximum.txt" u 7:6 w l ls "dashed" lc "blue"  t "",\
+                "<awk '$1==1.5' 1RSB_plot_data3.txt" u 7:6 w l lc "blue" lw 3 t "",\
+                NaN w p ls 5 lc "purple" t "{/Symbol a}=3.0",\
+                NaN w p ls 5 lc "red" t "{/Symbol a}=2.0",\
+                NaN w p ls 5 lc "blue" t "{/Symbol a}=1.5",\
+                NaN w l ls "dashed" lc "black" t "1RSB: {/Symbol S}_{max}",\
+                NaN w l lc "black" lw 3 t "1RSB: {/Symbol S}_0",\
+                NaN w l lc "black" t "RS"
+
+
+
+reset
+
+
+
+
+set output "RS_unconstrained_energy.eps"
+set style fill transparent solid 0.1 noborder
+set ylabel "E"
+set xlabel "m"
+
+plot            "<awk '$1==3.' RS_plot_data.txt" u 2:(-$4) w l lc "purple" t "",\
+                "<awk '$1==2.5' results_RS_UNSAT.txt" u 2:(-$3) w l lc "blue" t "",\
+                "<awk '$1==2.' RS_plot_data.txt" u 2:(-$4) w l lc "red" t "",\
+                NaN w p ls 5 lc "purple" t "{/Symbol a}=3.0",\
+                NaN w p ls 5 lc "blue" t "{/Symbol a}=2.5",\
+                NaN w p ls 5 lc "red" t "{/Symbol a}=2.0"
+
+
+
+reset

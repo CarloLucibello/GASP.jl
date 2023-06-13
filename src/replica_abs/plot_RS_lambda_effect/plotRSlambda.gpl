@@ -1,0 +1,143 @@
+set term postscript eps enhanced color dashed "Helvetica" 18
+set fit results
+
+
+set output "RS_lambda_effect.eps"
+set style fill transparent solid 0.1 noborder
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol l}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set logscale x
+set yrange [1.08:3.02]
+set xrange [0.00105:1.]
+
+set pm3d map
+set pm3d clip4in
+set palette defined (0.7 "cyan", 1.00 "yellow")
+set colorbox vertical
+set logscale cb
+set cbtics ("0.9" 0.1,"0.99" 0.01,"0.999" 0.001, "0.9999" 0.0001, "0.99999" 0.00001)
+set cblabel "{/Symbol r}" rotate by 0
+
+set label 1 "easy" at 0.1,2.4 front font ",22"
+set label 2 "hard" at 0.0052,1.9 front font ",22"
+set  label 3 "impossible" at 0.0024,1.27 front font ",22"
+set label 4 "no signal" at 0.15,1.27 front font ",22"
+
+plot "<awk '$3>0.001 && $5>0.' RS_Delta_lambda_phase_plan.txt" u 3:1:(1-$5) w p ls 7 ps 1.5 lc palette t "",\
+     "<awk '$3==0' RS_phase_curves_lambda.txt" u 2:1 w l lc "black" t "",\
+     "<awk '$3==1' RS_phase_curves_lambda.txt" u 2:1 w l lc "black" t "",\
+     "<awk '$3==2' RS_phase_curves_lambda.txt" u 2:1 w l lc "black" t ""
+
+reset
+
+
+set output "RS_alpha_lambda_landscape_Rinit+1.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol l}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set logscale x
+set yrange [1.08:3.02]
+set xrange [0.001:1.]
+
+set key box opaque
+
+p   "<awk '$6!=1 && $6-$3<1e-6 && $6-$3>-1e-6 && $3>1e-1' RS_phases_+1.txt" u 2:1 w p ls 7 lc "green" t "easy",\
+    "<awk '($6!=1 && ($6-$3>1e-6 || $6-$3<-1e-6) && $7>$4) || $6==1' RS_phases_+1.txt" u 2:1 w p ls 7 lc "yellow" t "hard",\
+    "<awk '$6!=1 && ($6-$3>1e-6 || $6-$3<-1e-6) && $4>$7' RS_phases_+1.txt" u 2:1 w p ls 7 lc "red" t "impossible",\
+    "<awk '$6!=1 && $6-$3<1e-6 && $6-$3>-1e-6 && $3<1e-1' RS_phases_+1.txt" u 2:1 w p ls 7 lc "grey" t "no signal"
+
+reset
+
+set output "RS_alpha_lambda_landscape_Rinit+eps.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol l}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set logscale x
+set yrange [1.08:3.02]
+set xrange [0.001:1.]
+
+set key box opaque
+
+p   "<awk '$6!=1 && $6-$3<1e-6 && $6-$3>-1e-6 && $3>1e-1' RS_phases_+eps.txt" u 2:1 w p ls 7 lc "green" t "easy",\
+    "<awk '($6!=1 && ($6-$3>1e-6 || $6-$3<-1e-6) && $7>$4) || $6==1' RS_phases_+eps.txt" u 2:1 w p ls 7 lc "yellow" t "hard",\
+    "<awk '$6!=1 && ($6-$3>1e-6 || $6-$3<-1e-6) && $4>$7' RS_phases_+eps.txt" u 2:1 w p ls 7 lc "red" t "impossible",\
+    "<awk '$6!=1 && $6-$3<1e-6 && $6-$3>-1e-6 && $3<1e-1' RS_phases_+eps.txt" u 2:1 w p ls 7 lc "grey" t "no signal"
+
+reset
+
+set output "RS_lambda_effect_final.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol l}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set logscale x
+set yrange [1.1:3.]
+
+set dgrid3d 77,50
+set pm3d map interpolate 4,4
+set contour base
+set cntrparam levels discrete 0.5, 1.5, 2.5
+set cntrparam bspline
+set linetype 2 lc rgb 'black'
+unset clabel
+
+set label 1 "easy" at 0.1,2.4 front font ",22"
+set label 2 "hard" at 0.0062,1.9 front font ",22"
+set  label 3 "impossible" at 0.0024,1.27 front font ",22"
+
+
+set colorbox vertical
+set palette defined (0. "red", 0.5 "yellow",  1. "cyan")
+set cblabel "{/Symbol r}" rotate by 0
+set cbrange [0:1]
+
+splot  "<awk '$2<1.' temp.txt" u 2:1:3 w pm3d notitle nocontour ,\
+       "<awk '$2<1.' temp.txt" u 2:1:4 w lines notitle nosurface lw 2.2 lc "black"
+
+
+reset
+
+
+set output "RS_lambda_effect_retrieval.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol l}"
+
+set lmargin at screen 0.15
+set rmargin at screen 0.75
+
+set logscale x
+set yrange [1.1:3.]
+
+set dgrid3d 77,50
+set pm3d map interpolate 4,4
+set contour base
+set cntrparam levels discrete .5
+set cntrparam bspline
+set linetype 2 lc rgb 'black'
+unset clabel
+
+set label 1 "retrieval" at 0.1,2.4 front font ",20"
+
+
+set colorbox vertical
+set palette defined (0. "red", 0.5 "yellow",  1. "cyan")
+set cblabel "{/Symbol r}" rotate by 0
+set cbrange [0:1]
+
+splot  "<awk '$2<1.' temp.txt" u 2:1:3 w pm3d notitle nocontour ,\
+       "<awk '$2<1.' temp.txt" u 2:1:4 w lines notitle nosurface lw 2.2 lc "black"
+
+
+reset

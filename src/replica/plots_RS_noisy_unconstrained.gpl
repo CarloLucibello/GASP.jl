@@ -1,0 +1,48 @@
+set term postscript eps enhanced color dashed "Helvetica" 24
+set fit results
+
+
+set output "energy_RS_noisy_unconstrained.eps"
+set ylabel "E"
+set xlabel "{/Symbol r}"
+set key top left
+
+plot    "<awk '$1==2.' results_RS_UNSAT_unconstrained.txt" u 2:(-$3) w lp t "{/Symbol D}=0.",\
+        "<awk '$3==.001' results_RS_noisy_UNSAT_unconstrained.txt" u 2:(-$4) w lp t "{/Symbol D}=0.001",\
+        "<awk '$3==.002' results_RS_noisy_UNSAT_unconstrained.txt" u 2:(-$4) w lp t "{/Symbol D}=0.002",\
+        "<awk '$3==.005' results_RS_noisy_UNSAT_unconstrained.txt" u 2:(-$4) w lp t "{/Symbol D}=0.005",\
+        "<awk '$3==.01' results_RS_noisy_UNSAT_unconstrained.txt" u 2:(-$4) w lp t "{/Symbol D}=0.01",\
+        "<awk '$3==.02' results_RS_noisy_UNSAT_unconstrained.txt" u 2:(-$4) w lp t "{/Symbol D}=0.02",\
+        "<awk '$3==.05' results_RS_noisy_UNSAT_unconstrained.txt" u 2:(-$4) w lp t "{/Symbol D}=0.05",\
+        "<awk '$3==.1' results_RS_noisy_UNSAT_unconstrained.txt" u 2:(-$4) w lp t "{/Symbol D}=0.1",\
+
+reset
+
+set output "norm_RS_noisy_unconstrained.eps"
+set ylabel "q0"
+set xlabel "{/Symbol r}"
+set key top left
+
+plot    "<awk '$1==2.' results_RS_UNSAT_unconstrained.txt" u 2:4 w lp t "{/Symbol D}=0.",\
+        "<awk '$3==.001' results_RS_noisy_UNSAT_unconstrained.txt" u 2:5 w lp t "{/Symbol D}=0.001",\
+        "<awk '$3==.002' results_RS_noisy_UNSAT_unconstrained.txt" u 2:5 w lp t "{/Symbol D}=0.002",\
+        "<awk '$3==.005' results_RS_noisy_UNSAT_unconstrained.txt" u 2:5 w lp t "{/Symbol D}=0.005",\
+        "<awk '$3==.01' results_RS_noisy_UNSAT_unconstrained.txt" u 2:5 w lp t "{/Symbol D}=0.01",\
+        "<awk '$3==.02' results_RS_noisy_UNSAT_unconstrained.txt" u 2:5 w lp t "{/Symbol D}=0.02",\
+        "<awk '$3==.05' results_RS_noisy_UNSAT_unconstrained.txt" u 2:5 w lp t "{/Symbol D}=0.05",\
+        "<awk '$3==.1' results_RS_noisy_UNSAT_unconstrained.txt" u 2:5 w lp t "{/Symbol D}=0.1",\
+
+reset
+
+
+reset
+
+
+set output "alpha_hard_RS_noisy.eps"
+set ylabel "{/Symbol a}"
+set xlabel "{/Symbol D}_0"
+set key bottom right
+
+plot    "<cat 'results_findTransition_RS_noisy_UNSAT.txt' | sort -k3,3" u 3:1  w lp lc 1 t "{/Symbol a}_H",\
+
+reset

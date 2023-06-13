@@ -1,0 +1,51 @@
+set term postscript eps enhanced color dashed "Helvetica" 24
+set fit results
+
+set output "energy.eps"
+#set log y
+set ylabel "E"
+set xlabel "{/Symbol r}"
+#set xr[0.:1]
+set yr[0:]
+
+plot            "<awk '$1==3' results_RS_UNSAT.txt |sort -nk 2" u 2:(-$3) w l  lc 1 t "{/Symbol a}=3",\
+                "<awk '$1==2.5' results_RS_UNSAT.txt |sort -nk 2" u 2:(-$3)  w l  lc 2 t "{/Symbol a}=2.5",\
+                "<awk '$1==2.5' results_Sigma0_1RSB_UNSAT.txt |sort -nk 2" u 2:($5)  w lp  lc 2 t "1RSB {/Symbol a}=2.5",\
+                "<awk '$1==2.' results_RS_UNSAT.txt |sort -nk 2" u 2:(-$3)  w l lc 3  t "{/Symbol a}=2.",\
+                "<awk '$1==2.' results_Sigma0_1RSB_UNSAT.txt |sort -nk 2" u 2:($5)  w lp lc 3  t "1RSB {/Symbol a}=2.",\
+                "<awk '$1==1.7' results_RS_UNSAT.txt |sort -nk 2" u 2:(-$3)  w l  lc 5  t "{/Symbol a}=1.7",\
+
+#"<awk '$1==2.4' results_RS_UNSAT.txt |sort -nk 2" u 2:(-$3)  w lp  t "{/Symbol a}=2.4",\
+#"<awk '$1==2.6' results_RS_UNSAT.txt |sort -nk 2" u 2:(-$3)  w lp  t "{/Symbol a}=2.6",\
+#"<awk '$1==2.3' results_RS_UNSAT.txt |sort -nk 2" u 2:(-$3)  w lp lc 4  t "{/Symbol a}=2.3",\
+
+
+set output "norm.eps"
+#set log y
+set ylabel "norm"
+set xlabel "{/Symbol r}"
+#set xr[0.:1]
+#set yr[0:]
+
+plot            "<awk '$1==3' results_RS_UNSAT.txt |sort -nk 2" u 2:($4) w l lc 1 t "{/Symbol a}=3",\
+                "<awk '$1==3' results_Sigma0_1RSB_UNSAT.txt |sort -nk 2" u 2:($7) w lp  lc 1 t "{/Symbol a}=3",\
+                "<awk '$1==2.5' results_RS_UNSAT.txt |sort -nk 2" u 2:($4)  w l lc 2  t "{/Symbol a}=2.5",\
+                "<awk '$1==2.5' results_Sigma0_1RSB_UNSAT.txt |sort -nk 2" u 2:($7)  w lp lc 2 t "1RSB {/Symbol a}=2.5",\
+                "<awk '$1==2.' results_RS_UNSAT.txt |sort -nk 2" u 2:($4)  w lp  lc 3 t "{/Symbol a}=2."
+                "<awk '$1==2.5' results_Sigma0_1RSB_UNSAT.txt |sort -nk 2" u 2:($7)  w lp lc 2 t "1RSB {/Symbol a}=2.5",\
+
+
+
+reset
+
+set output "norm.eps"
+set style fill transparent solid 0.5 noborder
+set ylabel "E"
+set xlabel "{/Symbol r}"
+
+plot            p "<awk '$1==2 && $3==0.01' test.dat" u 2:(-$4) w l lc 2 t "{/Symbol a}=2, RS",\
+                "<awk '$1==2 && $5<1e-4' results1RSB.txt | sort -k2,2" u 2:6 w l lc "blue" t "{/Symbol a}=2, 1RSB: {/Symbol S}_0",\
+                "<awk '$1==2 && $5>1e-4' results1RSB.txt | sort -k2,2" u 2:6 w l lc "blue" ls "dashed" t "{/Symbol a}=2, 1RSB: {/Symbol S}_{max}}",\
+                "<awk '<join -j 1 f1.tmp f2.tmp" u 1:2 w filledcurves lc "skyblue" t "",\
+                
+reset

@@ -1,0 +1,33 @@
+set print "-"
+set fit quiet 
+# passare come argomenti a,c,q,dq,n
+
+filename = "results_fantasy2RSB_generalized.txt"
+coly = int(cy)
+colx = int(cx)
+
+case = int(n)
+tofit = "<cat ".filename." | awk '$1==".sprintf("%g",a)."' | tail -5" #&& sqrt(($12-".sprintf("%g",q).")^2)< ".sprintf("%g",dq)."'"
+
+if(case == -2){
+    f(x) = A*(x-1.)**-1 + B*(x-1.)**-2 + C*x + D 
+    fit f(x) tofit u colx:coly via A,B,C,D
+    print f(q)
+}
+
+if(case == -1){
+    f(x) = A*(x-1.)**-1 + B*x + C
+    fit f(x) tofit u colx:coly via A,B,C
+    print f(q)
+}
+if(case == 2){
+    f(x) = B*x**2 + C*x + D
+    fit f(x) tofit u colx:coly via B,C,D
+    print f(q)
+}
+
+if(case == 3){
+    f(x) = A*x**3 + B*x**2 + C*x + D
+    fit f(x) tofit u colx:coly via A,B,C,D
+    print f(q)
+}

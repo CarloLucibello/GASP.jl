@@ -1,0 +1,65 @@
+set term postscript eps enhanced color dashed "Helvetica" 24
+set fit results
+
+set output "energy.eps"
+#set log y
+set ylabel "E"
+set xlabel "{/Symbol r}"
+set xr[0.:1]
+set yr[0:]
+
+plot    "<awk '$1==2' span_RS_UNSAT.dat " u 2:(-$7)  w l lc 1 t "RS {/Symbol a}=2 ",\
+        "<awk '$1==1.6' span_RS_UNSAT.dat " u 2:(-$7)  w l lc 2 t "RS {/Symbol a}=1.6 ",\
+        "<awk '$1==1.6' results_phase_retrieval_zeroT_UNSAT.txt " u 2:5  w p lc 2 t "1RSB {/Symbol a}=1.6 ",\
+        "<awk '$1==1.5' results.txt " u 2:5  w p lc 3 t "1RSBv2 {/Symbol a}=1.5 ",\
+        "<awk '$1==1.5' results_phase_retrieval_zeroT_UNSAT.txt " u 2:5  w p lc 3 t "1RSB {/Symbol a}=1.5 ",\
+        "<awk '$1==1.4' results_phase_retrieval_zeroT_UNSAT.txt " u 2:5  w p lc 4 t "1RSB {/Symbol a}=1.4 ",\
+    #    "<awk '$1==1.05' results_phase_retrieval_RS_SAT.txt " u 2:(-$3)  w p lc 4 t "Bayes {/Symbol a}=1.05 "
+
+
+set output "energy_unconstr.eps"
+#set log y
+set ylabel "E"
+set xlabel "{/Symbol r}"
+set xr[0.:1]
+set yr[0:]
+
+plot    "<awk '$1==2' results_RS_UNSAT_unconstrained.txt " u 2:(-$3)  w p lc 1 t "RS {/Symbol a}=2 ",\
+        "<awk '$1==2' results_1RSB_UNSAT_unconstrained.txt " u 2:($5)  w lp lc 1 t "1RSB {/Symbol a}=2 ",\
+        "<awk '$1==2.3' results_RS_UNSAT_unconstrained.txt " u 2:(-$3)  w p lc 2 t "RS {/Symbol a}=2.3 ",\
+        "<awk '$1==2.3' results_1RSB_UNSAT_unconstrained.txt " u 2:($5)  w lp lc 2 t "1RSB {/Symbol a}=2.3 ",\
+
+
+set output "energy_noisy.eps"
+#set log y
+set ylabel "E"
+set xlabel "{/Symbol r}"
+set xr[0.:1]
+set yr[0:]
+
+plot            "<awk '$1==1.6' span_RS_UNSAT.dat |sort -nk 2" u 2:(-$7)  w lp  t "RS {/Symbol D}=0",\
+                "<awk '$1==1.6 && $3==0.001' results_noisy_RS_UNSAT.txt | sort -nk 2" u 2:(-$4)  w lp  t "RS {/Symbol D}=1e-3",\
+                "<awk '$1==1.6 && $3==0.01' results_noisy_RS_UNSAT.txt | sort -nk 2" u 2:(-$4)  w lp  t "RS {/Symbol D}=1e-2",\
+                "<awk '$1==1.6 && $3==0.1' results_noisy_RS_UNSAT.txt |sort -nk 2" u 2:(-$4)  w lp  t "RS {/Symbol D}=1e-1"
+
+
+
+reset
+
+set output "bayes_freeene.eps"
+set title "noisy {/Symbol a}=1.6"
+#set log y
+set ylabel "Phi"
+set xlabel "q0"
+set xr[0.:1.01]
+
+plot    "<awk '$1==0.5' results_phase_retrieval_Bayes.txt " u 3:2  w l lc 1 t "{/Symbol a}=0.5 ",\
+        "<echo '0 -0.3918'"  with p ls 1 lc 7 not, \
+        "<awk '$1==0.8' results_phase_retrieval_Bayes.txt " u 3:2  w l lc 2 t "{/Symbol a}=0.8 ",\
+        "<echo '0.22 -0.62542'" with p ls 1 lc 7 not, \
+        "<awk '$1==0.9' results_phase_retrieval_Bayes.txt " u 3:2  w l lc 3 t "{/Symbol a}=0.9 ",\
+        "<echo '0.33 -0.70075'"   with p ls 1 lc 7 not, \
+        "<awk '$1==1.05' results_phase_retrieval_Bayes.txt " u 3:2  w l lc 4 t "{/Symbol a}=1.05 ",\
+        "<echo '0.57 -0.8056439145573033'"  with p ls 1 lc 7 not, \
+        "<echo '1 -0.8'"  with p ls 1 lc 7 not, \
+        "<awk '$1==1.5' results_phase_retrieval_Bayes.txt " u 3:2  w l lc 5 t "{/Symbol a}=1.5 ",\

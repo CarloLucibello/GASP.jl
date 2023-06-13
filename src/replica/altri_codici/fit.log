@@ -1,0 +1,171 @@
+
+
+*******************************************************************************
+Tue May  1 18:54:39 2018
+
+
+FIT:    data read from filename u 2:1
+        format = x:z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = b*x**2+c*x +d
+fitted parameters initialized with current variable values
+
+  14 1.9832456195e-29   0.00e+00  5.78e-07    1.181229e+05   4.915822e+03   2.394747e+00
+
+After 14 iterations the fit converged.
+final sum of squares of residuals : 1.98325e-29
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+b               = 118123         
+c               = 4915.82        
+d               = 2.39475        
+
+
+*******************************************************************************
+Tue May  1 19:05:39 2018
+
+
+FIT:    data read from filename u 2:1
+        format = x:z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = b*x**2+c*x +d
+fitted parameters initialized with current variable values
+
+  14 1.9832456195e-29   0.00e+00  5.78e-07    1.181229e+05   4.915822e+03   2.394747e+00
+
+After 14 iterations the fit converged.
+final sum of squares of residuals : 1.98325e-29
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+b               = 118123         
+c               = 4915.82        
+d               = 2.39475        
+
+
+*******************************************************************************
+Tue May  1 19:05:57 2018
+
+
+FIT:    data read from filename u 2:1
+        format = x:z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x**3+b*x**2+c*x +d
+fitted parameters initialized with current variable values
+
+BREAK: Number of data points smaller than number of parameters
+
+*******************************************************************************
+Tue May  1 19:06:08 2018
+
+
+FIT:    data read from filename u 2:1
+        format = x:z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = b*x**2+c*x +d
+fitted parameters initialized with current variable values
+
+  14 1.9832456195e-29   0.00e+00  5.78e-07    1.181229e+05   4.915822e+03   2.394747e+00
+
+After 14 iterations the fit converged.
+final sum of squares of residuals : 1.98325e-29
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+b               = 118123         
+c               = 4915.82        
+d               = 2.39475        
+
+
+*******************************************************************************
+Tue May  1 19:07:35 2018
+
+
+FIT:    data read from filename u 2:1
+        format = x:z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = b*x**2+c*x +d
+fitted parameters initialized with current variable values
+
+  14 1.9832456195e-29   0.00e+00  5.78e-07    1.181229e+05   4.915822e+03   2.394747e+00
+
+After 14 iterations the fit converged.
+final sum of squares of residuals : 1.98325e-29
+rel. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+b               = 118123         
+c               = 4915.82        
+d               = 2.39475        
+
+
+*******************************************************************************
+Wed May  2 18:48:43 2018
+
+
+FIT:    data read from filename u 2:1
+        format = x:z
+        #datapoints = 4
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x**3+b*x**2+c*x +d
+fitted parameters initialized with current variable values
+
+  18 4.9303806576e-32   0.00e+00  5.00e-13   -2.334092e+08  -5.896151e+05  -6.196365e+02   8.138773e-01
+
+After 18 iterations the fit converged.
+final sum of squares of residuals : 4.93038e-32
+abs. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a               = -2.33409e+08   
+b               = -589615        
+c               = -619.636       
+d               = 0.813877       

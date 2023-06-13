@@ -38,6 +38,9 @@ function init!(amp::AMPGraph; x₀=nothing)
     amp.x .= initx(x₀, amp.W, amp.y)
     amp.σ .= 1
     amp.g .= 0
+    amp.∂g .= 0
+    amp.ω .= amp.y
+    amp.V .=  amp.W2' * amp.σ
 end
 
 predictor(amp::AMPGraph) = amp.x
@@ -58,29 +61,24 @@ function oneiter!(amp::AMPGraph)
     # N, M = size(W)
     # α = M/N
     ϵ = 1e-10 # for stability
-    V .= W2' * σ
+    V .= W2' * σ #|> mean
     ω .= W' * x .- V .* g
 
-    @. g = (-ω + y*tanh(y*ω/(V+ϵ))) / (V+ϵ)
+    kappa = 1e-10
+    @. g = ifelse(y < kappa,
+        (y - ω)/(V+ϵ),
+        (-ω + y*tanh(y*ω/(V+ϵ))) / (V+ϵ))
+
     @. ∂g = -1/(V+ϵ) + (1 - tanh(y*ω/(V+ϵ))^2)*(y/(V+ϵ))^2
     # ∂g .= mean(∂g) 
     # ∂g .= -mean(g.^2) #equivalent to above? 
 
-    # 0T version
-    # @. g = 2/(1+2V) * (y * sign(ω) - ω)
-    # @. ∂g = 2/(1+2V) * (2y*δ(ω) - 1)
-    # ∂g .= -mean(g.^2) 
-    
-    # PERCEPTRoN
-    # @. g = y / √V * GH(-y * ω / √V)  
-    # @. ∂g = -ω/V *g - g^2
-
-    A .= .- W2*∂g
+    A .= .- W2*∂g #|> mean
     A .= max.(A, -λ+ϵ)
     # @assert all(A .+ λ .> 0) 
     B .= W*g .+ A.*x
 
-    xnew  = @. B / (A + λ)
+    xnew  = @. B  / (A + λ)
     Δ = maximum(abs, x .- xnew) 
     x .= xnew
     @. σ = 1 / (A + λ)
@@ -88,16 +86,54 @@ function oneiter!(amp::AMPGraph)
     Δ
 end
 
+function oneiter_swamp!(amp::AMPGraph, t)
+    @extract amp: x σ B A  
+    @extract amp: ω g ∂g V 
+    @extract amp: y W W2 λ
+    # N, M = size(W)
+    # α = M/N
+    ϵ = 1e-10 # for stability
+    kappa = 1e-3
+    if t > 1
+        @. g = ifelse(y < kappa,
+                    (y - ω) / (V+ϵ),
+                    (-ω + y*tanh(y*ω/(V+ϵ))) / (V+ϵ))
+    else
+        @. g = 0
+    end
+    V .= W2' * σ #|> mean
+    ω .= W' * x .- V .* g
+
+    this_g = @. ifelse(y < kappa,
+        (y - ω)/(V+ϵ),
+        (-ω + y*tanh(y*ω/(V+ϵ))) / (V+ϵ))
+
+    @. ∂g = -1/(V+ϵ) + (1 - tanh(y*ω/(V+ϵ))^2)*(y/(V+ϵ))^2
+    # ∂g .= mean(∂g) 
+    # ∂g .= -mean(this_g.^2) #equivalent to above? 
+
+    A .= .- W2*∂g #|> mean
+    A .= max.(A, -λ+ϵ)
+    B .= W*this_g .+ A.*x
+
+    xnew  = @. B  / (A + λ)
+    @. σ = 1 / (A + λ)
+
+    Δ = maximum(abs, x .- xnew) 
+    x .= xnew
+    Δ
+end
+
 function initx(x₀, A, y)
+    N = size(A,1)
     if x₀ isa Vector
         x = deepcopy(x₀)
     elseif x₀ == :spectral
         x = spectral_init_optimal(A, y)
+    elseif x₀ == :randn
+        x = randn(N) / sqrt(N)
     elseif x₀ == nothing
-        # x = zeros(size(A,1))
-        x = randn(size(A,1))
-    elseif x₀ isa Number
-        ρ = x₀
+        x = zeros(N)
     end
     @assert length(x) == size(A, 1)
     x
@@ -114,8 +150,9 @@ function solve(problem;
             epochs = 200,
             infotime = 1,  # report every `infotime` epochs
             x₀ = nothing, # [:spectral,:techer, nothing, a configuration]
-            ρ₀ = 1e-3, # initial overlap with the teacher (if x₀=:teacher)
+            ρ₀ = 1e-5, # initial overlap with the teacher (if x₀=:teacher)
             verb = 3,
+            swamp = true,
             ϵ = 1e-7  # stopping criterion
         )
 
@@ -133,7 +170,7 @@ function solve(problem;
 
     report(epoch, Δ, verb) = begin
             x = predictor(amp)
-            res = @NT(epoch=epoch,
+            res = (epoch=epoch,
                     train_loss = loss(x, A, y),
                     test_loss = loss(x, Atst, ytst),
                     ρ = abs(dot(x, teacher.x0)/length(x)),
@@ -153,13 +190,17 @@ function solve(problem;
     report(epoch, Δ, verb+1);# try
     while epoch < epochs
         epoch += 1
-        Δ = oneiter!(amp)
+        if swamp
+            Δ = oneiter_swamp!(amp, epoch)
+        else
+            Δ = oneiter!(amp)
+        end
         epoch % infotime == 0 && report(epoch, Δ, verb)
         Δ < ϵ && break
     end
     #catch e; e isa InterruptException || error(e); end
     # report(epoch, Δ, verb+1)
-    verb > 0 && Δ > ϵ && warn("not converged!")
+    verb > 0 && Δ > ϵ && @warn("not converged!")
 
     return problem, amp, predictor(amp)
 end

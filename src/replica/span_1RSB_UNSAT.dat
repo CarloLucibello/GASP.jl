@@ -1,0 +1,8 @@
+# converged point, but when increase m the complexity increases. Unphysical branch?
+PhaseRetr.span(q0=0.04214861962263065,δq=1.224111787800082,qh0=0.01672915750372539,qh1=0.5538738200305815,δqh=0.8169180003947293,ρh=0.14189781357787162,m=0.2, ρ=0.2,α=2,ψ=0.,fixρ=true,ϵ=1e-4,verb=2,maxiters=100,RES=100,limit=10,width=6, fixm=true)
+
+PhaseRetr.span(q0=0.05247489383642619,δq=0.3245528906922854,qh0=0.3111065305372307,qh1=5.735665233430609,δqh=3.0811624679119864,ρh=0.39925014546666215,m=0.4, ρ=0.2,α=3,ψ=0.,fixρ=true,ϵ=1e-4,verb=2,maxiters=100,RES=100,limit=10,width=6, fixm=false)
+
+Il servizio di prenotazione "Self Service" non è disponibile durante il periodo di assestamento degli orari delle lezioni
+In caso di necessità contattare il numero 011 090 6215
+dell'ufficio Gestione Sedi

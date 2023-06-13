@@ -158,7 +158,7 @@ function solve(problem;
     y .*= scaling
     A .*= scaling  # E[A_ij^2] = 1/m
     
-    params = @NT(β=β,ρ₀=ρ₀, x₀=x₀, λ=λ, teacher=problem.teacher)
+    params = (β=β,ρ₀=ρ₀, x₀=x₀, λ=λ, teacher=problem.teacher)
     amp = AMPGraph(problem, params)
     
     ## printing utilities ##
@@ -170,7 +170,7 @@ function solve(problem;
 
     report(epoch, Δ, verb) = begin
             x = predictor(amp)
-            res = @NT(epoch=epoch,
+            res = (epoch=epoch,
                     train_loss = loss(x, A, y),
                     test_loss = loss(x, Atst, ytst),
                     ρ = abs(dot(x, teacher.x0)/length(x)),
@@ -193,7 +193,7 @@ function solve(problem;
     end
     #catch e; e isa InterruptException || error(e); end
     # report(epoch, Δ, verb+1)
-    verb > 0 && Δ > ϵ && warn("not converged!")
+    verb > 0 && Δ > ϵ && @warn("not converged!")
 
     return df, amp
 end

@@ -1,0 +1,53 @@
+set term postscript eps enhanced color dashed "Helvetica" 24
+set fit results
+
+
+set output "PhaseRetr_RS_beta_scalings/q0.eps"
+set ylabel "q_0"
+set xlabel "{/Symbol b}"
+
+plot    "<awk '$1==1.2 && $3==0.2' results_phase_retrieval_RS_finiteT.txt" u 2:5  w lp lc 1 t "RS {/Symbol a}=1.2, {/Symbol r}=0.2 ",\
+        "<awk '$1==1.2 && $3==0.4' results_phase_retrieval_RS_finiteT.txt" u 2:5  w lp lc 1 t "RS {/Symbol a}=1.2, {/Symbol r}=0.4 ",\
+        "<awk '$1==1.6 && $3==0.2' results_phase_retrieval_RS_finiteT.txt" u 2:5  w lp lc 2 t "RS {/Symbol a}=1.6, {/Symbol r}=0.2 ",\
+        "<awk '$1==1.6 && $3==0.4' results_phase_retrieval_RS_finiteT.txt" u 2:5  w lp lc 2 t "RS {/Symbol a}=1.6, {/Symbol r}=0.4 "
+
+
+
+reset
+
+set output "PhaseRetr_RS_beta_scalings/qh0.eps"
+set ylabel "qh_0"
+set xlabel "{/Symbol b}"
+
+plot    "<awk '$1==1.2 && $3==0.2' results_phase_retrieval_RS_finiteT.txt" u 2:6  w lp lc 1 t "RS {/Symbol a}=1.2, {/Symbol r}=0.2 ",\
+        "<awk '$1==1.2 && $3==0.4' results_phase_retrieval_RS_finiteT.txt" u 2:6  w lp lc 1 t "RS {/Symbol a}=1.2, {/Symbol r}=0.4 ",\
+        "<awk '$1==1.6 && $3==0.2' results_phase_retrieval_RS_finiteT.txt" u 2:6  w lp lc 2 t "RS {/Symbol a}=1.6, {/Symbol r}=0.2 ",\
+        "<awk '$1==1.6 && $3==0.4' results_phase_retrieval_RS_finiteT.txt" u 2:6  w lp lc 2 t "RS {/Symbol a}=1.6, {/Symbol r}=0.4 "
+
+
+
+
+reset
+
+set output "PhaseRetr_RS_beta_scalings/qh1.eps"
+set ylabel "qh_1"
+set xlabel "{/Symbol b}"
+
+plot    "<awk '$1==1.2 && $3==0.2' results_phase_retrieval_RS_finiteT.txt" u 2:7  w lp lc 1 t "RS {/Symbol a}=1.2, {/Symbol r}=0.2 ",\
+        "<awk '$1==1.2 && $3==0.4' results_phase_retrieval_RS_finiteT.txt" u 2:7  w lp lc 1 t "RS {/Symbol a}=1.2, {/Symbol r}=0.4 ",\
+        "<awk '$1==1.6 && $3==0.2' results_phase_retrieval_RS_finiteT.txt" u 2:7  w lp lc 2 t "RS {/Symbol a}=1.6, {/Symbol r}=0.2 ",\
+        "<awk '$1==1.6 && $3==0.4' results_phase_retrieval_RS_finiteT.txt" u 2:7  w lp lc 2 t "RS {/Symbol a}=1.6, {/Symbol r}=0.4 "
+
+
+
+
+reset
+
+set output "PhaseRetr_RS_beta_scalings/ρh.eps"
+set ylabel "{/Symbol r}h_0"
+set xlabel "{/Symbol b}"
+
+plot    "<awk '$1==1.2 && $3==0.2' results_phase_retrieval_RS_finiteT.txt" u 2:8  w lp lc 1 t "RS {/Symbol a}=1.2, {/Symbol r}=0.2 ",\
+        "<awk '$1==1.2 && $3==0.4' results_phase_retrieval_RS_finiteT.txt" u 2:8  w lp lc 1 t "RS {/Symbol a}=1.2, {/Symbol r}=0.4 ",\
+        "<awk '$1==1.6 && $3==0.2' results_phase_retrieval_RS_finiteT.txt" u 2:8  w lp lc 2 t "RS {/Symbol a}=1.6, {/Symbol r}=0.2 ",\
+        "<awk '$1==1.6 && $3==0.4' results_phase_retrieval_RS_finiteT.txt" u 2:8  w lp lc 2 t "RS {/Symbol a}=1.6, {/Symbol r}=0.4 "

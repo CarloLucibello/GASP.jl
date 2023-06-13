@@ -3,22 +3,22 @@ module PhaseRetr
 using LittleScienceTools.Roots
 using FastGaussQuadrature
 using QuadGK
-# using AutoGrad
-# using Cubature
+using AutoGrad
+using Cubature
 # import LsqFit: curve_fit
 include("../common.jl")
 
 
 ###### INTEGRATION  ######
-const ∞ = 15.0
-const dx = 0.1
+const ∞ = 20.0
+const dx = 0.025
 
 const interval = map(x->sign(x)*abs(x)^2, -1:dx:1) .* ∞
 
 ∫D(f, int=interval) = quadgk(z->begin
         r = G(z) * f(z)
-        # isfinite(r) ? r : 0.0
-    end, int..., abstol=1e-6, maxevals=10^7)[1]
+        isfinite(r) ? r : 0.0
+    end, int..., abstol=1e-7, maxevals=10^7)[1]
 
 # ∫Dexp(f, g=z->1, int=interval) = quadgk(z->begin
 #     r = logG(z) + f(z)
@@ -120,7 +120,7 @@ fyp(q0, δq, z0, u) = u * √(δq) + z0 * √(q0)
 fargGe(y, yp, u) = 1/2 * u^2 + 1/2 * (y^2 - yp^2)^2
 
 function fargGe_min(y, q0, δq, z0; argmin=false)
-    ### findmin of 1/2 u^2 + 1/2 * (y^2 - (u √δq + z0 √q0)^2)^2
+    ### findmin of 1/2 u^2 + 1/2 * (y - (u √δq + z1 √(1-q0) + z0 √q0)^2)^2
     a = 9 * √(δq) * √(q0) * z0
     b = 2 * y^2 * δq - 1
     c = 6*(-a + sqrt(complex(a^2 - 6 * b^3)))
@@ -141,27 +141,8 @@ function fargGe_min(y, q0, δq, z0; argmin=false)
     minimum(r->fargGe(y, fyp(q0, δq, z0, r), r), roots)
 end
 
-function fargminGe(y, q0, δq, z0)
-    ### findmin of 1/2 u^2 + 1/2 * (y^2 - (u √δq + z0 √q0)^2)^2
-    a = 9 * √(δq) * √(q0) * z0
-    b = 2 * y^2 * δq - 1
-    c = 6*(-a + sqrt(complex(a^2 - 6 * b^3)))
-    c3 = c^(1/3)
-    bc3 = b / c3
-    !isfinite(bc3) && (bc3 = zero(Complex)) # guard for b~0  
-    u1 = 1/δq * real((-a/9 -bc3 - c3/6))
-    u2 = 1/δq * real((-a/9 + (1+√complex(-3))/2 * bc3 + (1-√complex(-3))/2 * c3/6))
-    u3 = 1/δq * real((-a/9 + (1-√complex(-3))/2 * bc3 + (1+√complex(-3))/2 * c3/6))
 
-    roots = [u1,u2,u3]
-    m, am_ind = findmin(map(u->fargGe(y, fyp(q0, δq, z0, u), u), roots))
-    am = roots[am_ind]
-    yp = fyp(q0, δq, z0, am)
-    return am, m, yp
-end
-
-
-function Ge(q0, δq, ρ, precise; n=81)
+function Ge(q0, δq, ρ, precise; n=121)
     f1 = @spawn Ge(q0, δq, ρ; n=n)
     f2 = @spawn Ge(q0, δq, ρ; n=n+1)
     fetch(f1) / 2 + fetch(f2) / 2
@@ -221,9 +202,9 @@ function ∂δq_Ge_an(q0, δq, ρ; n=41)
     end, n=n)
 end
 
-∂ρ_Ge(op, ep) = ∂ρ_Ge_an(op.q0, op.δq, ep.ρ, true; n=81)
-∂q0_Ge(op, ep) = ∂q0_Ge_an(op.q0, op.δq, ep.ρ, true; n=81)
-∂δq_Ge(op, ep) = ∂δq_Ge_an(op.q0, op.δq, ep.ρ, true; n=81)
+∂ρ_Ge(op, ep) = ∂ρ_Ge_an(op.q0, op.δq, ep.ρ, true; n=121)
+∂q0_Ge(op, ep) = ∂q0_Ge_an(op.q0, op.δq, ep.ρ, true; n=121)
+∂δq_Ge(op, ep) = ∂δq_Ge_an(op.q0, op.δq, ep.ρ, true; n=121)
 
 ############ Thermodynamic functions
 
@@ -244,24 +225,6 @@ function all_therm_func(op::OrderParams, ep::ExtParams)
     return ThermFunc(ϕ)
 end
 
-
-function stability(op, ep)
-    @extract op: q0 δq δqh
-    @extract ep: ρ α
-
-    γS = 1/δqh^2 
-    # γE = < (ℓ'' / (1+δq*ℓ''))^2 >
-    γE = ∫DD(u0->∫DD(z0->begin
-            # u, f, yp  = fargGe_min(u0, 1, δq, ρ*u0 + √(q0 - ρ^2)*z0; argmin=true)
-            u, f, yp  = fargminGe(u0, 1, δq, ρ*u0 + √(q0 - ρ^2)*z0)
-            l2 = 6*yp^2 - 2u0^2 
-            (l2 / (1 + δq*l2))^2
-        end))
-
-    return 1 - α*γS*γE  # α*γS*γE < 1 => the solution is locally stable
-end
-
-
 #################  SADDLE POINT  ##################
 
 fδqh(op, ep) = -2ep.α * ∂q0_Ge(op, ep)
@@ -278,6 +241,18 @@ function iδqh(op)
     (true, sqrt(op.qh0 + op.ρh^2))
 end
 
+# fqh0(δq, ρ, α) = 2α * ∂δq_Ge(δq, ρ)
+# fρh(δq, ρ, α) = α * ∂ρ_Ge(δq, ρ)
+#
+# fδq(qh0,δqh,ρh) = 1/δqh
+# fρ(qh0,δqh,ρh) = ρh/δqh
+#
+# iρh(ρ,qh0,δqh) = (true, ρ*δqh)
+#
+# function iδqh(qh0, δqh, ρh)
+#     (true, sqrt(qh0 + ρh^2))
+# end
+
 ###############################
 
 function fix_inequalities!(op, ep)
@@ -290,7 +265,9 @@ function converge!(op::OrderParams, ep::ExtParams, pars::Params;
         fixρ=true, fixnorm=true, extrap=-1)
     @extract pars: maxiters verb ϵ ψ
 
+    fixnorm && (op.q0 = 1)
     fix_inequalities!(op, ep)
+
     Δ = Inf
     ok = false
     ops = Vector{OrderParams}() # keep some history and extrapolate for quicker convergence
@@ -300,17 +277,17 @@ function converge!(op::OrderParams, ep::ExtParams, pars::Params;
         verb > 1 && println("it=$it")
 
         @update  op.qh0    fqh0       Δ ψ verb  op ep
-        if fixnorm
-            @updateI op.δqh oki   iδqh     Δ ψ verb  op
-            ok &= oki
-        else
-            @update op.δqh  fδqh     Δ ψ verb  op ep
-        end
         if fixρ
             @updateI op.ρh oki   iρh   Δ ψ verb  op ep
             ok &= oki
         else
             @update  op.ρh  fρh       Δ ψ verb  op ep
+        end
+        if fixnorm
+            @updateI op.δqh oki   iδqh     Δ ψ verb  op
+            ok &= oki
+        else
+            @update op.δqh  fδqh     Δ ψ verb  op ep
         end
 
         @update op.δq   fδq       Δ ψ verb  op
@@ -341,6 +318,46 @@ function converge!(op::OrderParams, ep::ExtParams, pars::Params;
     ok
 end
 
+# function converge!(op::OrderParams, ep::ExtParams, pars::Params; fixρ = true)
+#     @extract pars : maxiters verb ϵ ψ
+#
+#     Δ = Inf
+#     ok = false
+#
+#     it = 0
+#     for it = 1:maxiters
+#         Δ = 0.0
+#         verb > 1 && println("it=$it")
+#
+#         @update  op.qh0    fqh0       Δ ψ verb  op.δq ep.ρ ep.α
+#         @updateI op.δqh ok   iδqh     Δ ψ verb  op.qh0 op.δqh op.ρh
+#         if fixρ
+#             @updateI op.ρh ok   iρh   Δ ψ verb  ep.ρ op.qh0 op.δqh
+#         else
+#             @update  op.ρh  fρh       Δ ψ verb  op.δq ep.ρ ep.α
+#         end
+#
+#         # fix_inequalities_hat!(op, ep)
+#         # fix_inequalities_nonhat!(op, ep)
+#
+#         @update op.δq   fδq       Δ ψ verb  op.qh0 op.δqh op.ρh
+#         if !fixρ
+#             @update ep.ρ   fρ     Δ ψ verb  op.qh0 op.δqh op.ρh
+#         end
+#
+#
+#         verb > 1 && println(" Δ=$Δ\n")
+#         verb > 1 && println(all_therm_func(op, ep))
+#
+#         @assert isfinite(Δ)
+#         ok = ok && Δ < ϵ
+#         ok && break
+#     end
+#
+#     ok
+# end
+
+
 function converge(;
         q0 = 1.,
         δq=0.5,
@@ -363,13 +380,13 @@ end
 function span(;
         q0=2.0860295957019495,δq=7.816340972218491,qh0=0.034142290508436736,δqh=0.12793710043539372,ρh=0.0012793710043539372,
         ρ=0.01, α=2.,
-        ϵ=1e-4, maxiters=10000,verb=3, ψ=0.,
+        ϵ=1e-4, maxiters=10000,verb=3, ψ=0., fixnorm=false,
         kws...)
 
     op = OrderParams(q0,δq,qh0,δqh,ρh)
     ep = ExtParams(first(α), first(ρ))
     pars = Params(ϵ, ψ, maxiters, verb)
-    return span!(op, ep, pars; ρ=ρ, α=α, kws...)
+    return span!(op, ep, pars; ρ=ρ, α=α, fixnorm=fixnorm, kws...)
 end
 
 function span!(op::OrderParams, ep::ExtParams, pars::Params;
@@ -388,7 +405,6 @@ function span!(op::OrderParams, ep::ExtParams, pars::Params;
 
         ok = converge!(op, ep, pars; fixρ=fixρ,fixnorm=fixnorm,extrap=extrap)
         tf = all_therm_func(op, ep)
-        println("# stability = $(stability(op,ep))")
         push!(results, (ok, deepcopy(ep), deepcopy(op), deepcopy(tf)))
         ok && open(resfile, "a") do rf
             println(rf, plainshow(ep), " ", plainshow(tf), " ", plainshow(op))
@@ -407,5 +423,58 @@ function readparams(file, line = 0)
     op = OrderParams(res[line,4:end]...)
     return ep, op, tf
 end
+
+# function span(;
+#     δq=0.3188,
+#     qh0=0.36889,δqh=0.36889, ρh=0.56421,
+#     ρ=0.384312, α=1,
+#     ϵ=1e-6, maxiters=10000,verb=2, ψ=0.,
+#     kws...)
+#
+#     op = OrderParams(δq,qh0,δqh,ρh)
+#     ep = ExtParams(first(α), first(ρ))
+#     pars = Params(ϵ, ψ, maxiters, verb)
+#     return span!(op, ep, pars; ρ=ρ,α=α, kws...)
+# end
+#
+# function span!(op::OrderParams, ep::ExtParams, pars::Params;
+#     α=1, ρ=1,
+#     resfile = "results.txt",
+#     fixm=false, fixρ=false, mlessthan1=false)
+#
+#     if !isfile(resfile)
+#         open(resfile, "w") do f
+#             allheadersshow(f, ExtParams, OrderParams, ThermFunc)
+#         end
+#     end
+#
+#     results = []
+#     for α in α, ρ in ρ
+#         fixρ && (ep.ρ = ρ)
+#         ep.α = α;
+#
+#         ok = converge!(op, ep, pars; fixρ=fixρ)
+#         tf = all_therm_func(op, ep)
+#         push!(results, (ok, deepcopy(ep), deepcopy(op), deepcopy(tf)))
+#         if ok
+#             open(resfile, "a") do rf
+#                 println(rf, plainshow(ep), " ", plainshow(op), " ", plainshow(tf))
+#             end
+#         end
+#         !ok && break
+#         pars.verb > 0 && print(ep, "\n", tf,"\n")
+#     end
+#     return results
+# end
+#
+#
+# function readparams(file, line = 0)
+#     res = readdlm(file)
+#     line = line <= 0 ? size(res,1) + line : line # -1 since readdlm discards the header
+#     ep = ExtParams(res[line,1:2]...)
+#     op = OrderParams(res[line,3:6]...)
+#     tf = ThermFunc(res[line,end])
+#     return ep, op, tf
+# end
 
 end ## module
